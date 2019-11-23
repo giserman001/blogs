@@ -24,7 +24,7 @@ module.exports = {
     repoLabel: 'My GitHub',
     nav: [{
         text: 'Home',
-        link: '/'
+        link: '/home'
       },
       {
         text: 'test',
