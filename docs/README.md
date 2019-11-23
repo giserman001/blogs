@@ -1,1 +1,7 @@
-'# Hello VuePress! 测试自动化部署' 
+---
+home: true
+heroImage: /touxiang.png
+actionText: 去看看
+actionLink: /knowledge/javascript/
+footer: Copyright © 2018-present fyz
+---
