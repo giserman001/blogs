@@ -8,14 +8,14 @@ function findMarkdown(dir, callback) {
       let innerDir = `${dir}/${fileName}`
       if (fileName.indexOf('.') !== 0) {
         fs.stat(innerDir, function (err, stat) {
-          console.log(stat)
           if (stat.isDirectory()) {
             findMarkdown(innerDir, callback)
           } else {
             // 跳过readme 文件，当然你也可以自行修改
-            if (/\.md$/.test(fileName) && !/README/.test(fileName)){
-              callback(innerDir);
-            }
+            // if (/\.md$/.test(fileName) && !/README/.test(fileName)){
+            //   callback(innerDir);
+            // }
+            callback(innerDir);
           }
         })
       }
