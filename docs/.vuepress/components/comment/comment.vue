@@ -16,8 +16,8 @@ export default {
     body.appendChild(script);
     script.onload = () => {
       const commentConfig = {
-        clientID: "a0a3296915c68cd08325",
-        clientSecret: "3fab08fbf66b40338349249c92f65175e3505e1f",
+        clientID: "7a511ce4457c367b5ff8",
+        clientSecret: "fa2aa39c932e1e507831fb48c0a9f47e84e12ebd",
         repo: "blogs",
         owner: "giserman001",
         // 这里接受一个数组，可以添加多个管理员
