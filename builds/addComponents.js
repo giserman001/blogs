@@ -6,6 +6,7 @@ const rootDir = './docs'
 findMarkdown(rootDir, writeComponents)
 
 function writeComponents(dir) {
+    console.log(dir)
   if (!/README/.test(dir)) {
     fs.appendFile(dir, `\n \n <comment-comment/> \n `, (err) => {
       if (err) throw err

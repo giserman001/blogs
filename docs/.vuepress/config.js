@@ -27,8 +27,8 @@ module.exports = {
         link: '/'
       },
       {
-        text: 'FirstBlog',
-        link: '/blog/FirstBlog.md'
+        text: 'test',
+        link: '/test.md'
       }
     ]
   }
