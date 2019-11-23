@@ -16,12 +16,14 @@ const getFileNames = (parentFileName) => {
 module.exports = {
   base: '/blogs/',
   title: 'blogs',
+  lastUpdated: true,
   description: 'Vuepress blog',
   themeConfig: {
     // 你的GitHub仓库，请正确填写
-    repo: 'https://github.com/giserman001',
-    // 自定义仓库链接文字。
-    repoLabel: 'My GitHub',
+    repo: 'giserman001/blogs',
+    editLinks: true,
+    docsDir: 'docs',
+    smoothScroll: true,//页面滚动
     nav: [{
         text: 'Home',
         link: '/home'
