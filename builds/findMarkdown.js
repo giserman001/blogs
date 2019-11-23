@@ -12,10 +12,9 @@ function findMarkdown(dir, callback) {
             findMarkdown(innerDir, callback)
           } else {
             // 跳过readme 文件，当然你也可以自行修改
-            // if (/\.md$/.test(fileName) && !/README/.test(fileName)){
-            //   callback(innerDir);
-            // }
-            callback(innerDir);
+            if (/\.md$/.test(fileName) && !/README/.test(fileName)){
+              callback(innerDir);
+            }
           }
         })
       }
