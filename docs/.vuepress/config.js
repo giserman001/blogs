@@ -18,7 +18,7 @@ module.exports = {
   title: 'blogs',
   lastUpdated: true,
   description: 'Vuepress blog',
-  sidebarDepth: 1,
+  sidebarDepth: 2,
   themeConfig: {
     logo: '/logo.png',
     repo: 'giserman001/blogs',
@@ -32,17 +32,23 @@ module.exports = {
     {
       text: '前端框架',
       items: [
-        { text: 'vue', link: '/vue/vue_ts/' },
-        { text: 'react', link: '/react/test/' }
+        { text: 'vue', link: '/vue/' },
+        { text: 'react', link: '/react/' }
       ]
     }],
-    sidebar: [
-      ['/vue/vue_ts/', 'Vue + TS 开发应用'],
-      ['/vue/vue_optimize/', 'vue优化技巧'],
-      ['/vue/vue_auth_manage/', 'vue权限菜单及按钮权限'],
-      ['/vue/vue_JWT/', 'vue里JWT认证'],
-      ['/vue/vue_render_jsx/', 'vue里render函数之JSX应用']
-      ['/vue/vue_module_communicate/', 'Vue组件间通信方式']
-    ]
+    sidebar: {
+      '/vue/': [
+        ['', '默认文档'],
+        ['vue_ts', 'Vue + TS 开发应用'],
+        ['vue_optimize', 'vue优化技巧'],
+        ['vue_auth_manage', 'vue权限菜单及按钮权限'],
+        ['vue_JWT', 'vue里JWT认证'],
+        ['vue_render_jsx', 'vue里render函数之JSX应用']
+        ['vue_module_communicate', 'Vue组件间通信方式']
+      ],
+      '/react/': [
+        ['', 'test标题']
+      ]
+    }
   }
 }
