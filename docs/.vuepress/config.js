@@ -47,6 +47,7 @@ module.exports = {
         ['vue_module_communicate', 'Vue组件间通信方式']
       ],
       '/react/': [
+        ['', '默认文档'],
         ['test', 'test标题']
       ]
       // demo
