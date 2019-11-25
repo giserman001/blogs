@@ -19,11 +19,11 @@ module.exports = {
   lastUpdated: true,
   description: 'Vuepress blog',
   themeConfig: {
-    // 你的GitHub仓库，请正确填写
+    logo: '/logo.png',
     repo: 'giserman001/blogs',
     editLinks: true,
     docsDir: 'docs',
-    smoothScroll: true,//页面滚动
+    smoothScroll: true,
     nav: [{
         text: 'Home',
         link: '/home'
