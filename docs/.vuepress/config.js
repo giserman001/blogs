@@ -20,7 +20,7 @@ module.exports = {
   description: 'Vuepress blog',
   sidebarDepth: 1,
   themeConfig: {
-    logo: './public/logo.png',
+    logo: './logo.png',
     repo: 'giserman001/blogs',
     editLinks: true,
     docsDir: 'docs',
@@ -38,7 +38,7 @@ module.exports = {
     }],
     sidebar: {
       '/vue/': [
-        ['', '默认文档'],
+        ['', 'web开发总结'],
         ['vue_ts', 'Vue + TS 开发应用'],
         ['vue_optimize', 'vue优化技巧'],
         ['vue_auth_manage', 'vue权限菜单及按钮权限'],
