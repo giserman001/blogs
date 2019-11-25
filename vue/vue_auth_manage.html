@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.服务端数据 | blogs</title>
+    <meta name="description" content="Vuepress blog">
+    
+    
+    <link rel="preload" href="/blogs/assets/css/0.styles.29f04c96.css" as="style"><link rel="preload" href="/blogs/assets/js/app.a4bb3780.js" as="script"><link rel="preload" href="/blogs/assets/js/2.8d77ee90.js" as="script"><link rel="preload" href="/blogs/assets/js/12.eec73c59.js" as="script"><link rel="preload" href="/blogs/assets/js/3.4e87f909.js" as="script"><link rel="prefetch" href="/blogs/assets/js/10.6e6714a6.js"><link rel="prefetch" href="/blogs/assets/js/11.907230fd.js"><link rel="prefetch" href="/blogs/assets/js/13.e9903ff9.js"><link rel="prefetch" href="/blogs/assets/js/14.a7124a84.js"><link rel="prefetch" href="/blogs/assets/js/15.9c7649bd.js"><link rel="prefetch" href="/blogs/assets/js/16.9cf50e99.js"><link rel="prefetch" href="/blogs/assets/js/17.8f4be178.js"><link rel="prefetch" href="/blogs/assets/js/4.d3ee7df1.js"><link rel="prefetch" href="/blogs/assets/js/5.12aec717.js"><link rel="prefetch" href="/blogs/assets/js/6.e9a80fbc.js"><link rel="prefetch" href="/blogs/assets/js/7.cd7171b8.js"><link rel="prefetch" href="/blogs/assets/js/8.60da153b.js"><link rel="prefetch" href="/blogs/assets/js/9.6478d529.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.29f04c96.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blogs/" class="home-link router-link-active"><img src="./public/logo.png" alt="blogs" class="logo"> <span class="site-name can-hide">blogs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blogs/home.html" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/vue/" class="nav-link router-link-active">vue</a></li><li class="dropdown-item"><!----> <a href="/blogs/react/" class="nav-link">react</a></li></ul></div></div> <a href="https://github.com/giserman001/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blogs/home.html" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/vue/" class="nav-link router-link-active">vue</a></li><li class="dropdown-item"><!----> <a href="/blogs/react/" class="nav-link">react</a></li></ul></div></div> <a href="https://github.com/giserman001/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/blogs/vue/" class="sidebar-link">默认文档</a></li><li><a href="/blogs/vue/vue_ts.html" class="sidebar-link">Vue + TS 开发应用</a></li><li><a href="/blogs/vue/vue_optimize.html" class="sidebar-link">vue优化技巧</a></li><li><a href="/blogs/vue/vue_auth_manage.html" class="active sidebar-link">vue权限菜单及按钮权限</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blogs/vue/vue_JWT.html" class="sidebar-link">vue里JWT认证</a></li><li><a href="/blogs/vue/vue_render_jsx.html" class="sidebar-link">vue里render函数之JSX应用</a></li><li><a href="/blogs/vue/vue_module_communicate.html" class="sidebar-link">Vue组件间通信方式</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="_1-服务端数据"><a href="#_1-服务端数据" class="header-anchor">#</a> 1.服务端数据</h3> <p>Vue权限菜单需要根据后端返回的数据来实现</p> <div class="language- extra-class"><pre class="language-text"><code>[
+    {pid:-1,name:'购物车',id:1,auth:'cart'},
+    {pid:1,name:'购物车列表',id:4,auth:'cart-list'},
+    {pid:4,name:'彩票',id:5,auth:'lottery'},
+    {pid:4,name:'商品',id:6,auth:'product'},
+    {pid:-1,name:'商店',id:2,auth:'shop'},
+    {pid:-1,name:'个人中心',id:3,auth:'store'},
+]
+</code></pre></div><p>通过express返回权限列表</p> <div class="language- extra-class"><pre class="language-text"><code>const express = require('express');
+const app = express();
+app.all('*', (req, res, next) =&gt; {
+  res.header('Access-Control-Allow-Origin', '*');
+  // Access-Control-Allow-Headers ,可根据浏览器的F12查看,把对应的粘贴在这里就行
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.header('Access-Control-Allow-Methods', '*');
+  res.header('Content-Type', 'application/json;charset=utf-8');
+  next();});
+app.get('/roleAuth', (req, res) =&gt; {
+  res.json({
+    menuList: [
+        {pid:-1,name:'购物车',id:1,auth:'cart'},
+        {pid:1,name:'购物车列表',id:4,auth:'cart-list'},
+        {pid:4,name:'彩票',id:5,auth:'lottery'},
+        {pid:4,name:'商品',id:6,auth:'product'},
+        {pid:-1,name:'商店',id:2,auth:'shop'},
+        {pid:-1,name:'个人中心',id:3,auth:'store'},
+    ]
+  });});
+app.listen(3000);
+</code></pre></div><h3 id="_2-静态菜单"><a href="#_2-静态菜单" class="header-anchor">#</a> 2.静态菜单</h3> <p>使用element-ui构建静态菜单</p> <div class="language- extra-class"><pre class="language-text"><code>import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>&lt;el-menu default-active=&quot;2&quot; class=&quot;el-menu-vertical-demo&quot;&gt;
+    &lt;el-submenu index=&quot;1&quot;&gt;
+        &lt;template slot=&quot;title&quot;&gt;导航一&lt;/template&gt;
+        &lt;el-submenu index=&quot;1-1&quot;&gt;
+            &lt;template slot=&quot;title&quot;&gt;选项1-1&lt;/template&gt;
+            &lt;el-menu-item index=&quot;1-1-1&quot;&gt;选项1-1-1&lt;/el-menu-item&gt;
+            &lt;el-menu-item index=&quot;1-1-2&quot;&gt;选项1-1-2&lt;/el-menu-item&gt;
+        &lt;/el-submenu&gt;
+        &lt;el-menu-item index=&quot;1-2&quot;&gt;选项1-2&lt;/el-menu-item&gt;
+    &lt;/el-submenu&gt;
+    &lt;el-menu-item index=&quot;2&quot;&gt;
+        导航二
+    &lt;/el-menu-item&gt;
+    &lt;el-menu-item index=&quot;3&quot;&gt;
+        导航三
+    &lt;/el-menu-item&gt;
+    &lt;el-menu-item index=&quot;4&quot;&gt;
+        导航四
+    &lt;/el-menu-item&gt;&lt;/el-menu&gt;
+</code></pre></div><p>路由配置</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'import Router from 'vue-router'import Home from './views/Home.vue'
+
+Vue.use(Router)export const authRoutes = [ // 权限路由
+  {
+    path: '/cart',
+    name: 'cart',
+    component: () =&gt; import('@/views/Cart'),
+    children: [
+      {
+        path: 'cart-list',
+        name: 'cart-list',
+        component: () =&gt; import('@/views/CartList'),
+        children: [
+          {
+            path: 'lottery',
+            name: 'lottery',
+            component: () =&gt; import('@/views/Lottery'),
+          },
+          {
+            path: 'product',
+            name: 'product',
+            component: () =&gt; import('@/views/Product'),
+          },
+        ],
+      },
+    ],
+  },];export default new Router({ // 默认导出 首页和404页面
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home
+    },
+    {
+      path:'*',
+      component:{
+        render:h=&gt;h('h1',{},'Not Found')
+      }
+    }
+  ]})
+</code></pre></div><h3 id="_3-获取权限"><a href="#_3-获取权限" class="header-anchor">#</a> 3.获取权限</h3> <p>根据后端返回的数据，格式化树结构，并提取用户权限</p> <div class="language- extra-class"><pre class="language-text"><code>// 默认设置没有获取过权限export default new Vuex.Store({
+  state: {
+    hasPermission:false
+  },
+  mutations: {
+    setPermission(state){
+      state.hasPermission = true
+    }
+  },})
+</code></pre></div><p>在路由跳转前看下是否获取过权限，如果没有获取过，就获取权限存入vuex中</p> <div class="language- extra-class"><pre class="language-text"><code>router.beforeEach(async (to,from,next)=&gt;{
+  if(!store.state.hasPermission){
+    // 获取最新路由列表
+    let newRoutes = await store.dispatch('getRouteList'); 
+    router.addRoutes(newRoutes); // 增加新路由
+    next({...to,replace:true})
+  }else{
+    next(); // 获取过就不需要再次获取了
+  }})
+</code></pre></div><h3 id="_4-获取相关需要数据"><a href="#_4-获取相关需要数据" class="header-anchor">#</a> 4.获取相关需要数据</h3> <div class="language- extra-class"><pre class="language-text"><code>const getMenListAndAuth = (menuList)=&gt;{
+  let menu = [];
+  let sourceMap = {};
+  let auth = [];
+  menuList.forEach(m =&gt; {
+    m.children = []; // 增加孩子列表
+    sourceMap[m.id] = m;
+    auth.push(m.auth)
+    if(m.pid === -1){
+      menu.push(m); // 根节点
+    }else{
+      sourceMap[m.pid] &amp;&amp; sourceMap[m.pid].children.push(m)
+    }
+  });
+  return {menu,auth} // 获取菜单数据和权限数据
+}
+async getRouteList({dispatch,commit}){
+    let auths = await axios.get('http://localhost:3000/roleAuth');
+    let menuList = auths.data.menuList;
+    let {menu,auth} = getMenListAndAuth(menuList);
+}
+</code></pre></div><h3 id="_5-找到需要添加的路由"><a href="#_5-找到需要添加的路由" class="header-anchor">#</a> 5.找到需要添加的路由</h3> <div class="language- extra-class"><pre class="language-text"><code>import {authRoutes} from './router'const getRoutes = auth =&gt; {
+  const filter = (authRoutes)=&gt;{
+    return authRoutes.filter(route=&gt;{
+      // 包含权限
+      if(auth.includes(route.name)){
+        if(route.children){
+          route.children = filter(route.children);
+        }
+        return true;
+      }
+    })
+  }
+  return filter(authRoutes);};
+
+// 获取需要添加的路由列表
+async getRouteList({ dispatch, commit }) {
+    let auths = await axios.get(&quot;http://localhost:3000/roleAuth&quot;);
+    let menuList = auths.data.menuList;
+    let { menu, auth } = getMenListAndAuth(menuList);
+    commit(&quot;setMenu&quot;, menu); // 将菜单数据保存起来
+    commit(&quot;setPermission&quot;); // 权限获取完毕
+    // 通过auth查找需要添加的路由
+    return getRoutes(auth);
+}
+</code></pre></div><h3 id="_6-递归渲染菜单"><a href="#_6-递归渲染菜单" class="header-anchor">#</a> 6.递归渲染菜单</h3> <p>渲染Menu组件提取公共部分</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+ &lt;div&gt;
+  &lt;el-menu&gt;
+   &lt;template v-for=&quot;menu in $store.state.menu&quot;&gt;
+    &lt;el-submenu v-if=&quot;menu.children.length&quot; :key=&quot;menu.auth&quot; :index=&quot;menu.auth&quot;&gt;
+     &lt;template slot=&quot;title&quot;&gt;{{menu.name}}&lt;/template&gt;
+     &lt;!-- 此处需要不停的递归 el-submenu  --&gt;
+    &lt;/el-submenu&gt;
+    &lt;el-menu-item v-else :key=&quot;menu.auth&quot; :index=&quot;menu.auth&quot;&gt;{{menu.name}}&lt;/el-menu-item&gt;
+   &lt;/template&gt;
+  &lt;/el-menu&gt;
+ &lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div><p>编写递归组件</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+    &lt;el-submenu :index=&quot;menu.auth&quot;&gt;
+         &lt;template slot=&quot;title&quot;&gt;{{menu.name}}&lt;/template&gt;
+         &lt;template v-for=&quot;(child,index) in menu.children&quot;&gt;  
+            &lt;el-menu-item v-if=&quot;!child.children.length&quot; :key=&quot;index&quot;&gt; 
+               &lt;router-link :to=&quot;{name:child.auth}&quot;&gt; {{child.name}}&lt;/router-link&gt;
+            &lt;/el-menu-item&gt;
+            &lt;!-- 如果有儿子继续递归组件 --&gt;
+            &lt;ResubMenu :menu=&quot;child&quot; v-else :key=&quot;index&quot;&gt;&lt;/ResubMenu&gt;
+         &lt;/template&gt;
+    &lt;/el-submenu&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+    name:'ResubMenu',
+    props:{
+        menu:{}
+    }}
+&lt;/script&gt;
+</code></pre></div><h3 id="_7-权限按钮控制"><a href="#_7-权限按钮控制" class="header-anchor">#</a> 7.权限按钮控制</h3> <div class="language- extra-class"><pre class="language-text"><code>state: {
+    hasPermission: false,
+    menu: [], // 菜单权限
+    btnPermission:{ // 按钮权限
+        edit:false,
+        add:true
+    }},
+</code></pre></div><p>查看当前按钮是否有权限</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;el-button v-has=&quot;'edit'&quot;&gt;编辑&lt;/el-button&gt;
+&lt;el-button v-has=&quot;'add'&quot;&gt;添加&lt;/el-button&gt;
+</code></pre></div><p>自定义指令的使用</p> <div class="language- extra-class"><pre class="language-text"><code>directives: {
+  has: {
+   inserted(el, bindings, vnode) {
+     let value = bindings.value;
+     // 在vuex中查看是否有按钮权限
+     let flag = vnode.context.$store.state.btnPermission[value];
+     // 如果没有全选则将按钮删除即可
+     !flag &amp;&amp; el.parentNode.removeChild(el);
+   }
+  }
+ }
+</code></pre></div> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/giserman001/blogs/edit/master/docs/vue/vue_auth_manage.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blogs/vue/vue_optimize.html" class="prev">vue优化技巧</a></span> <span class="next"><a href="/blogs/vue/vue_JWT.html">vue里JWT认证</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blogs/assets/js/app.a4bb3780.js" defer></script><script src="/blogs/assets/js/2.8d77ee90.js" defer></script><script src="/blogs/assets/js/12.eec73c59.js" defer></script><script src="/blogs/assets/js/3.4e87f909.js" defer></script>
+  </body>
+</html>

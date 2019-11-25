@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用vue-cli3.0创建vue项目 | blogs</title>
+    <meta name="description" content="Vuepress blog">
+    
+    
+    <link rel="preload" href="/blogs/assets/css/0.styles.29f04c96.css" as="style"><link rel="preload" href="/blogs/assets/js/app.a4bb3780.js" as="script"><link rel="preload" href="/blogs/assets/js/2.8d77ee90.js" as="script"><link rel="preload" href="/blogs/assets/js/11.907230fd.js" as="script"><link rel="preload" href="/blogs/assets/js/3.4e87f909.js" as="script"><link rel="prefetch" href="/blogs/assets/js/10.6e6714a6.js"><link rel="prefetch" href="/blogs/assets/js/12.eec73c59.js"><link rel="prefetch" href="/blogs/assets/js/13.e9903ff9.js"><link rel="prefetch" href="/blogs/assets/js/14.a7124a84.js"><link rel="prefetch" href="/blogs/assets/js/15.9c7649bd.js"><link rel="prefetch" href="/blogs/assets/js/16.9cf50e99.js"><link rel="prefetch" href="/blogs/assets/js/17.8f4be178.js"><link rel="prefetch" href="/blogs/assets/js/4.d3ee7df1.js"><link rel="prefetch" href="/blogs/assets/js/5.12aec717.js"><link rel="prefetch" href="/blogs/assets/js/6.e9a80fbc.js"><link rel="prefetch" href="/blogs/assets/js/7.cd7171b8.js"><link rel="prefetch" href="/blogs/assets/js/8.60da153b.js"><link rel="prefetch" href="/blogs/assets/js/9.6478d529.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.29f04c96.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blogs/" class="home-link router-link-active"><img src="./public/logo.png" alt="blogs" class="logo"> <span class="site-name can-hide">blogs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blogs/home.html" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/vue/" class="nav-link router-link-active">vue</a></li><li class="dropdown-item"><!----> <a href="/blogs/react/" class="nav-link">react</a></li></ul></div></div> <a href="https://github.com/giserman001/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blogs/home.html" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/vue/" class="nav-link router-link-active">vue</a></li><li class="dropdown-item"><!----> <a href="/blogs/react/" class="nav-link">react</a></li></ul></div></div> <a href="https://github.com/giserman001/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/blogs/vue/" class="sidebar-link">默认文档</a></li><li><a href="/blogs/vue/vue_ts.html" class="sidebar-link">Vue + TS 开发应用</a></li><li><a href="/blogs/vue/vue_optimize.html" class="sidebar-link">vue优化技巧</a></li><li><a href="/blogs/vue/vue_auth_manage.html" class="sidebar-link">vue权限菜单及按钮权限</a></li><li><a href="/blogs/vue/vue_JWT.html" class="active sidebar-link">vue里JWT认证</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blogs/vue/vue_render_jsx.html" class="sidebar-link">vue里render函数之JSX应用</a></li><li><a href="/blogs/vue/vue_module_communicate.html" class="sidebar-link">Vue组件间通信方式</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="使用vue-cli3-0创建vue项目"><a href="#使用vue-cli3-0创建vue项目" class="header-anchor">#</a> 使用vue-cli3.0创建vue项目</h3> <div class="language- extra-class"><pre class="language-text"><code>vue create &lt;project-name&gt;
+</code></pre></div><p>可以通过vue ui创建项目／管理项目依赖 vue ui</p> <h3 id="配置vue-config-js"><a href="#配置vue-config-js" class="header-anchor">#</a> 配置vue-config.js</h3> <div class="language- extra-class"><pre class="language-text"><code>let path = require('path')
+module.exports = {
+    publicPath:process.env.NODE_ENV === 'production'? '/vue-project':'/',
+    outputDir:'myassets', // 输出路径
+    assetsDir:'static', // 生成静态目录的文件夹
+    runtimeCompiler: true, // 是否可以使用template模板
+    parallel:require('os').cpus().length &gt; 1, //多余1核cpu时 启动并行压缩
+    productionSourceMap:false, //生产环境下 不使用soruceMap
+
+    // https://github.com/neutrinojs/webpack-chain
+    chainWebpack:config=&gt;{
+        // 控制webpack内部配置
+        config.resolve.alias.set('component',path.resolve(__dirname,'src/components'));
+    },
+    // https://github.com/survivejs/webpack-merge
+    configureWebpack:{
+        // 新增插件等
+        plugins:[]
+    },
+    devServer:{ // 配置代理
+        proxy:{
+            '/api':{
+                target:'http://a.zf.cn:3000',
+                changeOrigin:true
+            }
+        }
+    },
+    // 第三方插件配置
+    pluginOptions: {
+                'style-resources-loader': {
+                        preProcessor: 'less',
+                        patterns: [
+                // 插入全局样式
+                path.resolve(__dirname,'src/assets/common.less'), 
+                        ],
+                }
+        }}
+</code></pre></div><h3 id="_1-什么是jwt？"><a href="#_1-什么是jwt？" class="header-anchor">#</a> 1.什么是jwt？</h3> <ul><li>JSON Web Token（JWT）是目前最流行的跨域身份验证解决方案
+<strong>解决问题</strong>：session不支持分布式架构，无法支持横向扩展，只能通过数据库来保存会话数据实现共享。如果持久层失败会出现认证失败。
+<strong>优点</strong>：服务器不保存任何会话数据，即服务器变为无状态，使其更容易扩展。</li></ul> <h4 id="jwt包含了使用-分隔的三部分"><a href="#jwt包含了使用-分隔的三部分" class="header-anchor">#</a> JWT包含了使用.分隔的三部分</h4> <ul><li>Header 头部</li> <li></li></ul> <div class="language- extra-class"><pre class="language-text"><code>{ &quot;alg&quot;: &quot;HS256&quot;, &quot;typ&quot;: &quot;JWT&quot;}   
+// algorithm =&gt; HMAC SHA256// type =&gt; JWT
+</code></pre></div><ul><li>Payload 负载、载荷</li></ul> <div class="language- extra-class"><pre class="language-text"><code>JWT 规定了7个官方字段
+iss (issuer)：签发人
+exp (expiration time)：过期时间
+sub (subject)：主题
+aud (audience)：受众
+nbf (Not Before)：生效时间
+iat (Issued At)：签发时间
+jti (JWT ID)：编号
+</code></pre></div><ul><li>Signature 签名</li></ul> <div class="language- extra-class"><pre class="language-text"><code>HMACSHA256(
+  base64UrlEncode(header) + &quot;.&quot; +
+  base64UrlEncode(payload),
+  secret)
+</code></pre></div><p>JWT 作为一个令牌（token），有些场合可能会放到 URL（比如 api.example.com/?token=xxx）。Base64 有三个字符+、/和=，在 URL 里面有特殊含义，所以要被替换掉：=被省略、+替换成-，/替换成_ 。这就是 Base64URL 算法。</p> <h4 id="使用方式"><a href="#使用方式" class="header-anchor">#</a> 使用方式</h4> <p>HTTP 请求的头信息Authorization字段里面</p> <div class="language- extra-class"><pre class="language-text"><code>Authorization: Bearer &lt;token&gt;
+</code></pre></div><p>通过url传输</p> <div class="language- extra-class"><pre class="language-text"><code>http://www.xxx.com/pwa?token=xxxxx
+</code></pre></div><h3 id="_2-服务端返回token"><a href="#_2-服务端返回token" class="header-anchor">#</a> 2.服务端返回TOKEN</h3> <div class="language- extra-class"><pre class="language-text"><code>let express = require('express');let app = express();let bodyParser = require('body-parser');let jwt = require('jsonwebtoken');
+app.use((req,res,next)=&gt;{
+    res.header(&quot;Access-Control-Allow-Origin&quot;, &quot;http://localhost:8080&quot;);
+    res.header(&quot;Access-Control-Allow-Methods&quot;, &quot;GET,HEAD,OPTIONS,POST,PUT&quot;);
+    res.header(&quot;Access-Control-Allow-Headers&quot;, &quot;Origin, X-Requested-With, Content-Type, Accept, Authorization&quot;);
+    if(req.method.toLowerCase() === 'options'){
+        return res.end();
+    }
+    next();})
+app.use(bodyParser.json());let secret = 'zfjg';
+app.get('/test',(req,res)=&gt;{
+    res.end({test:'test'})})
+app.post('/login',(req,res)=&gt;{
+   let {username} = req.body;
+   if(username === 'admin'){ // 如果访问的是admin 种植cookie
+        res.json({
+            code:0,
+            username:'admin',
+            token:jwt.sign({username:'admin'},secret,{
+                expiresIn:20  
+            })
+        })
+   }else{
+       res.json({
+           code:1,
+           data:'用户名不存在'
+       })
+   }});
+app.get('/validate',(req,res)=&gt;{
+    let token = req.headers.authorization;
+    jwt.verify(token,secret,(err,decode)=&gt;{ // 验证token的可靠性
+        if(err){
+            return res.json({
+                code:1,
+                data:'token失效了'
+            })
+        }else{
+            res.json({
+                username:decode.username,
+                code:0, // 延长tokne的过期时间
+                token:jwt.sign({username:'admin'},secret,{
+                    expiresIn:20
+                })
+            })
+        }
+    });});
+
+app.listen(3000);
+</code></pre></div><h3 id="_3-路由配置"><a href="#_3-路由配置" class="header-anchor">#</a> 3.路由配置</h3> <ul><li>Home.vue 首页</li> <li>Profile.vue 个人中心</li> <li>Login.vue 登录页面</li></ul> <div class="language- extra-class"><pre class="language-text"><code>export default new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home,
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile,
+      meta: { needLogin: true }, // 必须要登录才能访问
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+    },
+  ],});
+</code></pre></div><h3 id="_4-axios封装"><a href="#_4-axios封装" class="header-anchor">#</a> 4.axios封装</h3> <div class="language- extra-class"><pre class="language-text"><code>import axios from 'axios';
+
+
+class FetchData {
+  constructor() {
+    this.baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : '/'; // 请求路径 
+    this.timeout = 3000; // 设置超时时间
+  }
+
+  setInterceptor(instance) { // 设置拦截器
+    instance.interceptors.request.use(config =&gt; {
+      config.headers.Authorization = `${localStorage.getItem('token')}`;
+      return config; // 增加token
+    }, (err) =&gt; {
+      Promise.reject(err);
+    });
+
+    instance.interceptors.response.use(res =&gt; res.data, (err) =&gt; {
+      Promise.reject(err);
+    });
+  }
+
+  request(request) {
+    const instance = axios.create();
+    const config = {
+      baseURL: this.baseURL,
+      timeout: this.timeout,
+      ...request,
+    }; // 合并配置
+    this.setInterceptor(instance);
+    return instance(config);
+  }}
+
+export default new FetchData();
+</code></pre></div><h3 id="_5-测试接口"><a href="#_5-测试接口" class="header-anchor">#</a> 5.测试接口</h3> <div class="language- extra-class"><pre class="language-text"><code>export const getTest = () =&gt; fetchData.request({ url: '/test' });export const login = username =&gt; fetchData.request({
+  url: '/login',
+  method: 'POST',
+  data: {
+    username,
+  },});
+  export const validate = () =&gt; fetchData.request({ url: '/validate' });
+</code></pre></div><h3 id="_6-在vuex中发送请求"><a href="#_6-在vuex中发送请求" class="header-anchor">#</a> 6.在vuex中发送请求</h3> <div class="language- extra-class"><pre class="language-text"><code>export default new Vuex.Store({
+  state: {
+    username: '',
+  },
+  mutations: {
+    setUsername(state, username) {
+      state.username = username;
+    },
+  },
+  actions: {
+    async login({ commit }, username) {
+      const r = await login(username); // 登录成功后返回用户名信息
+      if (r.token) { // 如果有返回token说明成功
+        commit('setUsername', username); // 将用户存入state中
+        localStorage.setItem('token', r.token); // 将token存放起来
+      } else { // 否则返回失败的promise
+        return Promise.reject(r);
+      }
+    },
+  },});
+</code></pre></div><h3 id="_7-权限认证"><a href="#_7-权限认证" class="header-anchor">#</a> 7.权限认证</h3> <div class="language- extra-class"><pre class="language-text"><code>async validate({ commit }) {
+    const r = await validate();
+    if (r.code === 1) {
+        return false;
+    }
+    commit('setUsername', r.username);
+    localStorage.setItem('token', r.token); // 将token存放起来
+    return true;
+}
+</code></pre></div><p>判断用户访问权限</p> <div class="language- extra-class"><pre class="language-text"><code>router.beforeEach(async (to, from, next) =&gt; {
+  // 如果不需要校验可以设置白名单
+  const isLogin = await store.dispatch('validate');
+  if (isLogin) {
+    // 如果是登录
+    if (to.name === 'login') {
+      next('/profile');
+    } else {
+      next();
+    }
+  } else {
+    const flag = to.matched.some(item =&gt; item.meta.needLogin);
+    if (flag) {
+      next('/login');
+    } else {
+      next();
+    }
+  }
+});
+</code></pre></div> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/giserman001/blogs/edit/master/docs/vue/vue_JWT.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blogs/vue/vue_auth_manage.html" class="prev">vue权限菜单及按钮权限</a></span> <span class="next"><a href="/blogs/vue/vue_render_jsx.html">vue里render函数之JSX应用</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blogs/assets/js/app.a4bb3780.js" defer></script><script src="/blogs/assets/js/2.8d77ee90.js" defer></script><script src="/blogs/assets/js/11.907230fd.js" defer></script><script src="/blogs/assets/js/3.4e87f909.js" defer></script>
+  </body>
+</html>
