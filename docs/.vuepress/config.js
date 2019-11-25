@@ -26,14 +26,15 @@ module.exports = {
     docsDir: 'docs',
     smoothScroll: true,
     nav: [{
-      text: 'Home',
+      text: 'web开发',
       link: '/home'
     },
     {
       text: '前端框架',
       items: [
         { text: 'vue', link: '/vue/' },
-        { text: 'react', link: '/react/' }
+        { text: 'react', link: '/react/' },
+        { text: '微信小程序', link: '/miniprogram/' }
       ]
     }],
     sidebar: {
@@ -49,6 +50,9 @@ module.exports = {
       '/react/': [
         ['', '默认文档'],
         ['test', 'test标题']
+      ],
+      '/miniprogram/': [
+        ['', '微信小程序']
       ]
       // demo
       // '/knowledge/javascript/': [
