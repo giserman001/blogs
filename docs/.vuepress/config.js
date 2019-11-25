@@ -18,9 +18,9 @@ module.exports = {
   title: 'blogs',
   lastUpdated: true,
   description: 'Vuepress blog',
-  sidebarDepth: 2,
+  sidebarDepth: 1,
   themeConfig: {
-    logo: '/logo.png',
+    logo: './public/logo.png',
     repo: 'giserman001/blogs',
     editLinks: true,
     docsDir: 'docs',
@@ -43,12 +43,19 @@ module.exports = {
         ['vue_optimize', 'vue优化技巧'],
         ['vue_auth_manage', 'vue权限菜单及按钮权限'],
         ['vue_JWT', 'vue里JWT认证'],
-        ['vue_render_jsx', 'vue里render函数之JSX应用']
+        ['vue_render_jsx', 'vue里render函数之JSX应用'],
         ['vue_module_communicate', 'Vue组件间通信方式']
       ],
       '/react/': [
-        ['', 'test标题']
+        ['test', 'test标题']
       ]
+      // demo
+      // '/knowledge/javascript/': [
+      //   {
+      //     title: 'javascript',
+      //     children: getFileNames('/knowledge/javascript/')
+      //   }
+      // ]
     }
   }
 }

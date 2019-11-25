@@ -1,4 +1,3 @@
-## vue权限菜单及按钮权限
 ### 1.服务端数据
 
 Vue权限菜单需要根据后端返回的数据来实现
@@ -262,3 +261,13 @@ directives: {
   }
  }
 ```
+
+ 
+ <comment-comment/> 
+ 
+ 
+ <comment-comment/> 
+ 
+ 
+ <comment-comment/> 
+ 

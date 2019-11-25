@@ -1,4 +1,3 @@
-## Vue组件间通信方式
 ### 快速原型开发
 
 可以快速识别.vue文件封装组件插件等功能
@@ -226,3 +225,12 @@ mounted() {
 状态管理 
 
 ![vuex](https://vuex.vuejs.org/vuex.png "vuex")
+ 
+ <comment-comment/> 
+ 
+ 
+ <comment-comment/> 
+ 
+ 
+ <comment-comment/> 
+ 

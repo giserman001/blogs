@@ -1,5 +1,3 @@
-## vue优化技巧
-
 * vue预渲染解决首页白屏和SEO (npm i prerender-spa-plugin)
 
     ```
@@ -124,3 +122,13 @@
     1. 存入本地localstroage sessionstroage
     >（使用插件：npm i vue-persist）
 
+
+ 
+ <comment-comment/> 
+ 
+ 
+ <comment-comment/> 
+ 
+ 
+ <comment-comment/> 
+ 

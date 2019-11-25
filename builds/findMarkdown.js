@@ -10,7 +10,6 @@ function findMarkdown(dir, callback) {
 
       if (fileName.indexOf('.') !== 0) {
         fs.stat(innerDir, function (err, stat) {
-
           if (stat.isDirectory()) {
             findMarkdown(innerDir, callback)
           } else {
@@ -21,7 +20,6 @@ function findMarkdown(dir, callback) {
           }
         })
       }
-
     })
   })
 }

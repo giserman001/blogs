@@ -1,5 +1,3 @@
-## Vue + TS 开发应用
-
 使用vue-cli3创建项目，增加TypeScript
 ```
  (*) Babel
@@ -231,3 +229,13 @@ public updateList!: (obj: IChangeItem) => void;public save(item: IChangeItem) {
     this.close();
 }
 ```
+
+ 
+ <comment-comment/> 
+ 
+ 
+ <comment-comment/> 
+ 
+ 
+ <comment-comment/> 
+ 
