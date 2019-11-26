@@ -36,6 +36,10 @@ module.exports = {
         { text: 'react', link: '/react/' },
         { text: '微信小程序', link: '/miniprogram/' }
       ]
+    },
+    {
+      text: '工具',
+      link: '/tool/'
     }],
     sidebar: {
       '/vue/': [
@@ -53,6 +57,10 @@ module.exports = {
       ],
       '/miniprogram/': [
         ['', '微信小程序']
+      ],
+      '/tool/': [
+        ['', '默认文档'],
+        ['vue_search_form', 'element-ui二次封装form表单']
       ],
       '/': [
         ['home', 'web开发']

@@ -68,7 +68,7 @@ obj.hasOwnProperty('value'))
 ## VW解决移动端自适应
 [参考文章](https://juejin.im/entry/5aa09c3351882555602077ca)
 
-## git撤销工作区所有修改的代码(没有add和commit)
+## git撤销工作区所有修改(没有add和commit)
 ```
 git checkout .
 ```
@@ -83,7 +83,8 @@ git checkout .
 > ![截图](./images/img2.png)
 > ![截图](./images/img3.png)
 
-## 时间格式化正则（YYYY-MM-DD || YYYY/MM/DD
+## 时间格式化正则
+> YYYY-MM-DD || YYYY/MM/DD
 ```
 YYYY[(-|/|.)MM][(-|/|.)DD]
 ```
