@@ -5,14 +5,15 @@ const getFileNames = (parentFileName) => {
   const files = fs.readdirSync(`./docs${parentFileName}`)
   files.forEach((val) => {
     if ('README.md'.includes(val)) {
-      // results.push('')
+      results.push('')
     } else {
       results.push(val)
     }
   })
   return results
 }
-
+console.log(getFileNames('/article/qualityArticles/'))
+console.log(getFileNames('/article/strategy/'))
 module.exports = {
   base: '/blogs/',
   title: 'blogs',
@@ -40,6 +41,13 @@ module.exports = {
     {
       text: '工具',
       link: '/tool/'
+    },
+    {
+      text: '知识库',
+      items: [
+        { text: '攻略', link: '/article/strategy/' },
+        { text: '优质文章', link: '/article/qualityArticles/' }
+      ]
     }],
     sidebar: {
       '/vue/': [
@@ -62,16 +70,21 @@ module.exports = {
         ['', '默认文档'],
         ['vue_search_form', 'element-ui二次封装form表单']
       ],
+      '/article/strategy/': [
+        {
+          title: '攻略',
+          children: getFileNames('/article/strategy/')
+        }
+      ],
+      '/article/qualityArticles/': [
+        {
+          title: '优质文章',
+          children: getFileNames('/article/qualityArticles/')
+        }
+      ],
       '/': [
         ['home', 'web开发']
       ]
-      // demo
-      // '/knowledge/javascript/': [
-      //   {
-      //     title: 'javascript',
-      //     children: getFileNames('/knowledge/javascript/')
-      //   }
-      // ]
     }
   }
 }
