@@ -1,19 +1,17 @@
 const fs = require('fs')
 // 获取该文件夹下的所有文件名
-const getFileNames = (parentFileName) => {
+const getFileNames = (parentFileName, pre) => {
   const results = []
   const files = fs.readdirSync(`./docs${parentFileName}`)
   files.forEach((val) => {
     if ('README.md'.includes(val)) {
-      results.push('')
+      results.push((pre?`${pre}/`:''))
     } else {
-      results.push(val)
+      results.push((pre?`${pre}/${val}`:val))
     }
   })
   return results
 }
-console.log(getFileNames('/article/qualityArticles/'))
-console.log(getFileNames('/article/strategy/'))
 module.exports = {
   base: '/blogs/',
   title: 'blogs',
@@ -27,28 +25,42 @@ module.exports = {
     docsDir: 'docs',
     smoothScroll: true,
     nav: [{
-      text: 'web开发',
-      link: '/home'
-    },
-    {
-      text: '前端框架',
-      items: [
-        { text: 'vue', link: '/vue/' },
-        { text: 'react', link: '/react/' },
-        { text: '微信小程序', link: '/miniprogram/' }
-      ]
-    },
-    {
-      text: '工具',
-      link: '/tool/'
-    },
-    {
-      text: '知识库',
-      items: [
-        { text: '攻略', link: '/article/strategy/' },
-        { text: '优质文章', link: '/article/qualityArticles/' }
-      ]
-    }],
+        text: 'web开发',
+        link: '/home'
+      },
+      {
+        text: '前端框架',
+        items: [{
+            text: 'vue',
+            link: '/vue/'
+          },
+          {
+            text: 'react',
+            link: '/react/'
+          },
+          {
+            text: '微信小程序',
+            link: '/miniprogram/'
+          }
+        ]
+      },
+      {
+        text: '工具',
+        link: '/tool/'
+      },
+      {
+        text: '知识库',
+        items: [{
+            text: '攻略',
+            link: '/article/strategy/'
+          },
+          {
+            text: '优质文章',
+            link: '/article/qualityArticles/javascript/'
+          }
+        ]
+      }
+    ],
     sidebar: {
       '/vue/': [
         ['', 'web开发总结'],
@@ -70,16 +82,17 @@ module.exports = {
         ['', '默认文档'],
         ['vue_search_form', 'element-ui二次封装form表单']
       ],
-      '/article/strategy/': [
+      '/article/strategy/': [{
+        title: '攻略',
+        children: getFileNames('/article/strategy/')
+      }],
+      '/article/qualityArticles/': [{
+          title: 'js优质文章',
+          children: getFileNames('/article/qualityArticles/javascript/', 'javascript')
+        },
         {
-          title: '攻略',
-          children: getFileNames('/article/strategy/')
-        }
-      ],
-      '/article/qualityArticles/': [
-        {
-          title: '优质文章',
-          children: getFileNames('/article/qualityArticles/')
+          title: 'node优质文章',
+          children: getFileNames('/article/qualityArticles/node/', 'node')
         }
       ],
       '/': [
