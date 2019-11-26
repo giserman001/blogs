@@ -87,11 +87,11 @@ module.exports = {
         children: getFileNames('/article/strategy/')
       }],
       '/article/qualityArticles/': [{
-          title: 'js优质文章',
+          title: 'javascript',
           children: getFileNames('/article/qualityArticles/javascript/', 'javascript')
         },
         {
-          title: 'node优质文章',
+          title: 'node',
           children: getFileNames('/article/qualityArticles/node/', 'node')
         }
       ],
