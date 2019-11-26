@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.模板缺陷 | blogs</title>
+    <meta name="description" content="Vuepress blog">
+    
+    
+    <link rel="preload" href="/blogs/assets/css/0.styles.ee5e2407.css" as="style"><link rel="preload" href="/blogs/assets/js/app.d862d4e8.js" as="script"><link rel="preload" href="/blogs/assets/js/2.e1636184.js" as="script"><link rel="preload" href="/blogs/assets/js/15.e1330227.js" as="script"><link rel="preload" href="/blogs/assets/js/3.d6643e9b.js" as="script"><link rel="prefetch" href="/blogs/assets/js/10.067ad631.js"><link rel="prefetch" href="/blogs/assets/js/11.cef1e8fe.js"><link rel="prefetch" href="/blogs/assets/js/12.509f4a0b.js"><link rel="prefetch" href="/blogs/assets/js/13.9267869d.js"><link rel="prefetch" href="/blogs/assets/js/14.82174203.js"><link rel="prefetch" href="/blogs/assets/js/16.41d969ec.js"><link rel="prefetch" href="/blogs/assets/js/17.8f4be178.js"><link rel="prefetch" href="/blogs/assets/js/4.1538f5ad.js"><link rel="prefetch" href="/blogs/assets/js/5.12aec717.js"><link rel="prefetch" href="/blogs/assets/js/6.f7b4b37d.js"><link rel="prefetch" href="/blogs/assets/js/7.c13504c0.js"><link rel="prefetch" href="/blogs/assets/js/8.a95c7703.js"><link rel="prefetch" href="/blogs/assets/js/9.74a3127e.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.ee5e2407.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blogs/" class="home-link router-link-active"><img src="./public/logo.png" alt="blogs" class="logo"> <span class="site-name can-hide">blogs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blogs/home.html" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/vue/" class="nav-link router-link-active">vue</a></li><li class="dropdown-item"><!----> <a href="/blogs/react/" class="nav-link">react</a></li></ul></div></div> <a href="https://github.com/giserman001/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blogs/home.html" class="nav-link">Home</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/vue/" class="nav-link router-link-active">vue</a></li><li class="dropdown-item"><!----> <a href="/blogs/react/" class="nav-link">react</a></li></ul></div></div> <a href="https://github.com/giserman001/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/blogs/vue/" class="sidebar-link">默认文档</a></li><li><a href="/blogs/vue/vue_ts.html" class="sidebar-link">Vue + TS 开发应用</a></li><li><a href="/blogs/vue/vue_optimize.html" class="sidebar-link">vue优化技巧</a></li><li><a href="/blogs/vue/vue_auth_manage.html" class="sidebar-link">vue权限菜单及按钮权限</a></li><li><a href="/blogs/vue/vue_JWT.html" class="sidebar-link">vue里JWT认证</a></li><li><a href="/blogs/vue/vue_render_jsx.html" class="active sidebar-link">vue里render函数之JSX应用</a></li><li><a href="/blogs/vue/vue_module_communicate.html" class="sidebar-link">Vue组件间通信方式</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h4 id="_1-模板缺陷"><a href="#_1-模板缺陷" class="header-anchor">#</a> 1.模板缺陷</h4> <p>模板的最大特点是扩展难度大，不易扩展。可能会造成逻辑冗余</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;Level :type=&quot;1&quot;&gt;哈哈&lt;/Level&gt;
+&lt;Level :type=&quot;2&quot;&gt;哈哈&lt;/Level&gt;
+&lt;Level :type=&quot;3&quot;&gt;哈哈&lt;/Level&gt;
+</code></pre></div><p>Level组件需要对不同的type产生不同的标签</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+ &lt;h1 v-if=&quot;type==1&quot;&gt;
+  &lt;slot&gt;&lt;/slot&gt;
+ &lt;/h1&gt;
+ &lt;h2 v-else-if=&quot;type==2&quot;&gt;
+  &lt;slot&gt;&lt;/slot&gt;
+ &lt;/h2&gt;
+ &lt;h3 v-else-if=&quot;type==3&quot;&gt;
+  &lt;slot&gt;&lt;/slot&gt;
+ &lt;/h3&gt;
+ &lt;/template&gt;
+ &lt;script&gt;
+ export default {
+ props: {
+  type: {
+   type: Number
+  }
+ }};
+ &lt;/script&gt;
+</code></pre></div><h4 id="_2-函数式组件"><a href="#_2-函数式组件" class="header-anchor">#</a> 2.函数式组件</h4> <p>函数式组件没有模板,只允许提供render函数</p> <div class="language- extra-class"><pre class="language-text"><code>export default {
+ render(h) {
+  return h(&quot;h&quot; + this.type, {}, this.$slots.default);
+ },
+ props: {
+  type: {
+   type: Number
+  }
+ }}
+</code></pre></div><blockquote><p>复杂的逻辑变得非常简单</p></blockquote> <h4 id="_3-jsx应用"><a href="#_3-jsx应用" class="header-anchor">#</a> 3.JSX应用</h4> <p>使用jsx会让代码看起来更加简洁易于读取</p> <div class="language- extra-class"><pre class="language-text"><code>export default {
+ render(h) {
+  const tag = &quot;h&quot; + this.type;
+  return &lt;tag&gt;{this.$slots.default}&lt;/tag&gt;;
+ },
+ props: {
+  type: {
+   type: Number
+  }
+ }};
+</code></pre></div><h4 id="_4-render方法订制组件"><a href="#_4-render方法订制组件" class="header-anchor">#</a> 4.render方法订制组件</h4> <p>编写List组件可以根据用户传入的数据自动循环列表</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;List :data=&quot;data&quot;&gt;&lt;/List&gt;
+&lt;script&gt;
+import List from &quot;./components/List&quot;;
+export default {
+ data() {
+  return { data: [&quot;苹果&quot;, &quot;香蕉&quot;, &quot;橘子&quot;] };
+ },
+ components: {
+  List
+ }};&lt;/script&gt;
+
+&lt;!-- List组件渲染列表 --&gt;
+&lt;template&gt;
+ &lt;div class=&quot;list&quot;&gt;
+  &lt;div v-for=&quot;(item,index) in data&quot; :key=&quot;index&quot;&gt;
+   &lt;li&gt;{{item}}&lt;/li&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/template&gt;
+ &lt;script&gt;
+ export default {
+ props: {
+  data: Array,
+  default: () =&gt; []
+ }};&lt;/script&gt;
+</code></pre></div><p>通过render方法来订制组件,在父组件中传入render方法</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;List :data=&quot;data&quot; :render=&quot;render&quot;&gt;&lt;/List&gt;
+render(h, name) {
+   return &lt;span&gt;{name}&lt;/span&gt;;
+ }
+</code></pre></div><p>我们需要createElement方法，就会想到可以编写个函数组件，将createElement方法传递出来</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+ &lt;div class=&quot;list&quot;&gt;
+  &lt;div v-for=&quot;(item,index) in data&quot; :key=&quot;index&quot;&gt;
+   &lt;li v-if=&quot;!render&quot;&gt;{{item}}&lt;/li&gt;
+   &lt;!-- 将render方法传到函数组件中，将渲染项传入到组件中，在内部回调这个render方法 --&gt;
+   &lt;ListItem v-else :item=&quot;item&quot; :render=&quot;render&quot;&gt;&lt;/ListItem&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/template&gt;
+ &lt;script&gt;
+ import ListItem from &quot;./ListItem&quot;;
+ export default {
+ components: {
+  ListItem
+ },
+ props: {
+  render: {
+   type: Function
+  },
+  data: Array,
+  default: () =&gt; []
+ }};
+ &lt;/script&gt;
+</code></pre></div><p>ListItem.vue调用最外层的render方法，将createElement和当前项传递出来</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script&gt;
+export default {
+ props: {
+  render: {
+   type: Function
+  },
+  item: {}
+ },
+ render(h) {
+  return this.render(h, this.item);
+ }};
+ &lt;/script&gt;
+</code></pre></div><h4 id="_5-scope-slot"><a href="#_5-scope-slot" class="header-anchor">#</a> 5.scope-slot</h4> <p>使用v-slot 将内部值传即可</p> <div class="language- extra-class"><pre class="language-text"><code>
+&lt;List :arr=&quot;arr&quot;&gt;
+    &lt;template v-slot=&quot;{item}&quot;&gt;
+        {{item}}
+    &lt;/template&gt;
+ &lt;/List&gt;
+ 
+&lt;div v-for=&quot;(item,key) in arr&quot; :key=&quot;key&quot;&gt;
+    &lt;slot :item=&quot;item&quot;&gt;&lt;/slot&gt;
+ &lt;/div&gt;
+</code></pre></div><h4 id="_5-编写可编辑表格"><a href="#_5-编写可编辑表格" class="header-anchor">#</a> 5.编写可编辑表格</h4> <p>基于iview使用jsx扩展成可编辑的表格</p> <div class="language- extra-class"><pre class="language-text"><code>
+&lt;template&gt;&lt;div&gt;
+  &lt;Table :columns=&quot;columns&quot; :data=&quot;data&quot;&gt;&lt;/Table&gt;&lt;/div&gt;
+  &lt;/template&gt;
+  &lt;script&gt;
+  import Vue from 'vue';
+  export default {
+  methods:{
+    render(h,{column,index,row}){
+      let value = row[column.key];
+      return &lt;div on-click={(e)=&gt;this.changeIndex(e,index)} &gt;
+      {this.index === index? 
+        &lt;i-input type=&quot;text&quot; value={value} on-input={(value)=&gt;{
+          this.handleChange(value,column,row)
+        }} onOn-enter={()=&gt;this.enter(row,index)}/&gt;:
+        &lt;span&gt;{value}&lt;/span&gt;
+      }
+      &lt;/div&gt;
+    },
+    enter(row,index){
+      this.data.splice(index,1,row);
+      this.index = -1;
+    },
+    handleChange(value,column,row){
+      row[column['key']]= value;
+    },
+    changeIndex(e,index){
+      this.index = index;
+      this.$nextTick(()=&gt;{
+        e.currentTarget.getElementsByTagName(&quot;input&quot;)[0].focus()
+      })
+    }
+  },
+  data() {
+    return {
+      index:-1,
+      columns: [
+        {
+          title: 'Name',
+          key: 'name',
+          render:this.render
+        },
+        {
+          title: 'Age',
+          key: 'age',
+        },
+        {
+          title: 'Address',
+          key: 'address',
+        },
+      ],
+      data: [
+        {
+          name: 'John Brown',
+          age: 18,
+          address: 'New York No. 1 Lake Park',
+          date: '2016-10-03',
+        },
+        {
+          name: 'Jim Green',
+          age: 24,
+          address: 'London No. 1 Lake Park',
+          date: '2016-10-01',
+        },
+        {
+          name: 'Joe Black',
+          age: 30,
+          address: 'Sydney No. 1 Lake Park',
+          date: '2016-10-02',
+        },
+        {
+          name: 'Jon Snow',
+          age: 26,
+          address: 'Ottawa No. 2 Lake Park',
+          date: '2016-10-04',
+        },
+      ],
+    };
+  },};
+  &lt;/script&gt;
+</code></pre></div> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/giserman001/blogs/edit/master/docs/vue/vue_render_jsx.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blogs/vue/vue_JWT.html" class="prev">vue里JWT认证</a></span> <span class="next"><a href="/blogs/vue/vue_module_communicate.html">Vue组件间通信方式</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blogs/assets/js/app.d862d4e8.js" defer></script><script src="/blogs/assets/js/2.e1636184.js" defer></script><script src="/blogs/assets/js/15.e1330227.js" defer></script><script src="/blogs/assets/js/3.d6643e9b.js" defer></script>
+  </body>
+</html>
