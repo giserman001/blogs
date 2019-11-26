@@ -18,9 +18,9 @@ module.exports = {
   title: 'blogs',
   lastUpdated: true,
   description: 'Vuepress blog',
-  sidebarDepth: 1,
   themeConfig: {
-    logo: './logo.png',
+    sidebarDepth: 1,
+    logo: './logo.jpg',
     repo: 'giserman001/blogs',
     editLinks: true,
     docsDir: 'docs',
@@ -53,6 +53,9 @@ module.exports = {
       ],
       '/miniprogram/': [
         ['', '微信小程序']
+      ],
+      '/': [
+        ['home', 'web开发']
       ]
       // demo
       // '/knowledge/javascript/': [

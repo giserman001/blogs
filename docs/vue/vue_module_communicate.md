@@ -225,12 +225,3 @@ mounted() {
 状态管理 
 
 ![vuex](https://vuex.vuejs.org/vuex.png "vuex")
- 
- <comment-comment/> 
- 
- 
- <comment-comment/> 
- 
- 
- <comment-comment/> 
- 
