@@ -20,25 +20,26 @@ module.exports = {
   description: 'Vuepress blog',
   sidebarDepth: 1,
   themeConfig: {
-    logo: './public/logo.png',
+    logo: './logo.png',
     repo: 'giserman001/blogs',
     editLinks: true,
     docsDir: 'docs',
     smoothScroll: true,
     nav: [{
-      text: 'Home',
+      text: 'web开发',
       link: '/home'
     },
     {
       text: '前端框架',
       items: [
         { text: 'vue', link: '/vue/' },
-        { text: 'react', link: '/react/' }
+        { text: 'react', link: '/react/' },
+        { text: '微信小程序', link: '/miniprogram/' }
       ]
     }],
     sidebar: {
       '/vue/': [
-        ['', '默认文档'],
+        ['', 'web开发总结'],
         ['vue_ts', 'Vue + TS 开发应用'],
         ['vue_optimize', 'vue优化技巧'],
         ['vue_auth_manage', 'vue权限菜单及按钮权限'],
@@ -47,7 +48,11 @@ module.exports = {
         ['vue_module_communicate', 'Vue组件间通信方式']
       ],
       '/react/': [
+        ['', '默认文档'],
         ['test', 'test标题']
+      ],
+      '/miniprogram/': [
+        ['', '微信小程序']
       ]
       // demo
       // '/knowledge/javascript/': [
