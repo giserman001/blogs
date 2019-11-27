@@ -14,7 +14,7 @@ const getFileNames = (parentFileName, pre) => {
 }
 module.exports = {
   base: '/blogs/',
-  title: 'blogs',
+  title: '细节决定成败',
   lastUpdated: true,
   description: 'Vuepress blog',
   themeConfig: {
