@@ -10,7 +10,7 @@ export default {
     return {};
   },
   mounted() {
-    console.log(document.title, 'title')
+    console.log(location, 'location.pathname')
     let body = document.querySelector(".gitalk-container");
     let script = document.createElement("script");
     script.src = "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js";
@@ -25,8 +25,7 @@ export default {
         admin: ["giserman001"],
         // id 用于当前页面的唯一标识，一般来讲 pathname 足够了，
         // 但是如果你的 pathname 超过 50 个字符，GitHub 将不会成功创建 issue，此情况可以考虑给每个页面生成 hash 值的方法.
-        // id: location.pathname,
-        id: document.title.replace(/\s\|\s细节决定成败|《|》/g, ""),
+        id: location.pathname,
         distractionFreeMode: false
       };
       const gitalk = new Gitalk(commentConfig);
