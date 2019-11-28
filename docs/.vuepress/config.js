@@ -25,7 +25,7 @@ module.exports = {
     docsDir: 'docs',
     smoothScroll: true,
     nav: [{
-        text: 'web开发',
+        text: 'web开发记录',
         link: '/home'
       },
       {
@@ -96,7 +96,7 @@ module.exports = {
         }
       ],
       '/': [
-        ['home', 'web开发']
+        ['home', 'web开发记录']
       ]
     }
   }
