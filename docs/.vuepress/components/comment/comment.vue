@@ -24,7 +24,8 @@ export default {
         admin: ["giserman001"],
         // id 用于当前页面的唯一标识，一般来讲 pathname 足够了，
         // 但是如果你的 pathname 超过 50 个字符，GitHub 将不会成功创建 issue，此情况可以考虑给每个页面生成 hash 值的方法.
-        id: location.pathname,
+        // id: location.pathname,
+        id: document.title.replace(/\s\|\s细节决定成败|《|》/g, ""),
         distractionFreeMode: false
       };
       const gitalk = new Gitalk(commentConfig);
