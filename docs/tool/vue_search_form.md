@@ -1,6 +1,6 @@
-## 场景：利用element-ui开发后台管理系统时,列表页面头部一般都有一个搜索的form,基本上每个列表页面都有，为了降低代码的重复率，那我们可以封装一个search-form组件
+### 场景：利用element-ui开发后台管理系统时,列表页面头部一般都有一个搜索的form,基本上每个列表页面都有，为了降低代码的重复率，那我们可以封装一个search-form组件
 
-### search-form组件
+#### search-form组件
 
 在components 中新建一个Form文件夹，在新建一个searchForm 组件用来放代码
 ```sh
