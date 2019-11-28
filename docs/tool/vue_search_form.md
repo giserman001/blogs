@@ -3,7 +3,7 @@
 ### search-form组件
 
 在components 中新建一个Form文件夹，在新建一个searchForm 组件用来放代码
-```
+```sh
 <template>
   <el-form
     :inline="true"
@@ -132,11 +132,11 @@ export default {
 </style>
 ```
 组件中调用
-```
+```sh
 <searchForm :formConfig="formConfig" :value="form"></searchForm>
 ```
 data里定义
-```
+```sh
 form: {
   time: "2019-10-31" // 默认值设置
 },
