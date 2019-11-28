@@ -63,7 +63,7 @@ module.exports = {
     ],
     sidebar: {
       '/vue/': [
-        ['', 'web开发总结'],
+        ['', 'element分页组件记录'],
         ['vue_ts', 'Vue + TS 开发应用'],
         ['vue_optimize', 'vue优化技巧'],
         ['vue_auth_manage', 'vue权限菜单及按钮权限'],
