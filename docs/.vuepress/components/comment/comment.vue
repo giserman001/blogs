@@ -10,6 +10,7 @@ export default {
     return {};
   },
   mounted() {
+    console.log(document.title, 'title')
     let body = document.querySelector(".gitalk-container");
     let script = document.createElement("script");
     script.src = "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js";
