@@ -79,7 +79,7 @@ module.exports = {
         ['', '微信小程序']
       ],
       '/tool/': [
-        ['', '默认文档'],
+        ['', '数字翻滚封装'],
         ['vue_search_form', 'element-ui二次封装form表单']
       ],
       '/article/strategy/': [{
