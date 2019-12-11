@@ -80,7 +80,8 @@ module.exports = {
       ],
       '/tool/': [
         ['', '数字翻滚封装'],
-        ['vue_search_form', 'element-ui二次封装form表单']
+        ['vue_search_form', 'element-ui二次封装form表单'],
+        ['card_overturn', 'css3卡片翻转']
       ],
       '/article/strategy/': [{
         title: '攻略',
