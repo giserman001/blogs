@@ -1,5 +1,5 @@
 ---
-tags: 工具
+sidebarDepth: 1
 ---
 
 # Vuepress搭建静态博客全攻略
