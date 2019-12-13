@@ -1,5 +1,5 @@
 使用vue-cli3创建项目，增加TypeScript
-```
+```js
  (*) Babel
  (*) TypeScript
  ( ) Progressive Web App (PWA) Support
@@ -16,7 +16,7 @@
 1. shims-tsx.d.ts，允许你以.tsx结尾的文件，在Vue项目中编写jsx代码
 2. shims-vue.d.ts TypeScript识别.vue 文件
 ### 一.更新ts路由文件
-```
+```js
 import Vue from 'vue';
 import Router from 'vue-router';
 import Todo from './views/Todo.vue';
@@ -37,7 +37,7 @@ Vue.use(Router);export default new Router({
   ],});
 ```
 ### 二.在components下新增Todo.vue
-```
+```sh
 <template>
   <div>
     <ul>
@@ -68,7 +68,7 @@ export default class Todo extends Vue {
 ```
 ### 三.JSX编写todo-item组件
 #### 属性传递(@Prop)
-```
+```js
 import { Component, Prop, Vue } from 'vue-property-decorator';
 interface Item {
   text: string;
@@ -87,19 +87,19 @@ export default class TodoItem extends Vue {
   }
 }
 ```
-```
+```sh
 // 在Todo中引入TodoItem组件
 <li v-for="(item,index) in lists" :key="index">
     <TodoItem :item="item" :index="index" :currentIndex="currentIndex"></TodoItem></li>
 ```
 ### 四.引入elementUI
-```
+```js
 // 在main.js中引入elementUI
 import ElementUI from 'element-ui';import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 ```
 ### 五.使用elementUI
-```
+```js
 public editingContent = ''; // 编辑的值
   public handleChange(value: string) {
     this.editingContent = value;
@@ -122,7 +122,7 @@ public editingContent = ''; // 编辑的值
 ```
 ### 六.组件间通信(@Emit)
 #### 实现编辑功能
-```
+```sh
 <TodoItem
   v-for="(item,index) in lists"
   :key="index"
@@ -136,13 +136,13 @@ public editingContent = ''; // 编辑的值
 ```
 
 子组件触发父组件的方法
-```
+```js
 public edit() {
     this.$emit('edit', this.index);}<el-button type='primary' size='small' icon='el-icon-edit' on-click={this.edit}></el-button>
 ```
 
 可以使用装饰器
-```
+```js
 import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 @Emit('edit') // 如果发射的事件名和方法名相同，则可以省略
 public edit() {
@@ -150,7 +150,7 @@ public edit() {
 }
 ```
 #### 实现保存功能
-```
+```sh
 <TodoItem
    v-for="(item,index) in lists"
   :key="index"
@@ -163,7 +163,7 @@ public edit() {
 ```
 
 将save方法传递给子组件
-```
+```js
 public save({index,content}:{index:number,content:string}){
     this.lists[index].text = content;
     this.close();
@@ -174,7 +174,7 @@ public close() {
 ```
 
 子组件调用save方法
-```
+```js
 @Emit()
 public save() {
   return {
@@ -187,7 +187,7 @@ public save() {
 ### 七.数据的监控(@Watch)
 
 这里我们可以监控索引的变化
-```
+```js
 import { Component, Prop, Vue, Emit, Watch } from 'vue-property-decorator';
 @Watch('currentIndex')
 public changeIndex() { // 索引变化讲内容赋予给当前编辑的内容
@@ -195,7 +195,7 @@ public changeIndex() { // 索引变化讲内容赋予给当前编辑的内容
 }
 ```
 ### 八.将数据迁移至vuex
-```
+```js
 import Vue from 'vue';import Vuex from 'vuex';
 Vue.use(Vuex);export default new Vuex.Store({
   state: {
@@ -217,10 +217,10 @@ Vue.use(Vuex);export default new Vuex.Store({
   },});
 ```
 #### 安装vuex-class
-```
+```js
 npm i vuex-class
 ```
-```
+```js
 import { State, Mutation } from "vuex-class";
 @State("lists") public lists!: Item[];
 @Mutation("updateList")

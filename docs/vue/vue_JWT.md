@@ -1,11 +1,11 @@
 ### 使用vue-cli3.0创建vue项目
-```
+```js
 vue create <project-name>
 ```
 
 可以通过vue ui创建项目／管理项目依赖 vue ui
 ### 配置vue-config.js
-```
+```js
 let path = require('path')
 module.exports = {
     publicPath:process.env.NODE_ENV === 'production'? '/vue-project':'/',
@@ -53,13 +53,13 @@ module.exports = {
 
 * Header 头部
 * 
-```
+```js
 { "alg": "HS256", "typ": "JWT"}   
 // algorithm => HMAC SHA256// type => JWT
 ```
 
 * Payload 负载、载荷
-```
+```js
 JWT 规定了7个官方字段
 iss (issuer)：签发人
 exp (expiration time)：过期时间
@@ -71,7 +71,7 @@ jti (JWT ID)：编号
 ```
 
 * Signature 签名
-```
+```js
 HMACSHA256(
   base64UrlEncode(header) + "." +
   base64UrlEncode(payload),
@@ -82,16 +82,16 @@ JWT 作为一个令牌（token），有些场合可能会放到 URL（比如 api
 #### 使用方式
 
 HTTP 请求的头信息Authorization字段里面
-```
+```js
 Authorization: Bearer <token>
 ```
 
 通过url传输
-```
+```js
 http://www.xxx.com/pwa?token=xxxxx
 ```
 ### 2.服务端返回TOKEN
-```
+```js
 let express = require('express');let app = express();let bodyParser = require('body-parser');let jwt = require('jsonwebtoken');
 app.use((req,res,next)=>{
     res.header("Access-Control-Allow-Origin", "http://localhost:8080");
@@ -146,7 +146,7 @@ app.listen(3000);
 * Home.vue 首页
 * Profile.vue 个人中心
 * Login.vue 登录页面
-```
+```js
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
@@ -170,10 +170,8 @@ export default new Router({
   ],});
 ```
 ### 4.axios封装
-```
+```js
 import axios from 'axios';
-
-
 class FetchData {
   constructor() {
     this.baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : '/'; // 请求路径 
@@ -207,7 +205,7 @@ class FetchData {
 export default new FetchData();
 ```
 ### 5.测试接口
-```
+```js
 export const getTest = () => fetchData.request({ url: '/test' });export const login = username => fetchData.request({
   url: '/login',
   method: 'POST',
@@ -217,7 +215,7 @@ export const getTest = () => fetchData.request({ url: '/test' });export const lo
   export const validate = () => fetchData.request({ url: '/validate' });
 ```
 ### 6.在vuex中发送请求
-```
+```js
 export default new Vuex.Store({
   state: {
     username: '',
@@ -240,7 +238,7 @@ export default new Vuex.Store({
   },});
 ```
 ### 7.权限认证
-```
+```js
 async validate({ commit }) {
     const r = await validate();
     if (r.code === 1) {
@@ -254,7 +252,7 @@ async validate({ commit }) {
 
 判断用户访问权限
 
-```
+```js
 router.beforeEach(async (to, from, next) => {
   // 如果不需要校验可以设置白名单
   const isLogin = await store.dispatch('validate');

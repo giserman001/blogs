@@ -1,19 +1,19 @@
 ### 1.服务端数据
 
 Vue权限菜单需要根据后端返回的数据来实现
-```
+```js
 [
-    {pid:-1,name:'购物车',id:1,auth:'cart'},
-    {pid:1,name:'购物车列表',id:4,auth:'cart-list'},
-    {pid:4,name:'彩票',id:5,auth:'lottery'},
-    {pid:4,name:'商品',id:6,auth:'product'},
-    {pid:-1,name:'商店',id:2,auth:'shop'},
-    {pid:-1,name:'个人中心',id:3,auth:'store'},
+  {pid:-1,name:'购物车',id:1,auth:'cart'},
+  {pid:1,name:'购物车列表',id:4,auth:'cart-list'},
+  {pid:4,name:'彩票',id:5,auth:'lottery'},
+  {pid:4,name:'商品',id:6,auth:'product'},
+  {pid:-1,name:'商店',id:2,auth:'shop'},
+  {pid:-1,name:'个人中心',id:3,auth:'store'},
 ]
 ```
 
 通过express返回权限列表
-```
+```js
 const express = require('express');
 const app = express();
 app.all('*', (req, res, next) => {
@@ -39,12 +39,12 @@ app.listen(3000);
 ### 2.静态菜单
 
 使用element-ui构建静态菜单
-```
+```js
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 ```
-```
+```js
 <el-menu default-active="2" class="el-menu-vertical-demo">
     <el-submenu index="1">
         <template slot="title">导航一</template>
@@ -67,9 +67,8 @@ Vue.use(ElementUI);
 ```
 
 路由配置
-```
+```js
 import Vue from 'vue'import Router from 'vue-router'import Home from './views/Home.vue'
-
 Vue.use(Router)export const authRoutes = [ // 权限路由
   {
     path: '/cart',
@@ -114,7 +113,7 @@ Vue.use(Router)export const authRoutes = [ // 权限路由
 ### 3.获取权限
 
 根据后端返回的数据，格式化树结构，并提取用户权限
-```
+```js
 // 默认设置没有获取过权限export default new Vuex.Store({
   state: {
     hasPermission:false
@@ -127,7 +126,7 @@ Vue.use(Router)export const authRoutes = [ // 权限路由
 ```
 
 在路由跳转前看下是否获取过权限，如果没有获取过，就获取权限存入vuex中
-```
+```js
 router.beforeEach(async (to,from,next)=>{
   if(!store.state.hasPermission){
     // 获取最新路由列表
@@ -139,7 +138,7 @@ router.beforeEach(async (to,from,next)=>{
   }})
 ```
 ### 4.获取相关需要数据
-```
+```js
 const getMenListAndAuth = (menuList)=>{
   let menu = [];
   let sourceMap = {};
@@ -163,7 +162,7 @@ async getRouteList({dispatch,commit}){
 }
 ```
 ### 5.找到需要添加的路由
-```
+```js
 import {authRoutes} from './router'const getRoutes = auth => {
   const filter = (authRoutes)=>{
     return authRoutes.filter(route=>{
@@ -192,7 +191,7 @@ async getRouteList({ dispatch, commit }) {
 ### 6.递归渲染菜单
 
 渲染Menu组件提取公共部分
-```
+```sh
 <template>
  <div>
   <el-menu>
@@ -209,7 +208,7 @@ async getRouteList({ dispatch, commit }) {
 ```
 
 编写递归组件
-```
+```sh
 <template>
     <el-submenu :index="menu.auth">
          <template slot="title">{{menu.name}}</template>
@@ -231,7 +230,7 @@ export default {
 </script>
 ```
 ### 7.权限按钮控制
-```
+```js
 state: {
     hasPermission: false,
     menu: [], // 菜单权限
@@ -242,13 +241,13 @@ state: {
 ```
 
 查看当前按钮是否有权限
-```
+```sh
 <el-button v-has="'edit'">编辑</el-button>
 <el-button v-has="'add'">添加</el-button>
 ```
 
 自定义指令的使用
-```
+```js
 directives: {
   has: {
    inserted(el, bindings, vnode) {

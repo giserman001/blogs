@@ -3,7 +3,7 @@ sidebarDepth: 2
 ---
 
 ## 浏览器滚动条样式修改（兼容IE）
-```
+```css
 滚动条样式修改（谷歌等浏览器）
 /* 公共的滚动条的样式 */
 .scrollBar::-webkit-scrollbar{
@@ -36,7 +36,7 @@ IE下滚动条样式
 }
 ```
 ## 三角形样式
-```
+```css
 div {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -54,7 +54,7 @@ div {
 }
 ```
 ## 渐变色兼容写法（iE）
-```
+```css
 div {
   background-image: -webkit-gradient(linear, 0 50%, 100% 50%, from(rgba(11, 145, 236, 1)), to(rgba(95, 226, 255, 1)));
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#0b91ec, endColorstr=#5fe2ff);
@@ -62,14 +62,14 @@ div {
 }
 ```
 ## 判断对象中是否有key
-```
+```js
 obj.hasOwnProperty('value'))
 ```
 ## VW解决移动端自适应
 [参考文章](https://juejin.im/entry/5aa09c3351882555602077ca)
 
 ## git撤销工作区所有修改(没有add和commit)
-```
+```js
 git checkout .
 ```
 ## git使用遇到的问题
@@ -85,6 +85,33 @@ git checkout .
 
 ## 时间格式化正则
 > YYYY-MM-DD || YYYY/MM/DD
-```
+```js
 YYYY[(-|/|.)MM][(-|/|.)DD]
+```
+## moment常用几个方法
+```js
+// 判断哪个日期在前
+moment('2016-05-04').isBefore('2016-05-16')
+// 比如指定日期加30天
+moment("2019-02-01").add(30,"days").format("YYYY-MM-DD");
+// 指定日期减6天
+moment().subtract(6, "days").format("YYYY-MM-DD")
+// 两个日期相差天数
+moment("2019-02-01").diff(moment("2019-01-01"),'days');
+
+
+// 本周 周日(开始) - 周六(结束)
+let start = moment().startOf('week').format('YYYY-MM-DD');
+let end = moment().endOf('week').format('YYYY-MM-DD');
+// 本周 周一 - 周日
+// 从周一开始
+moment().startOf('week').add(1, 'day').format('YYYY-MM-DD');
+// 从周日结束
+moment().endOf('week').add(1, 'day').format('YYYY-MM-DD');
+// 本月(开始-结束)
+let start = moment().startOf('month').format('YYYY-MM-DD');
+let end = moment().endOf('month').format('YYYY-MM-DD');
+// 本年(开始-结束)
+let start = moment().startOf('year').format('YYYY-MM-DD');
+let end = moment().endOf('year').format('YYYY-MM-DD');
 ```

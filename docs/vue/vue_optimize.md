@@ -1,11 +1,11 @@
 * vue预渲染解决首页白屏和SEO (npm i prerender-spa-plugin)
 
-    ```
+    ```js
     npm install prerender-spa-plugin
     ```
     缺陷数据不够动态，可以使用ssr服务端渲染
 
-    ```
+    ```js
     const PrerenderSPAPlugin = require('prerender-spa-plugin');
     const path = require('path');
     module.exports = {
@@ -24,7 +24,7 @@
 
     配置webpack插件 vue-skeleton-webpack-plugin
     单页骨架屏幕
-    ```
+    ```js
     import Vue from 'vue';
     import Skeleton from './Skeleton.vue';
     export default new Vue({
@@ -45,7 +45,7 @@
     ```
     带路由（多页）的骨架屏，编写skeleton.js文件
 
-    ```
+    ```js
     import Vue from 'vue';
     import Skeleton1 from './Skeleton1';
     import Skeleton2 from './Skeleton2';
@@ -62,7 +62,7 @@
         `});
     ```
 
-    ```
+    ```js
     new SkeletonWebpackPlugin({
         webpackConfig: {
             entry: {

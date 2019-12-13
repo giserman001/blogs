@@ -1,14 +1,14 @@
 #### 1.模板缺陷
 
 模板的最大特点是扩展难度大，不易扩展。可能会造成逻辑冗余
-```
+```sh
 <Level :type="1">哈哈</Level>
 <Level :type="2">哈哈</Level>
 <Level :type="3">哈哈</Level>
 ```
 
 Level组件需要对不同的type产生不同的标签
-```
+```sh
 <template>
  <h1 v-if="type==1">
   <slot></slot>
@@ -32,7 +32,7 @@ Level组件需要对不同的type产生不同的标签
 #### 2.函数式组件
 
 函数式组件没有模板,只允许提供render函数
-```
+```js
 export default {
  render(h) {
   return h("h" + this.type, {}, this.$slots.default);
@@ -48,7 +48,7 @@ export default {
 #### 3.JSX应用
 
 使用jsx会让代码看起来更加简洁易于读取
-```
+```js
 export default {
  render(h) {
   const tag = "h" + this.type;
@@ -63,7 +63,7 @@ export default {
 #### 4.render方法订制组件
 
 编写List组件可以根据用户传入的数据自动循环列表
-```
+```sh
 <List :data="data"></List>
 <script>
 import List from "./components/List";
@@ -92,7 +92,7 @@ export default {
 ```
 
 通过render方法来订制组件,在父组件中传入render方法
-```
+```sh
 <List :data="data" :render="render"></List>
 render(h, name) {
    return <span>{name}</span>;
@@ -100,7 +100,7 @@ render(h, name) {
 ```
 
 我们需要createElement方法，就会想到可以编写个函数组件，将createElement方法传递出来
-```
+```sh
 <template>
  <div class="list">
   <div v-for="(item,index) in data" :key="index">
@@ -127,7 +127,7 @@ render(h, name) {
 ```
 
 ListItem.vue调用最外层的render方法，将createElement和当前项传递出来
-```
+```js
 <script>
 export default {
  props: {
@@ -144,14 +144,12 @@ export default {
 #### 5.scope-slot
 
 使用v-slot 将内部值传即可
-```
-
+```sh
 <List :arr="arr">
     <template v-slot="{item}">
         {{item}}
     </template>
  </List>
- 
 <div v-for="(item,key) in arr" :key="key">
     <slot :item="item"></slot>
  </div>
@@ -159,8 +157,7 @@ export default {
 #### 5.编写可编辑表格
 
 基于iview使用jsx扩展成可编辑的表格
-```
-
+```sj
 <template><div>
   <Table :columns="columns" :data="data"></Table></div>
   </template>
