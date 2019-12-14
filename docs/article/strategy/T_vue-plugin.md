@@ -1,5 +1,5 @@
 # vue插件总结——总有一款你能用上的插件
-1. []()
+> 转载知乎
 ## UI组件
 1. [element](https://github.com/ElemeFE/element) - 饿了么出品的Vue2的web UI工具套件
 2. [mint-ui](https://github.com/ElemeFE/mint-ui) - Vue 2的移动UI元素
@@ -260,6 +260,71 @@
 10. [vue-blog](https://github.com/surmon-china/surmon.me) - 使用Vue2.0 和Vuex的vue-blog
 11. [vue-dashing-js](https://github.com/thelinuxlich/vue-dashing-js) - nuvo-dashing-js的fork
 12. [rss-reader](https://github.com/hello-efficiency-inc/raven-reader) - 简单的rss阅读器
+
+
+## Demo示例
+1. [eleme](https://github.com/liangxiaojuan/eleme) - 高仿饿了么app商家详情
+2. [NeteaseCloudWebApp](https://github.com/javaSwing/NeteaseCloudWebApp) - 高仿网易云音乐的webapp
+3. [vue-zhihu-daily](https://github.com/hilongjw/vue-zhihu-daily) - 知乎日报 with Vuejs
+4. [Vue-cnodejs](https://github.com/shinygang/Vue-cnodejs) - 基于vue重写Cnodejs.org的webapp
+5. [vue2-demo](https://github.com/lzxb/vue2-demo) - 从零构建vue2 + vue-router + vuex 开发环境
+6. [vue-wechat](https://github.com/useryangtao/vue-wechat) - vue.js开发微信app界面
+7. [vue-music](https://github.com/Sioxas/vue-music) - Vue 音乐搜索播放
+8. [maizuo](https://github.com/zhengguorong/maizuo) - vue/vuex/redux仿卖座网
+9. [vue-demo](https://github.com/kenberkeley/vue-demo) - vue简易留言板
+10. [spa-starter-kit](https://github.com/codecasts/spa-starter-kit) - 单页应用启动套件
+11. [zhihudaily-vue](https://github.com/yatessss/zhihudaily-vue) - 知乎日报web版
+12. [douban](https://github.com/ericjjj/douban) - 模仿豆瓣前端
+13. [vue-Meizi](https://github.com/liangxiaojuan/vue-Meizi) - vue最新实战项目
+14. [vue-demo-kugou](https://github.com/lavyun/vue-demo-kugou) - vuejs仿写酷狗音乐webapp
+15. [vue2.0-taopiaopiao](https://github.com/canfoo/vue2.0-taopiaopiao) - vue2.0与express构建淘票票页面
+16. [node-vue-server-webpack](https://github.com/yjj5855/node-vue-server-webpack) - Node.js+Vue.js+webpack快速开发框架
+17. [VueDemo_Sell_Eleme](https://github.com/SimonZhangITer/VueDemo_Sell_Eleme) - Vue2高仿饿了么外卖平台
+18. [vue-leancloud-blog](https://github.com/jiangjiu/vue-leancloud-blog) - 一个前后端完全分离的单页应用
+19. [vue-fis3](https://github.com/okoala/vue-fis3) - 流行开源工具集成demo
+20. [mi-by-vue](https://github.com/wendaosanshou/mi-by-vue) - VueJS仿小米官网
+21. [vue-demo-maizuo](https://github.com/ChuckCZC/vue-demo-maizuo) - 使用Vue2全家桶仿制卖座电影
+22. [vue2.x-douban](https://github.com/superman66/vue2.x-douban) - Vue2实现简易豆瓣电影webApp
+23. [vue-adminLte-vue-router](https://github.com/liujians/vue-adminLte-vue-router) - vue和adminLte整合应用
+24. [vue-zhihudaily](https://github.com/iHaPBoy/vue-zhihudaily) - 知乎日报 Web 版本
+25. [Zhihu-Daily-Vue.js](https://github.com/pomelo-chuan/Zhihu-Daily-Vue.js) - Vuejs单页网页应用
+26. [vue-axios-github](https://github.com/superman66/vue-axios-github) - 登录拦截登出功能
+27. [vue2.x-Cnode](https://github.com/vincentSea/vue2.x-Cnode) - 基于vue全家桶的Cnode社区
+28. [hello-vue-django](https://github.com/rokups/hello-vue-django) - 使用带有Django的vuejs的样板项目
+29. [websocket_chat](https://github.com/secreter/websocket_chat) - 基于vue和websocket的多人在线聊天室
+30. [x-blog](https://github.com/CommanderXL/x-blog) - 开源的个人blog项目
+31. [vue-cnode](https://github.com/wszgxa/vue-cnode) - vue单页应用demo
+32. [vue-express-mongodb](https://github.com/xrr2016/vue-express-mongodb) - 简单的前后端分离案例
+33. [photoShare](https://github.com/beidan/photoShare) - 基于图片分享的社交平台
+34. [notepad](https://github.com/lin-xin/notepad) - 本地存储的记事本
+35. [vue-zhihudaily-2.0](https://github.com/cs1707/vue-zhihudaily-2.0) - 使用Vue2.0+vue-router+vuex创建的zhihudaily
+36. [vueBlog](https://github.com/elva2596/vueBlog) - 前后端分离博客
+37. [Zhihu_Daily](https://github.com/littlewin-wang/Zhihu_Daily) - 基于Vue和Nodejs的Web单页应用
+38. [vue-ruby-china](https://github.com/hql123/vue-ruby-china) - VueJS框架搭建的rubychina平台
+39. [vue-koa-demo](https://github.com/Molunerfinn/vue-koa-demo) - 使用Vue2和Koa1的全栈demo
+40. [life-app-vue](https://github.com/shaqihe/life-app-vue) - 使用vue2完成多功能集合到小webapp
+41. [vue-trip](https://github.com/wenye123/vue-trip) - vue2做的出行webapp
+42. [github-explorer](https://github.com/SidKwok/github-explorer) - 寻找最有趣的GitHub库
+43. [vue-ssr-boilerplate](https://github.com/albertchan/vue-ssr-boilerplate) - 精简版的ofvue-hackernews-2
+44. [vue-bushishiren](https://github.com/nswbmw/vue-bushishiren) - 不是诗人应用
+45. [houtai](https://github.com/WebCodeFarmer/houtai) - 基于vue和Element的后台管理系统
+46. [ios7-vue](https://github.com/QRL909109/ios7-vue)- 使用vue2.0 vue-router vuex模拟ios7
+47. [Framework7-VueJS](https://github.com/tyllo/Framework7-VueJS) - 使用移动框架的示例
+48. [cnode-vue](https://github.com/jo0ger/cnode-vue) - 基于vue和vue-router构建的cnodejs web网站SPA
+49. [vue-cli-multipage-bootstrap](https://github.com/zhoou/vue-cli-multipage-bootstrap) - 将vue官方在线示例整合到组件中
+50. [vue-cnode](https://github.com/lelovelife/vue-cnode) - 用 Vue 做的 CNode 官网
+51. [seeMusic](https://github.com/Alex-xd/seeMusic) - 跨平台云音乐播放器
+52. [HyaReader](https://github.com/GitaiQAQ/HyaReader) - 移动友好的阅读器
+53. [zhihu-daily](https://github.com/xrr2016/zhihu-daily) - 轻松查看知乎日报内容
+54. [vue-cnode](https://github.com/Damonlw/vue-cnode)- 使用cNode社区提供的接口
+55. [zhihu-daily-vue](https://github.com/moonou/zhihu-daily-vue) - 知乎日报
+56. [vue-dropload](https://github.com/ITCNZ/vue-dropload) - 用以测试下拉加载与简单路由
+57. [vue-cnode-mobile](https://github.com/soulcm/vue-cnode-mobile) - 搭建cnode社区
+58. [Vuejs-SalePlatform](https://github.com/fishenal/vuejs-demo-project) - vuejs搭建的售卖平台demo
+59. [vue-memo](https://github.com/youknowznm/vue-memo) - 用 vue写的记事本应用
+60. [sls-vuex2-demo](https://github.com/sailengsi/sls-vuex2-demo) - vuex2商城购物车demo
+61. [v-notes](https://github.com/IgorHalfeld/v-notes) - 简单美观的记事本
+62. [vue-starter](https://github.com/BosNaufal/vue-starter) - VueJs项目的简单启动页
 
 
 
