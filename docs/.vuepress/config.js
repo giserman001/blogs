@@ -76,7 +76,7 @@ module.exports = {
         ['test', 'test标题']
       ],
       '/miniprogram/': [
-        ['', '小程序左滑删除']
+        ['', '小程序左滑删除'],
         ['wx_calendar', '小程序日历组件']
       ],
       '/tool/': [
