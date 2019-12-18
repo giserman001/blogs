@@ -1,0 +1,10 @@
+@require '~@theme/styles/variables'
+
+.tags-select
+  .tag-checkbox
+    input[type="radio"],
+    input[type="checkbox"]
+      &:checked + .post-tag
+        color $accentColor
+        .icon
+          fill $accentColor

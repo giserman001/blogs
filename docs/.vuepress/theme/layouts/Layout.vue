@@ -1,5 +1,1 @@
-<template>
-  <div class="theme-container">
-    <Content/>
-  </div>
-</template>
+<!-- make Vuepress happy -->
