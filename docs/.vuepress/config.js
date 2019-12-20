@@ -72,8 +72,7 @@ module.exports = {
         ['vue_module_communicate', 'Vue组件间通信方式']
       ],
       '/react/': [
-        ['', '默认文档'],
-        ['test', 'test标题']
+        ['', '默认文档']
       ],
       '/miniprogram/': [
         ['', '小程序左滑删除'],
