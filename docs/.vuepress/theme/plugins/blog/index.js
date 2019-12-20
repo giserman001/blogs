@@ -8,10 +8,8 @@ module.exports = ({
   lang,
 }) => {
   const ensureBothSlash = str => str.replace(/^\/?(.*)\/?$/, '/$1/')
-
   return {
     name: '@theme-meteorlxy/vuepress-plugin-blog',
-
     plugins: [
       [require('../blog-vuepress'), {
         categoryIndexPageUrl: '/posts/categories/',
@@ -20,8 +18,8 @@ module.exports = ({
         lang,
       }],
     ],
-
     extendPageData ($page) {
+      console.log($page.path, 'extendPageData')
       // Test the page if is a post according to the postsDir
       if ($page.path.startsWith(ensureBothSlash(postsDir))) {
         // Set the meta data of the page

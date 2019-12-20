@@ -1,8 +1,15 @@
+/**
+ * 这个属于配置文件编译时才会执行
+*/
 const path = require('path')
 const { logger } = require('@vuepress/shared-utils')
 const markdownItCenterText = require('markdown-it-center-text')
 
 module.exports = (opts, ctx) => {
+  /**
+   * opts ----> config.js里面的themeConfig
+   * ctx  ----> 当前页面所有状态的 Context API
+  */
   // set default theme config
   Object.assign(opts, Object.assign({
     lang: 'en-US',
@@ -21,6 +28,7 @@ module.exports = (opts, ctx) => {
   // resolve theme language
   if (typeof opts.lang === 'string') {
     try {
+      // 可以监听是否有此文件
       require.resolve(`./langs/${opts.lang}`)
     } catch (e) {
       opts.lang = 'en-US'
@@ -28,9 +36,8 @@ module.exports = (opts, ctx) => {
     }
     opts.lang = require(`./langs/${opts.lang}`)
   }
-
+  console.log(opts, 'opts')
   const { comments, lang, defaultPages, header, infoCard } = opts
-
   const noopGeo = (
     header.background && (
       header.background.url || header.background.useGeo === false
@@ -40,10 +47,8 @@ module.exports = (opts, ctx) => {
       infoCard.headerBackground.url || infoCard.headerBackground.useGeo === false
     )
   )
-
   const options = {
     name: 'vuepress-theme-meteorlxy',
-
     plugins: [
       [require('./plugins/blog'), { lang }],
       ['@vuepress/plugin-back-to-top'],
