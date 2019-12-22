@@ -1,0 +1,66 @@
+备份与恢复
+
+数据库 --> sql语句
+sql语句 --> 数据库
+
+1. 数据库导出SQL脚本(备份数据库内容，并不是备份数据库！)
+  > mysqldump –u用户名 –p密码 数据库名>生成的脚本文件路径
+  > 例如：mysqldump -uroot -p123 mydb1>C:\mydb1.sql  (与mysql.exe和mysqld.exe一样, 都在bin目录下)
+  > 注意，不要打分号，不要登录mysql，直接在cmd下运行
+  > 注意，生成的脚本文件中不包含create database语句
+
+2. 执行SQL脚本
+  第一种方式
+  > mysql -u用户名 -p密码 数据库<脚本文件路径
+  > 例如：
+    * 先删除mydb1库，再重新创建mydb1库
+    * mysql -uroot -p123 mydb1<C:\mydb1.sql
+  > 注意，不要打分号，不要登录mysql，直接在cmd下运行
+
+  第二种方式
+  > 登录mysql
+  > source SQL脚本路径
+  > 例如：
+    * 先删除mydb1库，再重新创建mydb1库
+    * 切换到mydb1库
+    * source c:\mydb1.sql
+
+---------------------------------
+
+数据库 --> sql：备份
+sql --> 数据库：恢复
+
+------------------
+
+mysqldump -uroot -p123 mydb3>c:/a.sql -->  备份
+mysql -uroot -p123 mydb3<c:/a.sql --> 恢复
+source c:/a.sql --> 恢复
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
