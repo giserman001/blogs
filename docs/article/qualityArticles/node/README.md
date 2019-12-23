@@ -1,5 +1,10 @@
 # EggJS基本使用
 
+::: tip 记录
+记录一下自己学习过程，方便以后自己查阅
+:::
+
+[[toc]]
 ### Egg.js官网
 
 官网： https://eggjs.org
@@ -26,7 +31,7 @@ Egg.js 基于 Es6、Es7 以及 Typescript、Koa2 使得 Nodejs 具有更规范�
 ### Egg.js  在阿里的地位
 ![截图](../../../images/egg.png)
 
-### Egg.js
+### Egg.js发展历程
 
 1. 2013 年蚂蚁的 chair 框架，可以视为 egg 的前身。
 2. 2015 年 11 月，在苏千的召集下，阿里各 BU 的前端骨干齐聚黄龙，闭门共建。
@@ -38,3 +43,61 @@ Egg.js 基于 Es6、Es7 以及 Typescript、Koa2 使得 Nodejs 具有更规范�
 8. 2018 年 7 月最新 egg 的版本是 2.2.1
 
 经过几年的沉淀 Egg 已经非常成熟。
+
+### Egg.js  目录结构介绍
+![截图](../../../images/egg_file.png)
+
+### Egg.js目录约定规范
+![截图](../../../images/egg_file1.png)
+
+egg工作流
+
+![截图](../../../images/egg_flow.jpg)
+
+### Vscode+Egg  开发工具配置
+![截图](../../../images/egg_file2.png)
+
+### Egg 路由配置
+
+https://eggjs.org/zh-cn/basics/router.html
+
+### 取获取 Get  传值以及动态路由的值
+
+https://eggjs.org/zh-cn/basics/controller.html
+
+### egg-view-ejs  的使用
+
+https://github.com/eggjs/egg-view-ejs
+
+1. 安装
+```js
+npm i egg-view-ejs --save
+```
+
+2. 找到 {app_root}/config/plugin.js
+
+```js
+exports.ejs = {
+  enable: true,
+  package: 'egg-view-ejs',
+}
+```
+
+3. 找到 {app_root}/config/config.default.js
+
+```js
+module.exports = appInfo => {
+  const config = exports = {}
+  // use for cookie sign key, should change to your own and keep security
+  config.keys = appInfo.name + '_1532498393023_7447'
+  // add your config here
+  config.middleware = []
+  //配置 ejs 模板引擎
+  config.view = {
+    mapping: {
+    '.html': 'ejs'
+    }
+  }
+  return config
+}
+```
