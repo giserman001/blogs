@@ -101,3 +101,6 @@ module.exports = appInfo => {
   return config
 }
 ```
+
+### 服务(service)和控制器(controller)相互调用规则
+![截图](../../../images/egg-flow.png)
