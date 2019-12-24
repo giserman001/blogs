@@ -3,11 +3,12 @@ title: Sequelize - 单表 CURD
 date: 2019-02-11 12:42:16
 categories: Sequelize
 tags: Sequelize
+sidebarDepth: 1
 ---
+[[toc]]
+### Create
 
-## Create
-
-### create - 创建保存新实例
+#### create - 创建保存新实例
 
 > create(values, [options]) -> Promise.<Instance>
 
@@ -38,7 +39,7 @@ const user = await UserModel.create({
 | [options.searchPath=DEFAULT] | `String`      | 指定schema的 search_path (仅 Postgres)      |
 | [options.benchmark=false]    | `Boolean`     | 当打印SQL日志时同时输出查询执行时间（毫秒） |
 
-### build - 创建新实例
+#### build - 创建新实例
 
 > build(values, [options]) -> Instance
 
@@ -62,9 +63,9 @@ console.log(user.get({ plain: true }))
 | [options.isNewRecord=true] | Boolean | 无                                          |
 | [options.include]          | Array   | 用于构建`prefetched/included`模型，参见 set |
 
-## Update
+### Update
 
-### update - 更新记录
+#### update - 更新记录
 
 > update(values, options) -> Promise.<Array.<affectedCount, affectedRows>>
 
@@ -92,13 +93,13 @@ await UserModel.update({ name: 'guoxiaoxiao', age: 18 }, { where: { id: 1 } })
 | [options.silent=false]          | `Boolean`     | 如果为true，updatedAt字段将不会更新      |
 
 
-## Read
+### Read
 
 详见 [Sequelize - 使用 model 查询数据](https://gershonv.github.io/2019/01/03/sequelize-query/)
 
-## Delete
+### Delete
 
-### destroy - 删除记录
+#### destroy - 删除记录
 
 > destroy(options) -> Promise.<Integer>
 
@@ -125,7 +126,7 @@ console.log(deleteRowsCount) // 执行成功后返回被删除的行数
 | [options.cascade=false]         | `Boolean`     | 仅适用于连接查询时的TRUNCATE操作，截断所有外键匹配的表                  |
 | [options.transaction]           | `Transaction` | 在事务中执行查询                                                        |
 
-## findOrCreate - 查找或创建
+### findOrCreate - 查找或创建
 
 > findOrCreate(options) -> Promise.<Instance, created>
 
@@ -153,7 +154,7 @@ UserModel.findOrCreate({
 | [options.defaults]    | `Object`      | 用于创建新实例的默认值 |
 | [options.transaction] | `Transaction` | 在事务中执行查询       |
 
-## findCreateFind - 查找或创建
+### findCreateFind - 查找或创建
 
 > findCreateFind(options) -> Promise.<Instance, created>
 
@@ -168,7 +169,7 @@ UserModel.findOrCreate({
 
 ps: `findOrInitialize`  - 查找或初始化: 查找一行记录，如果不存在则创建（不保存）实例
 
-## insertOrUpdate - 更新或创建
+### insertOrUpdate - 更新或创建
 
 > upsert(values, [options]) -> Promise.<created>
 
@@ -187,7 +188,7 @@ const isCreate = await TaskModel.insertOrUpdate({ title: '11', content: 'adfadf'
 | [options.fields=Object.keys(this.attributes)] | `Array`       | 要插入/更新字段。默认全部 |
 | [options.transaction]                         | `Transaction` | 在事务中执行查询          |
 
-## bulkCreate - 创建多条记录
+### bulkCreate - 创建多条记录
 
 > bulkCreate(records, [options]) -> Promise.<Array.<Instance>>
 

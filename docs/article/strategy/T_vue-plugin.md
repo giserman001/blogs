@@ -1,6 +1,9 @@
 # vue插件总结——总有一款你能用上的插件
 > 转载知乎
-## UI组件
+
+[[toc]]
+
+### UI组件
 1. [element](https://github.com/ElemeFE/element) - 饿了么出品的Vue2的web UI工具套件
 2. [mint-ui](https://github.com/ElemeFE/mint-ui) - Vue 2的移动UI元素
 3. [iview](https://github.com/iview/iview) - 基于 Vuejs 的开源 UI 组件库
@@ -24,7 +27,7 @@
 21. [vue-tabs](https://github.com/alexqdjay/vue-tabs) - 多tab页轻型框架
 
 
-## 编辑器
+### 编辑器
 1. [markcook](https://github.com/jrainlau/markcook) - 好看的markdown编辑器
 2. [eme](https://github.com/egoist/eme) - 优雅的Markdown编辑器
 3. [vue-syntax-highlight](https://github.com/vuejs/vue-syntax-highlight) - Sublime Text语法高亮
@@ -35,7 +38,7 @@
 8. [vue-simplemde](https://github.com/F-loat/vue-simplemde) - VueJS的Markdown编辑器组件
 9. [vue-quill](https://github.com/CroudTech/vue-quill) - vue组件构建quill编辑器
 
-## slider
+### slider
 1. [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper) - vue.js触摸滑动组件
 2. [vue-slick](https://github.com/staskjs/vue-slick) - 实现流畅轮播框的vue组件
 3. [vue-swipe](https://github.com/ElemeFE/vue-swipe) - VueJS触摸滑块
@@ -49,7 +52,7 @@
 11. [vue-easy-slider](https://github.com/shhdgit/vue-easy-slider) - Vue 2.x的滑块组件
 
 
-## 图表
+### 图表
 1. [vue-table](https://github.com/ratiw/vue-table) - 简化数据表格
 2. [vue-chartjs](https://github.com/apertureless/vue-chartjs) - vue中的Chartjs的封装
 3. [vue-charts](https://github.com/hchstera/vue-charts) - 轻松渲染一个图表
@@ -58,7 +61,7 @@
 6. [chartjs](https://github.com/vue-bulma/chartjs) - Vue Bulma的chartjs组件
 7. [vue-chartkick](https://github.com/ankane/vue-chartkick) - VueJS一行代码实现优美图表
 
-## 日历
+### 日历
 1. [vue-calendar](https://github.com/jinzhe/vue-calendar) - 日期选择插件
 2. [vue-datepicker](https://github.com/hilongjw/vue-datepicker) - 日历和日期选择组件
 3. [vue-datetime-picker](https://github.com/Haixing-Hu/vue-datetime-picker) - 日期时间选择控件
@@ -70,22 +73,22 @@
 9. [vue-date-picker](https://github.com/8788/vue-date-picker) - VueJS日期选择器组件
 10. [vue-datepicker-simple](https://github.com/dai-siki/vue-datepicker-simple) - 基于vue的日期选择器
 
-## 地址选择
+### 地址选择
 1. [vue-city](https://github.com/xinxingyu/vue-city) - 城市选择器
 2. [vue-region-picker](https://github.com/QingWei-Li/vue-region-picker) - 选择中国的省份市和地区
 
-## 地图
+### 地图
 1. [vue-amap](https://github.com/ElemeFE/vue-amap) - 基于Vue 2和高德地图的地图组件
 2. [vue-google-maps](https://github.com/GuillaumeLeclerc/vue-google-maps) - 带有双向数据绑定Google地图组件
 3. [vue-baidu-map](https://github.com/Dafrok/vue-baidu-map)- 基于 Vue 2的百度地图组件库
 4. [vue-cmap](https://github.com/doodlewind/vue-cmap) - Vue China map可视化组件
 
-## 播放器
+### 播放器
 1. [vue-video-player](https://github.com/surmon-china/vue-video-player) - VueJS视频及直播播放器
 2. [vue-video](https://github.com/hilongjw/vue-video) - Vue.js的HTML5视频播放器
 3. [vue-music-master](https://github.com/yunyi1895/vue-music-master) - vue手机端网页音乐播放器
 
-## 滚动scroll
+### 滚动scroll
 1. [vue-scroller](https://github.com/wangdahoo/vue-scroller) - Vonic UI的功能性组件
 2. [vue-mugen-scroll](https://github.com/egoist/vue-mugen-scroll) - 无限滚动组件
 3. [vue-infinite-loading](https://github.com/PeachScript/vue-infinite-loading) - VueJS的无限滚动插件
@@ -98,13 +101,13 @@
 10. [vue-smoothscroll](https://github.com/Teddy-Zhu/vue-smoothscroll) - smoothscroll的VueJS版本
 
 
-## 文件上传
+### 文件上传
 1. [vue-upload-component](https://github.com/lian-yue/vue-upload-component) - Vuejs文件上传组件
 2. [vue-core-image-upload](https://github.com/Vanthink-UED/vue-core-image-upload) - 轻量级的vue上传插件
 3. [vue-dropzone](https://github.com/rowanwins/vue-dropzone) - 用于文件上传的Vue组件
 
 
-## 图片处理
+### 图片处理
 1. [vue-lazyload-img](https://github.com/JALBAA/vue-lazyload-img) - 移动优化的vue图片懒加载插件
 2. [vue-image-crop-upload](https://github.com/dai-siki/vue-image-crop-upload) - vue图片剪裁上传组件
 3. [vue-svgicon](https://github.com/MMF-FE/vue-svgicon) - 创建svg图标组件的工具
@@ -113,20 +116,20 @@
 6. [vue-progressive-image](https://github.com/MatteoGabriele/vue-progressive-image) - Vue的渐进图像加载插件
 
 
-## 提示
+### 提示
 1. [vue-toast-mobile](https://github.com/ElemeFE/vue-toast-mobile) - VueJS的toast插件
 2. [vue-msgbox](https://github.com/ElemeFE/vue-msgbox) - vuejs的消息框
 3. [vue-tooltip](https://github.com/Akryum/v-tooltip) - 带绑定信息提示的提示工具
 4. [vue-verify-pop](https://github.com/aweiu/vue-verify-pop) - 带气泡提示的vue校验插件
 
 
-## 进度条
+### 进度条
 1. [vue-radial-progress](https://github.com/wyzantinc/vue-radial-progress) - Vue.js放射性进度条组件
 2. [vue-progressbar](https://github.com/hilongjw/vue-progressbar) - vue轻量级进度条
 3. [vue2-loading-bar](https://github.com/BosNaufal/vue2-loading-bar) - 最简单的仿Youtube加载条视图
 
 
-## 其他
+### 其他
 1. [vue-dragging](https://github.com/hilongjw/vue-dragging)- 使元素可以拖拽
 2. [Vue.Draggable](https://github.com/SortableJS/Vue.Draggable)- 实现拖放和视图模型数组同步
 3. [vue-picture-input](https://github.com/alessiomaffeis/vue-picture-input)- 移动友好的图片文件输入组件
@@ -168,7 +171,7 @@
 39. [vue-button](https://github.com/steven5538/vue-button)- Vue按钮组件
 
 
-## 开发框架
+### 开发框架
 1. [vue.js](https://github.com/vuejs/vue) - 流行的轻量高效的前端组件化方案
 2. [vue-admin](https://github.com/vue-bulma/vue-admin) - Vue管理面板框架
 3. [electron-vue](https://github.com/SimulatedGREG/electron-vue) - Electron及VueJS快速启动样板
@@ -180,7 +183,7 @@
 9. [vue-element-starter](https://github.com/Metnew/vue-element-starter) - vue启动页
 
 
-## 实用库
+### 实用库
 1. [vuelidate](https://github.com/vuelidate/vuelidate) - 简单轻量级的基于模块的Vue.js验证
 2. [qingcheng](https://github.com/zerqu/qingcheng) - qingcheng主题
 3. [vuex](https://github.com/vuejs/vuex) - 专为 Vue.js 应用程序开发的状态管理模式
@@ -231,7 +234,7 @@
 48. [vue-truncate-filter](https://github.com/imcvampire/vue-truncate-filter) - 截断字符串的VueJS过滤器
 
 
-## 服务端
+### 服务端
 1. [vue-ssr](https://github.com/hilongjw/vue-ssr) - 结合Express使用Vue2服务端渲染
 2. [nuxt.js](https://github.com/nuxt/nuxt.js) - 用于服务器渲染Vue app的最小化框架
 3. [vue-ssr](https://github.com/ccforward/vue-ssr) - 非常简单的VueJS服务器端渲染模板
@@ -239,7 +242,7 @@
 5. [express-vue](https://github.com/express-vue/express-vue) - 简单的使用服务器端渲染vue.js
 
 
-## 辅助工具
+### 辅助工具
 1. [DejaVue](https://github.com/MiCottOn/DejaVue) - Vuejs可视化及压力测试
 2. [vue-generate-component](https://github.com/NetanelBasal/vue-generate-component) - 轻松生成Vue js组件的CLI工具
 3. [vscode-VueHelper](https://github.com/OYsun/vscode-VueHelper) - 目前vscode最好的vue代码提示插件
@@ -247,7 +250,7 @@
 5. [VuejsStarterKit](https://github.com/MetinSeylan/VuejsStarterKit) - vuejs starter套件
 6. [vue-multipage-cli](https://github.com/xwpongithub/vue-multipage-cli) - 简单的多页CLI
 
-## 应用实例
+### 应用实例
 1. [pagekit](https://github.com/pagekit/pagekit) - 轻量级的CMS建站系统
 2. [vuedo](https://github.com/Vuedo/vuedo) - 博客平台
 3. [koel](https://github.com/phanan/koel) - 基于网络的个人音频流媒体服务
@@ -262,7 +265,7 @@
 12. [rss-reader](https://github.com/hello-efficiency-inc/raven-reader) - 简单的rss阅读器
 
 
-## Demo示例
+### Demo示例
 1. [eleme](https://github.com/liangxiaojuan/eleme) - 高仿饿了么app商家详情
 2. [NeteaseCloudWebApp](https://github.com/javaSwing/NeteaseCloudWebApp) - 高仿网易云音乐的webapp
 3. [vue-zhihu-daily](https://github.com/hilongjw/vue-zhihu-daily) - 知乎日报 with Vuejs

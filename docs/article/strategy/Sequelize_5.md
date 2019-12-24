@@ -3,9 +3,10 @@ title: Sequelize - 多表 CURD
 date: 2019-02-11 12:42:39
 categories: Sequelize
 tags: Sequelize
+sidebarDepth: 1
 ---
-
-## 一对一
+[[toc]]
+### 一对一
 
 ```js
 const UserModel = sequelize.define('user', {
@@ -35,7 +36,7 @@ AccountModel.belongsTo(UserModel, {
 
 <!-- more -->
 
-### 增 - createAccount
+#### 增 - createAccount
 
 ```js
 // 增
@@ -65,7 +66,7 @@ mysql> select * from accounts;
 1 row in set (0.00 sec)
 ```
 
-### 改 - setAccount
+#### 改 - setAccount
 
 ```js
 const user = await UserModel.findByPk(1)
@@ -88,7 +89,7 @@ mysql> select * from accounts;
 2 rows in set (0.00 sec)
 ```
 
-### 软删 - setAccount(null)
+#### 软删 - setAccount(null)
 
 ```js
 const user = await UserModel.findByPk(1)
@@ -101,7 +102,7 @@ SQL 执行逻辑是：
 1. 找出 `user` 所关联的 `account` 数据
 2. 将其外键 `userId` 设置为 `NULL`，完成关系的“切断”
 
-### 查 - getAccount
+#### 查 - getAccount
 
 ```js
 const user = await UserModel.findByPk(1)
@@ -144,7 +145,7 @@ LEFT OUTER JOIN `accounts` AS `account` ON `user`.`id` = `account`.`userId` WHER
 
 可以看到，我们对 2 个表进行了一个外联接，从而在取 `user` 的同时也获取到了 `account`。
 
-## 一对多
+### 一对多
 
 ```js
 const UserModel = sequelize.define(
@@ -196,9 +197,9 @@ CREATE TABLE IF NOT EXISTS `notes` (
 
 可以看到这种关系中，外键 `userId` 加在了多的一端（`notes` 表）。同时相关的模型也自动获得了一些方法。
 
-### 增
+#### 增
 
-#### createNote
+##### createNote
 
 ```js
 const user = await UserModel.create({ uuid: 1234 })
@@ -216,7 +217,7 @@ INSERT INTO `notes` (`id`,`title`,`createdAt`,`updatedAt`,`userId`)
 VALUES (DEFAULT,'aa','2019-01-12 05:32:50','2019-01-12 05:32:50',1);
 ```
 
-#### addNote
+##### addNote
 
 ```js
 const user = await UserModel.create({ uuid: 1234 })
@@ -235,7 +236,7 @@ UPDATE `notes` SET `userId`=1,`updatedAt`='2019-01-12 05:40:34' WHERE `id` IN (1
 1. 插入一条 `note` 数据，此时该条数据的外键 `userId` 为空
 2. 使用 `user` 的属性 `id` 值再更新该条 `note` 数据，设置好外键，完成关系建立
 
-#### addNotes
+##### addNotes
 
 ```js
 const user = await UserModel.create({ uuid: 1234 })
@@ -245,7 +246,7 @@ const note2 = await NoteModel.create({ title: 'bb' })
 await user.addNotes([note1, note2])
 ```
 
-### 改 - setNotes
+#### 改 - setNotes
 
 ```js
 const user = await UserModel.create({ uuid: 1234 })
@@ -275,9 +276,9 @@ mysql> select * from notes;
 4 rows in set (0.00 sec)
 ```
 
-### 软删
+#### 软删
 
-#### removeNote
+##### removeNote
 
 ```js
 const user = await UserModel.create({ uuid: 1234 })
@@ -298,7 +299,7 @@ mysql> select * from notes;
 2 rows in set (0.00 sec)
 ```
 
-#### setNotes([])
+##### setNotes([])
 
 ```js
 const user = await UserModel.create({ uuid: 1234 })
@@ -307,9 +308,9 @@ const note2 = await user.createNote({ title: 'bb' })
 await user.setNotes([])
 ```
 
-### 查
+#### 查
 
-#### getNotes
+##### getNotes
 
 ```js
 const user = await UserModel.create({ uuid: 1234 })
@@ -324,7 +325,7 @@ const notes = await user.getNotes({
 notes.map(note => console.log(note.title))
 ```
 
-#### findAll
+##### findAll
 
 > 场景 1： 查询所有满足条件的 `note`，同时获取 `note` 属于哪个 `user`。
 
@@ -396,7 +397,7 @@ const users = await UserModel.findAll({
 })
 ```
 
-## 多对多
+### 多对多
 
 ```js
 const NoteModel = sequelize.define('note', {
@@ -441,9 +442,9 @@ mysql> show columns from taggings;
 5 rows in set (0.00 sec)
 ```
 
-### 增
+#### 增
 
-#### createTag
+##### createTag
 
 ```js
 const note = await NoteModel.create({ title: 'aa' })
@@ -493,7 +494,7 @@ mysql> select * from tags;
 1 row in set (0.00 sec)
 ```
 
-#### addTag
+##### addTag
 
 ```js
 const note = await NoteModel.create({ title: 'aa' })
@@ -501,7 +502,7 @@ const tag = await TagModel.create({ name: 'react.js' })
 await note.addTag(tag, { through: { type: 1 } })
 ```
 
-#### addTags
+##### addTags
 
 ```js
 const note = await NoteModel.create({ title: 'aa' })
@@ -510,7 +511,7 @@ const tag2 = await TagModel.create({ name: 'vue.js' })
 await note.addTags([tag1, tag2], { through: { type: 1 } })
 ```
 
-### 改 - setTags
+#### 改 - setTags
 
 ```js
 const note = await NoteModel.create({ title: 'aa' })
@@ -547,9 +548,9 @@ mysql> select * from tags;
 4 rows in set (0.00 sec)
 ```
 
-### 删
+#### 删
 
-#### removeTag
+##### removeTag
 
 ```js
 const note = await NoteModel.create({ title: 'aa' })
@@ -584,7 +585,7 @@ mysql> select * from taggings;
 1 row in set (0.00 sec)
 ```
 
-#### setTags([])
+##### setTags([])
 
 ```js
 const note = await NoteModel.create({ title: 'aa' })
@@ -596,9 +597,9 @@ await note.addTags([tag1, tag2], { through: { type: 1 } })
 await note.setTags([])
 ```
 
-### 查
+#### 查
 
-#### getTags
+##### getTags
 
 ```js
 const note = await NoteModel.create({ title: 'aa' })
@@ -638,7 +639,7 @@ notes.map(d => {
 
 可以看到这种查询，就是执行一个 `inner join`。
 
-#### findAll
+##### findAll
 
 ```js
 const note = await NoteModel.create({ title: 'aa' })

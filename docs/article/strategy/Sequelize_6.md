@@ -3,8 +3,9 @@ title: Sequelize - associations
 date: 2019-02-11 12:41:53
 categories: Sequelize
 tags: Sequelize
+sidebarDepth: 1
 ---
-
+[[toc]]
 本部分描述了 Sequelize 中的各种关联类型。 Sequelize 中有四种类型的关联
 
 - `BelongsTo`
@@ -12,9 +13,9 @@ tags: Sequelize
 - `HasMany`
 - `BelongsToMany`
 
-## 基本概念
+### 基本概念
 
-### Source & Target
+#### Source & Target
 
 我们首先从一个基本概念开始，你将会在大多数关联中使用 `source` 和 `target` 模型。 假设您正试图在两个模型之间添加关联。 这里我们在 `users` 和 `articles` 之间添加一个 `hasOne` 关联。
 
@@ -66,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
 
 此时删除 `users` 表（`source`）, 就会报错了 Cannot drop table 'users' referenced by a foreign key constraint 'articles_ibfk_1' on table 'articles'.
 
-### 外键
+#### 外键
 
 当您在模型中创建关联时，会自动创建带约束的外键引用。 下面是设置：
 
@@ -106,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `tasks` (
 对于 `1:1` 和 `1:m` 关联，默认选项是 `SET NULL` 用于删除，`CASCADE` 用于更新。
 对于 `n:m`，两者的默认值是 `CASCADE`。 这意味着，如果您从 `n:m` 关联的一侧删除或更新一行，则引用该行的连接表中的所有行也将被删除或更新。
 
-#### 循环依赖 & 禁用约束
+##### 循环依赖 & 禁用约束
 
 在表之间添加约束意味着当使用 `sequelize.sync` 时，表必须以特定顺序在数据库中创建表。
 如果 `Task` 具有对 `User` 的引用，`users` 表必须在创建 `tasks` 表之前创建。
@@ -160,7 +161,7 @@ CREATE TABLE IF NOT EXISTS `versions` (
 ) ENGINE = InnoDB;
 ```
 
-#### 无限制地执行外键引用
+##### 无限制地执行外键引用
 
 有时您可能想引用另一个表，而不添加任何约束或关联。 在这种情况下，您可以手动将参考属性添加到您的模式定义中，并标记它们之间的关系。
 
@@ -206,11 +207,11 @@ Series.hasOne(Video)
 Trainer.hasMany(Series)
 ```
 
-## 一对一关联
+### 一对一关联
 
 一对一关联是通过单个外键连接的两个模型之间的关联。
 
-### BelongsTo
+#### BelongsTo
 
 `BelongsTo` 关联是在 `source model` 上存在一对一关系的外键的关联。
 
@@ -239,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `players` (
 ) ENGINE = InnoDB;
 ```
 
-#### 外键/目标键
+##### 外键/目标键
 
 默认情况下，将从目标模型名称和目标主键名称生成 `belongsTo` 关系的外键。
 
@@ -311,7 +312,7 @@ const User = sequelize.define(
 )
 ```
 
-### HasOne
+#### HasOne
 
 `HasOne` 关联是在 `target model` 上存在一对一关系的外键的关联。
 
@@ -365,7 +366,7 @@ Game.belongsTo(Team)
 
 即使它被称为 `hasOne` 关联，对于大多数 1：1 关系，您通常需要 `BelongsTo` 关联，因为 `BelongsTo` 将会在 `hasOne` 将添加到目标的源上添加 `foreignKey`。
 
-#### 源键
+##### 源键
 
 源关键是源模型中的属性，它的目标模型指向外键属性。 默认情况下，hasOne 关系的源键将是源模型的主要属性。 要使用自定义属性，请使用 `sourceKey` 选项。
 
@@ -378,7 +379,7 @@ const Company = sequelize.define('company', {})
 Company.hasOne(User, { foreignKey: 'companyName', sourceKey: 'name' })
 ```
 
-### HasOne 和 BelongsTo 之间的区别
+#### HasOne 和 BelongsTo 之间的区别
 
 在 Sequelize `1：1` 关系中可以使用 `HasOne` 和 `BelongsTo` 进行设置。 它们适用于不同的场景。 让我们用一个例子来研究这个差异。
 
@@ -446,7 +447,7 @@ const Team = sequelize.define('team', {
 - 当关于关联的信息存在于 `source` 模型中时，我们可以使用 `belongsTo`。 在这种情况下，`Player` 适用于`belongsTo`，因为它具有 `teamId` 列。
 - 当关于关联的信息存在于 `target` 模型中时，我们可以使用 `hasOne`。 在这种情况下， `Coach` 适用于 `hasOne` ，因为 `Team` 模型将其 `Coach` 的信息存储为 `coachId` 字段。
 
-## 一对多关联 (hasMany)
+### 一对多关联 (hasMany)
 
 一对多关联将一个来源与多个目标连接起来。 而多个目标接到同一个特定的源。
 
@@ -474,7 +475,7 @@ City.belongsTo(Country, { foreignKey: 'countryCode', targetKey: 'isoCode' })
 
 到目前为止，我们解决了单向关联。 但我们想要更多！ 让我们通过在下一节中创建一个多对多的关联来定义它。
 
-## 多对多关联 (BelongsToMany)
+### 多对多关联 (BelongsToMany)
 
 多对多关联用于将源与多个目标相连接。 此外，目标也可以连接到多个源。
 
@@ -570,7 +571,7 @@ User.findAll({
 })
 ```
 
-## 参考
+### 参考
 
 - [模型（表）之间的关系/关联](https://itbilu.com/nodejs/npm/41qaV3czb.html#associations-naming)
 - [Associations - 关联](https://github.com/demopark/sequelize-docs-Zh-CN/blob/master/associations.md)

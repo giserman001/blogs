@@ -3,9 +3,10 @@ title: Sequelize - model definition
 date: 2019-02-11 12:41:03
 categories: Sequelize
 tags: Sequelize
+sidebarDepth: 1
 ---
-
-## Model definition - 模型定义
+[[toc]]
+### Model definition - 模型定义
 
 `Sequelize` 使用 `define` 方法定义模型和表之间的映射，`Sequelize` 将默认添加 `createdAt` 和 `updatedAt` 属性。因此，您将能够知道数据库条目何时进入数据库以及最后一次更新时。
 `model` 定义格式为 `sequelize.define('name', {attributes}, {configuration})：`
@@ -29,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ```
 <!--more-->
 
-### base demo
+#### base demo
 
 ```js
 const Bar = sequelize.define('bar', {})
@@ -127,7 +128,7 @@ INSERT INTO `foos` (`fooId`,`age`,`createdAt`,`updatedAt`) VALUES
 SELECT `fooId` AS `id`, `age`, `uId`, `createdAt`, `updatedAt` FROM `foos` AS `foo`;
 ```
 
-## Attributes
+### Attributes
 
 ```js
 const User = sequelize.define('user', {
@@ -152,7 +153,7 @@ const User = sequelize.define('user', {
 })
 ```
 
-## Attributes - DataTypes
+### Attributes - DataTypes
 
 以下是 Sequelize 支持的一些数据类型。 有关完整和更新的列表, 参阅 [DataTypes](http://docs.sequelizejs.com/variable/index.html#static-variable-DataTypes).
 
@@ -216,7 +217,7 @@ Sequelize.GEOMETRY('POINT')           // 具有几何类型的空间列.  仅限
 Sequelize.GEOMETRY('POINT', 4326)     // 具有几何类型和SRID的空间列.  仅限于 PostgreSQL (具有 PostGIS) 或 MySQL.
 ```
 
-## Attributes - getters/setters
+### Attributes - getters/setters
 
 
 可以在模型上定义'对象属性' `getter` 和 `setter` 函数，这些可以用于映射到数据库字段的“保护”属性，也可以用于定义“伪”属性。
@@ -228,7 +229,7 @@ Sequelize.GEOMETRY('POINT', 4326)     // 具有几何类型和SRID的空间列. 
 
 > 注意: 如果在两个地方定义了 `getter` 或 `setter`，那么在相关属性定义中找到的函数始终是优先的。
 
-### 定义为属性定义的一部分
+#### 定义为属性定义的一部分
 
 ```js
 const Employee = sequelize.define('employee', {
@@ -258,7 +259,7 @@ Employee.sync({ force: true }).then(() => {
 })
 ```
 
-### 定义为模型参数的一部分
+#### 定义为模型参数的一部分
 
 以下是在模型参数中定义 `getter` 和 `setter` 的示例。
 `fullName getter`，是一个说明如何在模型上定义伪属性的例子 - 这些属性实际上不是数据库模式的一部分。 事实上，伪属性可以通过两种方式定义：使用模型 `getter`，或者使用虚拟数据类型的列。 虚拟数据类型可以有验证，而虚拟属性的 `getter` 则不能。
@@ -300,7 +301,7 @@ Foo.sync({ force: true }).then(async () => {
 })
 ```
 
-## Attributes - Validations
+### Attributes - Validations
 
 模型验证，允许您为模型的每个属性指定格式/内容/继承验证。
 
@@ -382,7 +383,7 @@ isIn: {
 
 有关内置验证方法的更多详细信息，请参阅[the validator.js project](https://github.com/chriso/validator.js) 。
 
-### 验证器 与 allowNull
+#### 验证器 与 allowNull
 
 如果模型的特定字段设置为允许null（使用 `allowNull：true` ），并且该值已设置为 `null` ，则其验证器不会运行。
 
@@ -404,7 +405,7 @@ const User = sequelize.define('user', {
 })
 ```
 
-### 模型验证
+#### 模型验证
 
 验证器也可以在特定字段验证器之后用来定义检查模型。例如，你可以确保纬度和经度都不设置，或者两者都设置，如果设置了一个而另一个未设置则验证失败。
 
@@ -450,7 +451,7 @@ const Pub = Sequelize.define('pub', {
 }
 ```
 
-## configuration
+### configuration
 
 你还可以修改 `Sequelize` 处理列名称的方式：
 
@@ -532,7 +533,7 @@ const Person = sequelize.define('person', { /* attributes */ }, {
 })
 ```
 
-## 数据库同步
+### 数据库同步
 
 
 当开始一个新的项目时，你还不会有一个数据库结构，并且使用 `Sequelize` 你也不需要它。 只需指定您的模型结构，并让库完成其余操作。 目前支持的是创建和删除表：
@@ -586,7 +587,7 @@ sequelize.[sync|drop]().then(() => {
 sequelize.sync({ force: true, match: /_test$/ });
 ```
 
-## sequelize.import
+### sequelize.import
 
 您还可以使用 `import` 方法将模型定义存储在单个文件中。 返回的对象与导入文件的功能中定义的完全相同。
 
@@ -615,7 +616,7 @@ AuthorModel.sync({ force: true }).then(async () => {
 })
 ```
 
-### 同时导入多个 model
+#### 同时导入多个 model
 
 再建立多一个 model `models/article.js`
 
@@ -656,7 +657,7 @@ sequelize.sync().then(() => {
 })
 ```
 
-## 扩展模型
+### 扩展模型
 
 `Sequelize` 模型是ES6类。 您可以轻松添加自定义实例或类级别的方法。
 
@@ -687,7 +688,7 @@ User.prototype.getFullname = function() {
 User.build({ firstname: 'foo', lastname: 'bar' }).getFullname() // 'foo bar'
 ```
 
-## 索引
+### 索引
 
 `Sequelize` 支持在 `Model.sync()` 或 `sequelize.sync` 中创建的模型定义中添加索引。
 
@@ -731,7 +732,7 @@ sequelize.define(
 )
 ```
 
-## 相关
+### 相关
 
 - [models-definition](http://docs.sequelizejs.com/manual/tutorial/models-definition.html)
 - [models-definition 中文版](https://github.com/demopark/sequelize-docs-Zh-CN/blob/master/models-definition.md)

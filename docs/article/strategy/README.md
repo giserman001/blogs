@@ -3,13 +3,14 @@ title: Sequelize - quick start(快速开始)
 date: 2019-02-11 12:40:42
 categories: Sequelize
 tags: Sequelize
+sidebarDepth: 1
 ---
-
+[[toc]]
 在 `Node.js` 社区中，`sequelize` 是一个广泛使用的 `ORM` 框架，它支持 `MySQL`、`PostgreSQL`、`SQLite` 和 `MSSQL` 等多个数据源。
 
 > 有数据库基础或者使用过 `ORM` 操作数据库的经验会更容易上手哦，笔者这里用的以 `mysql` 为主
 
-## 安装
+### 安装
 
 ```npm
 npm i sequelize mysql2 --registry=https://registry.npm.taobao.org
@@ -26,7 +27,7 @@ CREATE DATABASE IF NOT EXISTS demo;
 ```
 <!--more-->
 
-## 建立连接
+### 建立连接
 
 `Sequelize` 将在初始化时设置连接池，所以如果从单个进程连接到数据库，你最好每个数据库只创建一个实例。 如果要从多个进程连接到数据库，则必须为每个进程创建一个实例，但每个实例应具有“最大连接池大小除以实例数”的最大连接池大小。
 因此，如果您希望最大连接池大小为 90，并且有 3 个工作进程，则每个进程的实例应具有 30 的最大连接池大小。
@@ -50,7 +51,7 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname')
 ```
 
-## 测试连接
+### 测试连接
 
 您可以使用 `.authenticate()` 函数来测试连接。
 
@@ -65,7 +66,7 @@ sequelize
   })
 ```
 
-## model
+### model
 
 `Sequelize` 使用 `define` 方法定义模型和表之间的映射。大白话就是 我们可以通过 `model` 去建立表, 添加字段约束等。
 
@@ -87,7 +88,7 @@ User.sync({ force: true }).then(function() {
 
 上面的代码执行后我们可以发现 `demo` 数据库中创建了一个 `users` 的表
 
-### model 操作数据库
+#### model 操作数据库
 
 demo 就简单创建数据和查询数据吧
 
@@ -124,7 +125,7 @@ User.sync({ force: true }).then(async () => {
 })
 ```
 
-## 完整 demo
+### 完整 demo
 
 ```js
 const Sequelize = require('sequelize')

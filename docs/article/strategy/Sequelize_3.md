@@ -3,8 +3,9 @@ title: Sequelize - 使用 model 查询数据
 date: 2019-02-11 12:41:27
 categories: Sequelize
 tags: Sequelize
+sidebarDepth: 1
 ---
-
+[[toc]]
 `Sequelize` 中有两种查询：使用 `Model`（模型）中的方法查询和使用 `sequelize.query()` 进行基于 SQL 语句的原始查询。
 
 <!-- more -->
@@ -41,7 +42,7 @@ const UserModel = sequelize.define(
 )
 ```
 
-## 查询多项 (findAll)
+### 查询多项 (findAll)
 
 ```js
 const result = await UserModel.findAll() // result 将是所有 UserModel 实例的数组
@@ -52,7 +53,7 @@ const result = await UserModel.all()
 //...
 ```
 
-### 限制字段
+#### 限制字段
 
 查询时，如果只需要查询模型的部分属性，可以在通过在查询选项中指定 `attributes` 实现。该选项是一个数组参数，在数组中指定要查询的属性即可，这些要查询的属性就表示要在数据库查询的字段：
 
@@ -62,7 +63,7 @@ Model.findAll({
 })
 ```
 
-### 字段重命名
+#### 字段重命名
 
 查询属性（字段）可以通过传入一个嵌套数据进行重命名：
 
@@ -88,7 +89,7 @@ ctx.body = results
 console.log(results[0]['username'], results[0].get('username')) // undefind, 'guodada0'
 ```
 
-### 指定筛选条件 (where)
+#### 指定筛选条件 (where)
 
 在模型的 `find/finAll` 或 `updates/destroys` 操作中，可以指定一个 `where` 选项以指定筛选条件，
 
@@ -109,7 +110,7 @@ await UserModel.destroy({
 // ...
 ```
 
-#### 复合过滤 / OR / NOT 查询
+##### 复合过滤 / OR / NOT 查询
 
 ```js
 $and: {a: 5}           // AND (a = 5)
@@ -141,7 +142,7 @@ $col: 'user.organization_id' // = "user"."organization_id", with dialect specifi
 - `$like`: 模糊查询 `%锅` 以 `锅` 结尾的。 `%锅%` 包含 `锅` 的
 - `$in: [10, 11]` - 值为 10 或 11
 
-#### demo
+##### demo
 
 ```js
 // SELECT * FROM `users` AS `user` WHERE `user`.`age` > 18 AND `user`.`name` LIKE '%5';
@@ -164,7 +165,7 @@ const results = await UserModel.findAll({
 })
 ```
 
-### 分页与限制返回结果数
+#### 分页与限制返回结果数
 
 查询进，我们可以使用 `limit` 限制返回结果条数，并可以通过 `offset` 来设置查询偏移（跳过）量，通过这两个属性我们可以实现分页查询的功能：
 
@@ -179,7 +180,7 @@ UserModel.findAll({ offset: 8 })
 UserModel.findAll({ offset: 5, limit: 5 })
 ```
 
-### 排序
+#### 排序
 
 `order` 选项用于查询结果的排序数据。排序时应该传入一个包含属性-排序方向的元组/数组，以保证正确的转义：
 
@@ -202,7 +203,7 @@ const result = await UserModel.findAll({
 // ...
 ```
 
-## 查询单项
+### 查询单项
 
 ```js
 // find
@@ -227,7 +228,7 @@ const result = await UserModel.findByPk(1)
 //...
 ```
 
-## 查找并创建 (findOrCreate)
+### 查找并创建 (findOrCreate)
 
 `findOrCreate` 可用于检测一个不确定是否存在的元素，如果存在则返回记录，不存在时会使用提供的默认值新建记录。
 
@@ -248,7 +249,7 @@ UserModel.findOrCreate({
 // VALUES (DEFAULT,'guodada',23,1,99);
 ```
 
-## 分页查询 (findAndCountAll)
+### 分页查询 (findAndCountAll)
 
 `findAndCountAll` - 结合了 `findAll` 和 `count`
 
@@ -274,7 +275,7 @@ console.log(result.count, result.rows[0].get())
 // SELECT * FROM `users` AS `user` WHERE `user`.`age` >= 18 LIMIT 1, 15;
 ```
 
-### 支持 include
+#### 支持 include
 
 它支持 `include`。 只有标记为 `required` 的 `include` 将被添加到计数部分：
 
@@ -355,9 +356,9 @@ const result = await UserModel.findAndCountAll({
 console.log(result.count) // 2
 ```
 
-## 聚合查询
+### 聚合查询
 
-### SQL 中的分组查询
+#### SQL 中的分组查询
 
 [mysql-聚合函数](https://gershonv.github.io/2018/12/31/mysql-聚合函数/)
 
@@ -383,7 +384,7 @@ GROUP BY 列名
 - `HAVING` 子名-用于过滤分组结果，符合条件表达式的结果将会被显示
 - `WITH ROLLUP` 子名-用于指定追加一条记录，用于汇总前面的数据
 
-### sum(field, [options])
+#### sum(field, [options])
 
 `Sequelize` 提供了聚合函数，可以直接对模型进行聚合查询：
 
@@ -449,7 +450,7 @@ instance.updateAttributes({
 
 创建一个相当于数据库列的对象。这个方法经常结合 sequelize.fn 使用，它可以保证将列名正确的传递给该方法，而不是经过转义。
 
-### count(options: Object)
+#### count(options: Object)
 
 ```js
 const result = await OrderModel.count({
@@ -457,7 +458,7 @@ const result = await OrderModel.count({
 })
 ```
 
-### max/min
+#### max/min
 
 ```js
 const result = await OrderModel.max('price', {
@@ -467,7 +468,7 @@ const result = await OrderModel.max('price', {
 })
 ```
 
-## 原始查询
+### 原始查询
 
 [原始查询](https://itbilu.com/nodejs/npm/VJIR1CjMb.html#raw-query)
 
@@ -477,7 +478,7 @@ const result = await OrderModel.max('price', {
 const result = await sequelize.query('SELECT * FROM users', { model: UserModel })
 ```
 
-### 查询参数替换
+#### 查询参数替换
 
 原始查询中有两种替换查询参数的方法，以:开头的参数的形式替换或以不命名以?替换。在选项对象中传递参数：
 
@@ -501,7 +502,7 @@ sequelize
   })
 ```
 
-### 参数绑定
+#### 参数绑定
 
 参数绑定类似于参数替换。尤其是参数替换会在发送到数据库前被 sequelize 转义和替换，而参数绑定会被发送到 SQL 查询文本外。
 
