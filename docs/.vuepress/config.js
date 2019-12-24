@@ -29,6 +29,10 @@ module.exports = {
         link: '/home'
       },
       {
+        text: 'javascript',
+        link: '/javascript/'
+      },
+      {
         text: '前端框架',
         items: [{
             text: 'vue',
@@ -45,25 +49,22 @@ module.exports = {
         ]
       },
       {
-        text: '工具',
-        link: '/tool/'
-      },
-      {
         text: '知识库',
         items: [{
             text: '攻略',
             link: '/article/strategy/'
           },
-          {
-            text: '优质文章',
-            link: '/article/qualityArticles/javascript/'
-          }
+          // {
+          //   text: '优质文章',
+          //   link: '/article/qualityArticles/javascript/'
+          // }
         ]
       }
     ],
     sidebar: {
       '/vue/': [
         ['', 'element分页组件记录'],
+        ['vue_search_form', 'element-ui二次封装form表单'],
         ['vue_ts', 'Vue + TS 开发应用'],
         ['vue_optimize', 'vue优化技巧'],
         ['vue_auth_manage', 'vue权限菜单及按钮权限'],
@@ -78,24 +79,25 @@ module.exports = {
         ['', '小程序左滑删除'],
         ['wx_calendar', '小程序日历组件']
       ],
-      '/tool/': [
+      '/javascript/': [
         ['', '数字翻滚封装'],
-        ['vue_search_form', 'element-ui二次封装form表单'],
-        ['card_overturn', 'css3卡片翻转']
+        ['card_overturn', 'css3卡片翻转'],
+        ['js_skill_optimize', '灵活运用JS开发技巧']
       ],
       '/article/strategy/': [{
         title: '攻略',
         children: getFileNames('/article/strategy/')
       }],
-      '/article/qualityArticles/': [{
-          title: 'javascript',
-          children: getFileNames('/article/qualityArticles/javascript/', 'javascript')
-        },
-        {
-          title: 'node',
-          children: getFileNames('/article/qualityArticles/node/', 'node')
-        }
-      ],
+      // 暂时去掉优质文章模块
+      // '/article/qualityArticles/': [{
+      //     title: 'javascript',
+      //     children: getFileNames('/article/qualityArticles/javascript/', 'javascript')
+      //   },
+      //   {
+      //     title: 'node',
+      //     children: getFileNames('/article/qualityArticles/node/', 'node')
+      //   }
+      // ],
       '/': [
         ['home', 'web开发记录']
       ]
