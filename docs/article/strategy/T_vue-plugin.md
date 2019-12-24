@@ -1,4 +1,4 @@
-# vue插件总结——总有一款你能用上的插件
+# vue插件总结——总有一款你能用上
 > 转载知乎
 
 [[toc]]
@@ -178,7 +178,7 @@
 4. [vue-2.0-boilerplate](https://github.com/petervmeijgaard/vue-2-boilerplate) - Vue2单页应用样板
 5. [vue-webgulp](https://github.com/threeaccents/vue-webgulp) - 仿VueJS Vue loader示例
 6. [vue-bulma](https://github.com/wangxg2016/vue-bulma) - 轻量级高性能MVVM Admin UI框架
-7. [vue-spa-template]https://github.com/annnhan/vue-spa-template) - 前后端分离后的单页应用开发
+7. [vue-spa-template](https://github.com/annnhan/vue-spa-template) - 前后端分离后的单页应用开发
 8. [Framework7-Vue](https://github.com/framework7io/framework7-vue) - VueJS与Framework7结合
 9. [vue-element-starter](https://github.com/Metnew/vue-element-starter) - vue启动页
 
