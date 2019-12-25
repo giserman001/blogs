@@ -5,12 +5,16 @@ categories: Sequelize
 tags: Sequelize
 sidebarDepth: 1
 ---
+
 [[toc]]
+
 ### Create
 
 #### create - 创建保存新实例
 
-> create(values, [options]) -> Promise.<Instance>
+```js
+create(values, [options]) -> Promise.<Instance>
+```
 
 构建一个新的模型实例，并进行保存。与 `build()`方法不同的是，此方法除创建新实例外，还会将其保存到对应数据库表中。
 
@@ -41,7 +45,9 @@ const user = await UserModel.create({
 
 #### build - 创建新实例
 
-> build(values, [options]) -> Instance
+```js
+build(values, [options]) -> Instance
+```
 
 ```js
 // build后对象只存在于内存中，调用save后才操作db
@@ -52,7 +58,7 @@ const user = UserModel.build({
   score: 99
 })
 const result = await user.save()
-console.log(user.get({ plain: true })) 
+console.log(user.get({ plain: true }))
 ```
 
 | 名称                       | 类型    | 说明                                        |
@@ -101,7 +107,9 @@ await UserModel.update({ name: 'guoxiaoxiao', age: 18 }, { where: { id: 1 } })
 
 #### destroy - 删除记录
 
-> destroy(options) -> Promise.<Integer>
+```js
+destroy(options) -> Promise.<Integer>
+```
 
 删除多个实例，或设置 `deletedAt` 的时间戳为当前时间（当启用 `paranoid` 时）
 
@@ -128,7 +136,9 @@ console.log(deleteRowsCount) // 执行成功后返回被删除的行数
 
 ### findOrCreate - 查找或创建
 
-> findOrCreate(options) -> Promise.<Instance, created>
+```js
+findOrCreate(options) -> Promise.<Instance, created>
+```
 
 查找一行记录，如果不存在则创建实例并保存到数据库中
 
@@ -156,7 +166,9 @@ UserModel.findOrCreate({
 
 ### findCreateFind - 查找或创建
 
-> findCreateFind(options) -> Promise.<Instance, created>
+```js
+findCreateFind(options) -> Promise.<Instance, created>
+```
 
 效率更高的 `findOrCreate`，不会在事务中执行。首先会尝试进行查询，如果为空则尝试创建，如果是唯一约束则尝试再次查找。
 
@@ -171,7 +183,9 @@ ps: `findOrInitialize`  - 查找或初始化: 查找一行记录，如果不存�
 
 ### insertOrUpdate - 更新或创建
 
-> upsert(values, [options]) -> Promise.<created>
+```js
+upsert(values, [options]) -> Promise.<created>
+```
 
 创建或更新一行。如果匹配到主键或唯一约束键时会进行更新。
 
@@ -190,7 +204,9 @@ const isCreate = await TaskModel.insertOrUpdate({ title: '11', content: 'adfadf'
 
 ### bulkCreate - 创建多条记录
 
-> bulkCreate(records, [options]) -> Promise.<Array.<Instance>>
+```js
+bulkCreate(records, [options]) -> Promise.<Array.<Instance>>
+```
 
 批量创建并保存多个实例。
 
