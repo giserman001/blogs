@@ -70,7 +70,8 @@ module.exports = {
         ['vue_auth_manage', 'vue权限菜单及按钮权限'],
         ['vue_JWT', 'vue里JWT认证'],
         ['vue_render_jsx', 'vue里render函数之JSX应用'],
-        ['vue_module_communicate', 'Vue组件间通信方式']
+        ['vue_module_communicate', 'Vue组件间通信方式'],
+        ['vue_router', 'Vue相同路由不同参数的不刷新问题']
       ],
       '/react/': [
         ['', '默认文档']
@@ -102,5 +103,8 @@ module.exports = {
         ['home', 'web开发记录']
       ]
     }
+  },
+  markdown: {
+    lineNumbers: true
   }
 }
