@@ -1,3 +1,8 @@
+# vue中使用typescript
+
+[[toc]]
+
+### 使用
 使用vue-cli3创建项目，增加TypeScript
 ```js
  (*) Babel
@@ -30,7 +35,7 @@ Vue.use(Router);export default new Router({
       component: Todo, // 访问/ 的时候显示todo组件
     },
     {
-      path: '/list', 
+      path: '/list',
       name: 'list', // 访问/list时显示 列表组件
       component: () => import(/* webpackChunkName: "List" */ './views/List.vue'),
     },

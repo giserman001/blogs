@@ -1,3 +1,7 @@
+# vue使用优化及使用技巧
+
+[[toc]]
+
 ### vue预渲染解决首页白屏和SEO (npm i prerender-spa-plugin)
 
 ```js

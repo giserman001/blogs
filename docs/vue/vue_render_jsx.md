@@ -1,14 +1,18 @@
-#### 1.模板缺陷
+# vue里的render函数
+
+[[toc]]
+
+### 1.模板缺陷
 
 模板的最大特点是扩展难度大，不易扩展。可能会造成逻辑冗余
-```sh
+```html
 <Level :type="1">哈哈</Level>
 <Level :type="2">哈哈</Level>
 <Level :type="3">哈哈</Level>
 ```
 
 Level组件需要对不同的type产生不同的标签
-```sh
+```html
 <template>
  <h1 v-if="type==1">
   <slot></slot>
@@ -29,7 +33,7 @@ Level组件需要对不同的type产生不同的标签
  }};
  </script>
 ```
-#### 2.函数式组件
+### 2.函数式组件
 
 函数式组件没有模板,只允许提供render函数
 ```js
@@ -45,7 +49,7 @@ export default {
 ```
 >复杂的逻辑变得非常简单
 
-#### 3.JSX应用
+### 3.JSX应用
 
 使用jsx会让代码看起来更加简洁易于读取
 ```js
@@ -60,10 +64,10 @@ export default {
   }
  }};
 ```
-#### 4.render方法订制组件
+### 4.render方法订制组件
 
 编写List组件可以根据用户传入的数据自动循环列表
-```sh
+```html
 <List :data="data"></List>
 <script>
 import List from "./components/List";
@@ -73,7 +77,8 @@ export default {
  },
  components: {
   List
- }};</script>
+ }}
+ </script>
 
 <!-- List组件渲染列表 -->
 <template>
@@ -88,11 +93,12 @@ export default {
  props: {
   data: Array,
   default: () => []
- }};</script>
+ }}
+ </script>
 ```
 
 通过render方法来订制组件,在父组件中传入render方法
-```sh
+```html
 <List :data="data" :render="render"></List>
 render(h, name) {
    return <span>{name}</span>;
@@ -100,7 +106,7 @@ render(h, name) {
 ```
 
 我们需要createElement方法，就会想到可以编写个函数组件，将createElement方法传递出来
-```sh
+```html
 <template>
  <div class="list">
   <div v-for="(item,index) in data" :key="index">
@@ -122,11 +128,12 @@ render(h, name) {
   },
   data: Array,
   default: () => []
- }};
+ }}
  </script>
 ```
 
 ListItem.vue调用最外层的render方法，将createElement和当前项传递出来
+
 ```js
 <script>
 export default {
@@ -141,24 +148,25 @@ export default {
  }};
  </script>
 ```
-#### 5.scope-slot
+### 5.scope-slot
 
 使用v-slot 将内部值传即可
-```sh
+```html
 <List :arr="arr">
-    <template v-slot="{item}">
-        {{item}}
-    </template>
+  <template v-slot="{item}">
+      {{item}}
+  </template>
  </List>
 <div v-for="(item,key) in arr" :key="key">
     <slot :item="item"></slot>
  </div>
 ```
-#### 5.编写可编辑表格
+### 5.编写可编辑表格
 
 基于iview使用jsx扩展成可编辑的表格
-```sj
-<template><div>
+```html
+<template>
+<div>
   <Table :columns="columns" :data="data"></Table></div>
   </template>
   <script>
@@ -168,7 +176,7 @@ export default {
     render(h,{column,index,row}){
       let value = row[column.key];
       return <div on-click={(e)=>this.changeIndex(e,index)} >
-      {this.index === index? 
+      {this.index === index?
         <i-input type="text" value={value} on-input={(value)=>{
           this.handleChange(value,column,row)
         }} onOn-enter={()=>this.enter(row,index)}/>:
@@ -235,6 +243,6 @@ export default {
         },
       ],
     };
-  },};
+  }}
   </script>
 ```

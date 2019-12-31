@@ -1,3 +1,8 @@
+# vue里组件间通信总结
+
+[[toc]]
+
+
 ### 快速原型开发
 
 可以快速识别.vue文件封装组件插件等功能
@@ -6,7 +11,7 @@ sudo npm install @vue/cli -g
 sudo npm install -g @vue/cli-service-global
 vue serve App.vue
 ```
-#### 1.Props传递数据
+### 1.Props传递数据
 ```js
 components
    ├── Grandson1.vue // 孙子1
@@ -17,32 +22,32 @@ components
 ```
 
 在父组件中使用儿子组件
-```sh
+```html
 <template>
-     <div>
-          父组件:{{mny}}
-          <Son1 :mny="mny"></Son1>
-     </div>
+  <div>
+    父组件:{{mny}}
+    <Son1 :mny="mny"></Son1>
+  </div>
  </template>
  <script>
  import Son1 from "./Son1";
  export default {
-     components: {
-        Son1
-     },
-     data() {
-        return { mny: 100 };
-     }
+    components: {
+      Son1
+    },
+    data() {
+      return { mny: 100 }
+    }
  };
  </script>
 ```
 
 子组件接受父组件的属性
 
-#### 2.$emit使用
+### 2.$emit使用
 
 子组件触发父组件方法,通过回调的方式将修改的内容传递给父组件
-```sh
+```html
 <template>
  <div>
   父组件:{{mny}}
@@ -66,7 +71,7 @@ components
 ```
 
 子组件触发绑定自己身上的方法
-```sh
+```html
 <template>
  <div>
   子组件1: {{mny}}
@@ -83,12 +88,14 @@ components
  </script>
 ```
 >这里的主要目的就是同步父子组件的数据,->语法糖的写法
-##### .sync
-```sh
-<Son1 :mny.sync="mny"></Son1><!-- 触发的事件名 update:(绑定.sync属性的名字) --><button @click="$emit('update:mny',200)">更改</button>
+#### .sync
+```html
+<!-- 触发的事件名 update:(绑定.sync属性的名字) -->
+<Son1 :mny.sync="mny"></Son1>
+<button @click="$emit('update:mny',200)">更改</button>
 ```
-##### v-model
-```sh
+#### v-model
+```html
 <Son1 v-model="mny"></Son1><template>
  <div>
   子组件1: {{value}} // 触发的事件只能是input
@@ -104,28 +111,30 @@ components
  }};
  </script>
 ```
-#### 3.$parent、$children
+### 3.$parent、$children
 
 继续将属性传递
-```sh
-<Grandson1 :value="value"></Grandson1><template>
+```html
+<Grandson1 :value="value"></Grandson1>
+<template>
  <div>
   孙子:{{value}}
   <!-- 调用父组件的input事件 -->
   <button @click="$parent.$emit('input',200)">更改</button>
- </div></template>
- <script>
- export default {
- props: {
-  value: {
-   type: Number
-  }
- }};
- </script>
+ </div>
+</template>
+<script>
+export default {
+props: {
+value: {
+  type: Number
+}
+}};
+</script>
 ```
->如果层级很深那么就会出现$parent.$parent.....我们可以封装一个$dispatch方法向上进行派发#$dispatch、
+> 如果层级很深那么就会出现$parent.$parent.....我们可以封装一个$dispatch方法向上进行派发#$dispatch、
 
-##### $dispatch
+### $dispatch
 ```js
 Vue.prototype.$dispatch = function $dispatch(eventName, data) {
   let parent = this.$parent;
@@ -136,7 +145,7 @@ Vue.prototype.$dispatch = function $dispatch(eventName, data) {
 ```
 
 既然能向上派发那同样可以向下进行派发
-##### $broadcast
+### $broadcast
 ```js
 Vue.prototype.$broadcast = function $broadcast(eventName, data) {
   const broadcast = function () {
@@ -149,7 +158,7 @@ Vue.prototype.$broadcast = function $broadcast(eventName, data) {
   };
   broadcast.call(this, eventName, data);};
 ```
-#### 4.$attrs、$listeners
+### 4.$attrs、$listeners
 ##### $attrs
 
 批量向下传入属性
@@ -164,26 +173,27 @@ Vue.prototype.$broadcast = function $broadcast(eventName, data) {
 ##### $listeners
 
 批量向下传入方法
-```sh
-<Son2 name="小珠峰" age="10" @click="()=>{this.mny = 500}"></Son2><!-- 可以在son2组件中使用listeners属性,可以将方法继续向下传递 --><Grandson2 v-bind="$attrs" v-on="$listeners"></Grandson2>
-
+```html
+<Son2 name="小珠峰" age="10" @click="()=>{this.mny = 500}"></Son2>
+<!-- 可以在son2组件中使用listeners属性,可以将方法继续向下传递 -->
+<Grandson2 v-bind="$attrs" v-on="$listeners"></Grandson2>
 <button @click="$listeners.click()">更改</button>
 ```
-#### 5.Provide & Inject
-##### Provide
+### 5.Provide & Inject
+#### Provide
 
 在父级中注入数据
 ```js
 provide() {
   return { parentMsg: "父亲" };},
 ```
-##### Inject
+#### Inject
 
 在任意子组件中可以注入父级数据
 ```js
 inject: ["parentMsg"] // 会将数据挂载在当前实例上
 ```
-#### 6.Ref使用
+### 6.Ref使用
 
 获取组件实例
 ```sh
@@ -192,7 +202,7 @@ mounted() { // 获取组件定义的属性
   console.log(this.$refs.grand2.name);
 }
 ```
-#### 7.EventBus
+### 7.EventBus
 
 用于跨组件通知(不复杂的项目可以使用这种方式)
 ```js
@@ -214,7 +224,7 @@ mounted() {
   });
  },
 ```
-#### 8.Vuex通信
+### 8.Vuex通信
 
 状态管理 
 
