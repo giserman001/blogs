@@ -3,231 +3,259 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>1.服务端数据 | 细节决定成败</title>
+    <title>vue权限菜单及按钮权限 | 清风拂林</title>
     <meta name="description" content="Vuepress blog">
+    <meta name="generator" content="VuePress 1.3.1">
     
     
-    <link rel="preload" href="/blogs/assets/css/0.styles.ee5e2407.css" as="style"><link rel="preload" href="/blogs/assets/js/app.75a4696a.js" as="script"><link rel="preload" href="/blogs/assets/js/2.281d8a21.js" as="script"><link rel="preload" href="/blogs/assets/js/21.62657bd5.js" as="script"><link rel="preload" href="/blogs/assets/js/6.f154602b.js" as="script"><link rel="prefetch" href="/blogs/assets/js/10.7cc7dbd4.js"><link rel="prefetch" href="/blogs/assets/js/11.43f5d742.js"><link rel="prefetch" href="/blogs/assets/js/12.5c405a1f.js"><link rel="prefetch" href="/blogs/assets/js/13.9eda861b.js"><link rel="prefetch" href="/blogs/assets/js/14.9c0ab8e5.js"><link rel="prefetch" href="/blogs/assets/js/15.14ac56c6.js"><link rel="prefetch" href="/blogs/assets/js/16.88a516c6.js"><link rel="prefetch" href="/blogs/assets/js/17.e3ea7518.js"><link rel="prefetch" href="/blogs/assets/js/18.92bc5a7f.js"><link rel="prefetch" href="/blogs/assets/js/19.5799495b.js"><link rel="prefetch" href="/blogs/assets/js/20.9c208b9a.js"><link rel="prefetch" href="/blogs/assets/js/22.e3d82113.js"><link rel="prefetch" href="/blogs/assets/js/23.c2251375.js"><link rel="prefetch" href="/blogs/assets/js/24.6819ba0c.js"><link rel="prefetch" href="/blogs/assets/js/25.c53e1875.js"><link rel="prefetch" href="/blogs/assets/js/26.ed0e3bfb.js"><link rel="prefetch" href="/blogs/assets/js/3.98eeb4de.js"><link rel="prefetch" href="/blogs/assets/js/4.21c0b9ab.js"><link rel="prefetch" href="/blogs/assets/js/5.181d0c7e.js"><link rel="prefetch" href="/blogs/assets/js/7.cc075405.js"><link rel="prefetch" href="/blogs/assets/js/8.e44dd9bb.js"><link rel="prefetch" href="/blogs/assets/js/9.468894bb.js">
-    <link rel="stylesheet" href="/blogs/assets/css/0.styles.ee5e2407.css">
+    <link rel="preload" href="/blogs/assets/css/0.styles.f842eeaf.css" as="style"><link rel="preload" href="/blogs/assets/js/app.03f4b91d.js" as="script"><link rel="preload" href="/blogs/assets/js/2.8cc78ac9.js" as="script"><link rel="preload" href="/blogs/assets/js/32.6779046f.js" as="script"><link rel="preload" href="/blogs/assets/js/8.f1407b67.js" as="script"><link rel="prefetch" href="/blogs/assets/js/10.30706595.js"><link rel="prefetch" href="/blogs/assets/js/11.6f105139.js"><link rel="prefetch" href="/blogs/assets/js/12.7d272894.js"><link rel="prefetch" href="/blogs/assets/js/13.26ff3e84.js"><link rel="prefetch" href="/blogs/assets/js/14.2d4f0a2f.js"><link rel="prefetch" href="/blogs/assets/js/15.e3439baa.js"><link rel="prefetch" href="/blogs/assets/js/16.0d93c363.js"><link rel="prefetch" href="/blogs/assets/js/17.e047539e.js"><link rel="prefetch" href="/blogs/assets/js/18.6c2b1db3.js"><link rel="prefetch" href="/blogs/assets/js/19.5eb316f9.js"><link rel="prefetch" href="/blogs/assets/js/20.94cc5179.js"><link rel="prefetch" href="/blogs/assets/js/21.e1e139c7.js"><link rel="prefetch" href="/blogs/assets/js/22.c04b4401.js"><link rel="prefetch" href="/blogs/assets/js/23.8067f25f.js"><link rel="prefetch" href="/blogs/assets/js/24.805d6330.js"><link rel="prefetch" href="/blogs/assets/js/25.99d04a5b.js"><link rel="prefetch" href="/blogs/assets/js/26.7ac51890.js"><link rel="prefetch" href="/blogs/assets/js/27.4bd89dd7.js"><link rel="prefetch" href="/blogs/assets/js/28.f4dc0238.js"><link rel="prefetch" href="/blogs/assets/js/29.c9ef90a1.js"><link rel="prefetch" href="/blogs/assets/js/3.9f085617.js"><link rel="prefetch" href="/blogs/assets/js/30.407ea166.js"><link rel="prefetch" href="/blogs/assets/js/31.f21cff44.js"><link rel="prefetch" href="/blogs/assets/js/33.48c094a5.js"><link rel="prefetch" href="/blogs/assets/js/34.9b550a20.js"><link rel="prefetch" href="/blogs/assets/js/35.34841bc6.js"><link rel="prefetch" href="/blogs/assets/js/36.755943f3.js"><link rel="prefetch" href="/blogs/assets/js/37.2722a0be.js"><link rel="prefetch" href="/blogs/assets/js/4.711c049b.js"><link rel="prefetch" href="/blogs/assets/js/5.792b06b0.js"><link rel="prefetch" href="/blogs/assets/js/6.20d2a180.js"><link rel="prefetch" href="/blogs/assets/js/7.ff0680cb.js"><link rel="prefetch" href="/blogs/assets/js/9.3592fd49.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.f842eeaf.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blogs/" class="home-link router-link-active"><img src="./logo.jpg" alt="细节决定成败" class="logo"> <span class="site-name can-hide">细节决定成败</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blogs/home.html" class="nav-link">web开发记录</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/vue/" class="nav-link router-link-active">vue</a></li><li class="dropdown-item"><!----> <a href="/blogs/react/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blogs/miniprogram/" class="nav-link">微信小程序</a></li></ul></div></div><div class="nav-item"><a href="/blogs/tool/" class="nav-link">工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="知识库" class="dropdown-title"><span class="title">知识库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/article/strategy/" class="nav-link">攻略</a></li><li class="dropdown-item"><!----> <a href="/blogs/article/qualityArticles/javascript/" class="nav-link">优质文章</a></li></ul></div></div> <a href="https://github.com/giserman001/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blogs/" class="home-link router-link-active"><img src="./logo.jpg" alt="清风拂林" class="logo"> <span class="site-name can-hide">清风拂林</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blogs/home.html" class="nav-link">
+  web开发记录
+</a></div><div class="nav-item"><a href="/blogs/javascript/" class="nav-link">
+  javascript
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/vue/" class="nav-link router-link-active">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/react/" class="nav-link">
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/miniprogram/" class="nav-link">
+  微信小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="知识库" class="dropdown-title"><span class="title">知识库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/article/strategy/" class="nav-link">
+  攻略
+</a></li></ul></div></div> <a href="https://github.com/giserman001/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
     GitHub
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blogs/home.html" class="nav-link">web开发记录</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/vue/" class="nav-link router-link-active">vue</a></li><li class="dropdown-item"><!----> <a href="/blogs/react/" class="nav-link">react</a></li><li class="dropdown-item"><!----> <a href="/blogs/miniprogram/" class="nav-link">微信小程序</a></li></ul></div></div><div class="nav-item"><a href="/blogs/tool/" class="nav-link">工具</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="知识库" class="dropdown-title"><span class="title">知识库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/article/strategy/" class="nav-link">攻略</a></li><li class="dropdown-item"><!----> <a href="/blogs/article/qualityArticles/javascript/" class="nav-link">优质文章</a></li></ul></div></div> <a href="https://github.com/giserman001/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blogs/home.html" class="nav-link">
+  web开发记录
+</a></div><div class="nav-item"><a href="/blogs/javascript/" class="nav-link">
+  javascript
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/vue/" class="nav-link router-link-active">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/react/" class="nav-link">
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/miniprogram/" class="nav-link">
+  微信小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="知识库" class="dropdown-title"><span class="title">知识库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/article/strategy/" class="nav-link">
+  攻略
+</a></li></ul></div></div> <a href="https://github.com/giserman001/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
     GitHub
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/blogs/vue/" class="sidebar-link">element分页组件记录</a></li><li><a href="/blogs/vue/vue_ts.html" class="sidebar-link">Vue + TS 开发应用</a></li><li><a href="/blogs/vue/vue_optimize.html" class="sidebar-link">vue优化技巧</a></li><li><a href="/blogs/vue/vue_auth_manage.html" class="active sidebar-link">vue权限菜单及按钮权限</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blogs/vue/vue_JWT.html" class="sidebar-link">vue里JWT认证</a></li><li><a href="/blogs/vue/vue_render_jsx.html" class="sidebar-link">vue里render函数之JSX应用</a></li><li><a href="/blogs/vue/vue_module_communicate.html" class="sidebar-link">Vue组件间通信方式</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="_1-服务端数据"><a href="#_1-服务端数据" class="header-anchor">#</a> 1.服务端数据</h3> <p>Vue权限菜单需要根据后端返回的数据来实现</p> <div class="language- extra-class"><pre class="language-text"><code>[
-    {pid:-1,name:'购物车',id:1,auth:'cart'},
-    {pid:1,name:'购物车列表',id:4,auth:'cart-list'},
-    {pid:4,name:'彩票',id:5,auth:'lottery'},
-    {pid:4,name:'商品',id:6,auth:'product'},
-    {pid:-1,name:'商店',id:2,auth:'shop'},
-    {pid:-1,name:'个人中心',id:3,auth:'store'},
-]
-</code></pre></div><p>通过express返回权限列表</p> <div class="language- extra-class"><pre class="language-text"><code>const express = require('express');
-const app = express();
-app.all('*', (req, res, next) =&gt; {
-  res.header('Access-Control-Allow-Origin', '*');
-  // Access-Control-Allow-Headers ,可根据浏览器的F12查看,把对应的粘贴在这里就行
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  res.header('Access-Control-Allow-Methods', '*');
-  res.header('Content-Type', 'application/json;charset=utf-8');
-  next();});
-app.get('/roleAuth', (req, res) =&gt; {
-  res.json({
-    menuList: [
-        {pid:-1,name:'购物车',id:1,auth:'cart'},
-        {pid:1,name:'购物车列表',id:4,auth:'cart-list'},
-        {pid:4,name:'彩票',id:5,auth:'lottery'},
-        {pid:4,name:'商品',id:6,auth:'product'},
-        {pid:-1,name:'商店',id:2,auth:'shop'},
-        {pid:-1,name:'个人中心',id:3,auth:'store'},
-    ]
-  });});
-app.listen(3000);
-</code></pre></div><h3 id="_2-静态菜单"><a href="#_2-静态菜单" class="header-anchor">#</a> 2.静态菜单</h3> <p>使用element-ui构建静态菜单</p> <div class="language- extra-class"><pre class="language-text"><code>import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI);
-</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>&lt;el-menu default-active=&quot;2&quot; class=&quot;el-menu-vertical-demo&quot;&gt;
-    &lt;el-submenu index=&quot;1&quot;&gt;
-        &lt;template slot=&quot;title&quot;&gt;导航一&lt;/template&gt;
-        &lt;el-submenu index=&quot;1-1&quot;&gt;
-            &lt;template slot=&quot;title&quot;&gt;选项1-1&lt;/template&gt;
-            &lt;el-menu-item index=&quot;1-1-1&quot;&gt;选项1-1-1&lt;/el-menu-item&gt;
-            &lt;el-menu-item index=&quot;1-1-2&quot;&gt;选项1-1-2&lt;/el-menu-item&gt;
-        &lt;/el-submenu&gt;
-        &lt;el-menu-item index=&quot;1-2&quot;&gt;选项1-2&lt;/el-menu-item&gt;
-    &lt;/el-submenu&gt;
-    &lt;el-menu-item index=&quot;2&quot;&gt;
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/blogs/vue/" class="sidebar-link">element分页组件记录</a></li><li><a href="/blogs/vue/vue_search_form.html" class="sidebar-link">element-ui二次封装form表单</a></li><li><a href="/blogs/vue/vue_ts.html" class="sidebar-link">Vue + TS 开发应用</a></li><li><a href="/blogs/vue/vue_optimize.html" class="sidebar-link">vue优化技巧</a></li><li><a href="/blogs/vue/vue_auth_manage.html" class="active sidebar-link">vue权限菜单及按钮权限</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blogs/vue/vue_JWT.html" class="sidebar-link">vue里JWT认证</a></li><li><a href="/blogs/vue/vue_render_jsx.html" class="sidebar-link">vue里render函数之JSX应用</a></li><li><a href="/blogs/vue/vue_module_communicate.html" class="sidebar-link">Vue组件间通信方式</a></li><li><a href="/blogs/vue/vue_router.html" class="sidebar-link">Vue相同路由不同参数的不刷新问题</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue权限菜单及按钮权限"><a href="#vue权限菜单及按钮权限" class="header-anchor">#</a> vue权限菜单及按钮权限</h1> <p></p><div class="table-of-contents"><ul><li><a href="#_1-服务端数据">1.服务端数据</a></li><li><a href="#_2-静态菜单">2.静态菜单</a></li><li><a href="#_3-获取权限">3.获取权限</a></li><li><a href="#_4-获取相关需要数据">4.获取相关需要数据</a></li><li><a href="#_5-找到需要添加的路由">5.找到需要添加的路由</a></li><li><a href="#_6-递归渲染菜单">6.递归渲染菜单</a></li><li><a href="#_7-权限按钮控制">7.权限按钮控制</a></li></ul></div><p></p> <h3 id="_1-服务端数据"><a href="#_1-服务端数据" class="header-anchor">#</a> 1.服务端数据</h3> <p>Vue权限菜单需要根据后端返回的数据来实现</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'购物车'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'cart'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'购物车列表'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">4</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'cart-list'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token number">4</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'彩票'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">5</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'lottery'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token number">4</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'商品'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">6</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'product'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'商店'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'shop'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'个人中心'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">3</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'store'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>通过express返回权限列表</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token string">'*'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">'Access-Control-Allow-Origin'</span><span class="token punctuation">,</span> <span class="token string">'*'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// Access-Control-Allow-Headers ,可根据浏览器的F12查看,把对应的粘贴在这里就行</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">'Access-Control-Allow-Headers'</span><span class="token punctuation">,</span> <span class="token string">'Content-Type'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">'Access-Control-Allow-Methods'</span><span class="token punctuation">,</span> <span class="token string">'*'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">'Content-Type'</span><span class="token punctuation">,</span> <span class="token string">'application/json;charset=utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/roleAuth'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    menuList<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'购物车'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'cart'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'购物车列表'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">4</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'cart-list'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token number">4</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'彩票'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">5</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'lottery'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token number">4</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'商品'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">6</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'product'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'商店'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'shop'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>pid<span class="token operator">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>name<span class="token operator">:</span><span class="token string">'个人中心'</span><span class="token punctuation">,</span>id<span class="token operator">:</span><span class="token number">3</span><span class="token punctuation">,</span>auth<span class="token operator">:</span><span class="token string">'store'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="_2-静态菜单"><a href="#_2-静态菜单" class="header-anchor">#</a> 2.静态菜单</h3> <p>使用element-ui构建静态菜单</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> ElementUI <span class="token keyword">from</span> <span class="token string">'element-ui'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'element-ui/lib/theme-chalk/index.css'</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>ElementUI<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token operator">&lt;</span>el<span class="token operator">-</span>menu <span class="token keyword">default</span><span class="token operator">-</span>active<span class="token operator">=</span><span class="token string">&quot;2&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;el-menu-vertical-demo&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>el<span class="token operator">-</span>submenu index<span class="token operator">=</span><span class="token string">&quot;1&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>template slot<span class="token operator">=</span><span class="token string">&quot;title&quot;</span><span class="token operator">&gt;</span>导航一<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>el<span class="token operator">-</span>submenu index<span class="token operator">=</span><span class="token string">&quot;1-1&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>template slot<span class="token operator">=</span><span class="token string">&quot;title&quot;</span><span class="token operator">&gt;</span>选项<span class="token number">1</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item index<span class="token operator">=</span><span class="token string">&quot;1-1-1&quot;</span><span class="token operator">&gt;</span>选项<span class="token number">1</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item index<span class="token operator">=</span><span class="token string">&quot;1-1-2&quot;</span><span class="token operator">&gt;</span>选项<span class="token number">1</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>submenu<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item index<span class="token operator">=</span><span class="token string">&quot;1-2&quot;</span><span class="token operator">&gt;</span>选项<span class="token number">1</span><span class="token operator">-</span><span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>submenu<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item index<span class="token operator">=</span><span class="token string">&quot;2&quot;</span><span class="token operator">&gt;</span>
         导航二
-    &lt;/el-menu-item&gt;
-    &lt;el-menu-item index=&quot;3&quot;&gt;
+    <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item index<span class="token operator">=</span><span class="token string">&quot;3&quot;</span><span class="token operator">&gt;</span>
         导航三
-    &lt;/el-menu-item&gt;
-    &lt;el-menu-item index=&quot;4&quot;&gt;
+    <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item index<span class="token operator">=</span><span class="token string">&quot;4&quot;</span><span class="token operator">&gt;</span>
         导航四
-    &lt;/el-menu-item&gt;&lt;/el-menu&gt;
-</code></pre></div><p>路由配置</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'import Router from 'vue-router'import Home from './views/Home.vue'
+    <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">-</span>item<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>menu<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>路由配置</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token keyword">import</span> Router <span class="token keyword">from</span> <span class="token string">'vue-router'</span><span class="token keyword">import</span> Home <span class="token keyword">from</span> <span class="token string">'./views/Home.vue'</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Router<span class="token punctuation">)</span><span class="token keyword">export</span> <span class="token keyword">const</span> authRoutes <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token comment">// 权限路由</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/cart'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'cart'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Cart'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'cart-list'</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'cart-list'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/CartList'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        children<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            path<span class="token operator">:</span> <span class="token string">'lottery'</span><span class="token punctuation">,</span>
+            name<span class="token operator">:</span> <span class="token string">'lottery'</span><span class="token punctuation">,</span>
+            <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Lottery'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            path<span class="token operator">:</span> <span class="token string">'product'</span><span class="token punctuation">,</span>
+            name<span class="token operator">:</span> <span class="token string">'product'</span><span class="token punctuation">,</span>
+            <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/Product'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token comment">// 默认导出 首页和404页面</span>
+  mode<span class="token operator">:</span> <span class="token string">'history'</span><span class="token punctuation">,</span>
+  base<span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">BASE_URL</span><span class="token punctuation">,</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+      name<span class="token operator">:</span> <span class="token string">'home'</span><span class="token punctuation">,</span>
+      component<span class="token operator">:</span> Home
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      path<span class="token operator">:</span><span class="token string">'*'</span><span class="token punctuation">,</span>
+      component<span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token function-variable function">render</span><span class="token operator">:</span><span class="token parameter">h</span><span class="token operator">=&gt;</span><span class="token function">h</span><span class="token punctuation">(</span><span class="token string">'h1'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token string">'Not Found'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br></div></div><h3 id="_3-获取权限"><a href="#_3-获取权限" class="header-anchor">#</a> 3.获取权限</h3> <p>根据后端返回的数据，格式化树结构，并提取用户权限</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 默认设置没有获取过权限export default new Vuex.Store({</span>
+  state<span class="token operator">:</span> <span class="token punctuation">{</span>
+    hasPermission<span class="token operator">:</span><span class="token boolean">false</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  mutations<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">setPermission</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span>hasPermission <span class="token operator">=</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>在路由跳转前看下是否获取过权限，如果没有获取过，就获取权限存入vuex中</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span><span class="token keyword">from</span><span class="token punctuation">,</span>next</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>hasPermission<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 获取最新路由列表</span>
+    <span class="token keyword">let</span> newRoutes <span class="token operator">=</span> <span class="token keyword">await</span> store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'getRouteList'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    router<span class="token punctuation">.</span><span class="token function">addRoutes</span><span class="token punctuation">(</span>newRoutes<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 增加新路由</span>
+    <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token operator">...</span>to<span class="token punctuation">,</span>replace<span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+    <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取过就不需要再次获取了</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="_4-获取相关需要数据"><a href="#_4-获取相关需要数据" class="header-anchor">#</a> 4.获取相关需要数据</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">getMenListAndAuth</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">menuList</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> menu <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> sourceMap <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> auth <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  menuList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">m</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    m<span class="token punctuation">.</span>children <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 增加孩子列表</span>
+    sourceMap<span class="token punctuation">[</span>m<span class="token punctuation">.</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> m<span class="token punctuation">;</span>
+    auth<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>auth<span class="token punctuation">)</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>pid <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      menu<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 根节点</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+      sourceMap<span class="token punctuation">[</span>m<span class="token punctuation">.</span>pid<span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> sourceMap<span class="token punctuation">[</span>m<span class="token punctuation">.</span>pid<span class="token punctuation">]</span><span class="token punctuation">.</span>children<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>menu<span class="token punctuation">,</span>auth<span class="token punctuation">}</span> <span class="token comment">// 获取菜单数据和权限数据</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">async</span> <span class="token function">getRouteList</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>dispatch<span class="token punctuation">,</span>commit<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> auths <span class="token operator">=</span> <span class="token keyword">await</span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'http://localhost:3000/roleAuth'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> menuList <span class="token operator">=</span> auths<span class="token punctuation">.</span>data<span class="token punctuation">.</span>menuList<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> <span class="token punctuation">{</span>menu<span class="token punctuation">,</span>auth<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">getMenListAndAuth</span><span class="token punctuation">(</span>menuList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="_5-找到需要添加的路由"><a href="#_5-找到需要添加的路由" class="header-anchor">#</a> 5.找到需要添加的路由</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span>authRoutes<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./router'</span><span class="token keyword">const</span> <span class="token function-variable function">getRoutes</span> <span class="token operator">=</span> <span class="token parameter">auth</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">filter</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">authRoutes</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> authRoutes<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">route</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+      <span class="token comment">// 包含权限</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>auth<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>route<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>route<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">{</span>
+          route<span class="token punctuation">.</span>children <span class="token operator">=</span> <span class="token function">filter</span><span class="token punctuation">(</span>route<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token function">filter</span><span class="token punctuation">(</span>authRoutes<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-Vue.use(Router)export const authRoutes = [ // 权限路由
-  {
-    path: '/cart',
-    name: 'cart',
-    component: () =&gt; import('@/views/Cart'),
-    children: [
-      {
-        path: 'cart-list',
-        name: 'cart-list',
-        component: () =&gt; import('@/views/CartList'),
-        children: [
-          {
-            path: 'lottery',
-            name: 'lottery',
-            component: () =&gt; import('@/views/Lottery'),
-          },
-          {
-            path: 'product',
-            name: 'product',
-            component: () =&gt; import('@/views/Product'),
-          },
-        ],
-      },
-    ],
-  },];export default new Router({ // 默认导出 首页和404页面
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path:'*',
-      component:{
-        render:h=&gt;h('h1',{},'Not Found')
-      }
-    }
-  ]})
-</code></pre></div><h3 id="_3-获取权限"><a href="#_3-获取权限" class="header-anchor">#</a> 3.获取权限</h3> <p>根据后端返回的数据，格式化树结构，并提取用户权限</p> <div class="language- extra-class"><pre class="language-text"><code>// 默认设置没有获取过权限export default new Vuex.Store({
-  state: {
-    hasPermission:false
-  },
-  mutations: {
-    setPermission(state){
-      state.hasPermission = true
-    }
-  },})
-</code></pre></div><p>在路由跳转前看下是否获取过权限，如果没有获取过，就获取权限存入vuex中</p> <div class="language- extra-class"><pre class="language-text"><code>router.beforeEach(async (to,from,next)=&gt;{
-  if(!store.state.hasPermission){
-    // 获取最新路由列表
-    let newRoutes = await store.dispatch('getRouteList'); 
-    router.addRoutes(newRoutes); // 增加新路由
-    next({...to,replace:true})
-  }else{
-    next(); // 获取过就不需要再次获取了
-  }})
-</code></pre></div><h3 id="_4-获取相关需要数据"><a href="#_4-获取相关需要数据" class="header-anchor">#</a> 4.获取相关需要数据</h3> <div class="language- extra-class"><pre class="language-text"><code>const getMenListAndAuth = (menuList)=&gt;{
-  let menu = [];
-  let sourceMap = {};
-  let auth = [];
-  menuList.forEach(m =&gt; {
-    m.children = []; // 增加孩子列表
-    sourceMap[m.id] = m;
-    auth.push(m.auth)
-    if(m.pid === -1){
-      menu.push(m); // 根节点
-    }else{
-      sourceMap[m.pid] &amp;&amp; sourceMap[m.pid].children.push(m)
-    }
-  });
-  return {menu,auth} // 获取菜单数据和权限数据
-}
-async getRouteList({dispatch,commit}){
-    let auths = await axios.get('http://localhost:3000/roleAuth');
-    let menuList = auths.data.menuList;
-    let {menu,auth} = getMenListAndAuth(menuList);
-}
-</code></pre></div><h3 id="_5-找到需要添加的路由"><a href="#_5-找到需要添加的路由" class="header-anchor">#</a> 5.找到需要添加的路由</h3> <div class="language- extra-class"><pre class="language-text"><code>import {authRoutes} from './router'const getRoutes = auth =&gt; {
-  const filter = (authRoutes)=&gt;{
-    return authRoutes.filter(route=&gt;{
-      // 包含权限
-      if(auth.includes(route.name)){
-        if(route.children){
-          route.children = filter(route.children);
-        }
-        return true;
-      }
-    })
-  }
-  return filter(authRoutes);};
-
-// 获取需要添加的路由列表
-async getRouteList({ dispatch, commit }) {
-    let auths = await axios.get(&quot;http://localhost:3000/roleAuth&quot;);
-    let menuList = auths.data.menuList;
-    let { menu, auth } = getMenListAndAuth(menuList);
-    commit(&quot;setMenu&quot;, menu); // 将菜单数据保存起来
-    commit(&quot;setPermission&quot;); // 权限获取完毕
-    // 通过auth查找需要添加的路由
-    return getRoutes(auth);
-}
-</code></pre></div><h3 id="_6-递归渲染菜单"><a href="#_6-递归渲染菜单" class="header-anchor">#</a> 6.递归渲染菜单</h3> <p>渲染Menu组件提取公共部分</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
- &lt;div&gt;
-  &lt;el-menu&gt;
-   &lt;template v-for=&quot;menu in $store.state.menu&quot;&gt;
-    &lt;el-submenu v-if=&quot;menu.children.length&quot; :key=&quot;menu.auth&quot; :index=&quot;menu.auth&quot;&gt;
-     &lt;template slot=&quot;title&quot;&gt;{{menu.name}}&lt;/template&gt;
-     &lt;!-- 此处需要不停的递归 el-submenu  --&gt;
-    &lt;/el-submenu&gt;
-    &lt;el-menu-item v-else :key=&quot;menu.auth&quot; :index=&quot;menu.auth&quot;&gt;{{menu.name}}&lt;/el-menu-item&gt;
-   &lt;/template&gt;
-  &lt;/el-menu&gt;
- &lt;/div&gt;
-&lt;/template&gt;
-</code></pre></div><p>编写递归组件</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
-    &lt;el-submenu :index=&quot;menu.auth&quot;&gt;
-         &lt;template slot=&quot;title&quot;&gt;{{menu.name}}&lt;/template&gt;
-         &lt;template v-for=&quot;(child,index) in menu.children&quot;&gt;  
-            &lt;el-menu-item v-if=&quot;!child.children.length&quot; :key=&quot;index&quot;&gt; 
-               &lt;router-link :to=&quot;{name:child.auth}&quot;&gt; {{child.name}}&lt;/router-link&gt;
-            &lt;/el-menu-item&gt;
-            &lt;!-- 如果有儿子继续递归组件 --&gt;
-            &lt;ResubMenu :menu=&quot;child&quot; v-else :key=&quot;index&quot;&gt;&lt;/ResubMenu&gt;
-         &lt;/template&gt;
-    &lt;/el-submenu&gt;
-&lt;/template&gt;
-&lt;script&gt;
-export default {
-    name:'ResubMenu',
-    props:{
-        menu:{}
-    }}
-&lt;/script&gt;
-</code></pre></div><h3 id="_7-权限按钮控制"><a href="#_7-权限按钮控制" class="header-anchor">#</a> 7.权限按钮控制</h3> <div class="language- extra-class"><pre class="language-text"><code>state: {
-    hasPermission: false,
-    menu: [], // 菜单权限
-    btnPermission:{ // 按钮权限
-        edit:false,
-        add:true
-    }},
-</code></pre></div><p>查看当前按钮是否有权限</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;el-button v-has=&quot;'edit'&quot;&gt;编辑&lt;/el-button&gt;
-&lt;el-button v-has=&quot;'add'&quot;&gt;添加&lt;/el-button&gt;
-</code></pre></div><p>自定义指令的使用</p> <div class="language- extra-class"><pre class="language-text"><code>directives: {
-  has: {
-   inserted(el, bindings, vnode) {
-     let value = bindings.value;
-     // 在vuex中查看是否有按钮权限
-     let flag = vnode.context.$store.state.btnPermission[value];
-     // 如果没有全选则将按钮删除即可
-     !flag &amp;&amp; el.parentNode.removeChild(el);
-   }
-  }
- }
-</code></pre></div> <div class="gitalk-container"><div id="gitalk-container"></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/giserman001/blogs/edit/master/docs/vue/vue_auth_manage.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+<span class="token comment">// 获取需要添加的路由列表</span>
+<span class="token keyword">async</span> <span class="token function">getRouteList</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> dispatch<span class="token punctuation">,</span> commit <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> auths <span class="token operator">=</span> <span class="token keyword">await</span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&quot;http://localhost:3000/roleAuth&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> menuList <span class="token operator">=</span> auths<span class="token punctuation">.</span>data<span class="token punctuation">.</span>menuList<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> <span class="token punctuation">{</span> menu<span class="token punctuation">,</span> auth <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">getMenListAndAuth</span><span class="token punctuation">(</span>menuList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">&quot;setMenu&quot;</span><span class="token punctuation">,</span> menu<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 将菜单数据保存起来</span>
+    <span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">&quot;setPermission&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 权限获取完毕</span>
+    <span class="token comment">// 通过auth查找需要添加的路由</span>
+    <span class="token keyword">return</span> <span class="token function">getRoutes</span><span class="token punctuation">(</span>auth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h3 id="_6-递归渲染菜单"><a href="#_6-递归渲染菜单" class="header-anchor">#</a> 6.递归渲染菜单</h3> <p>渲染Menu组件提取公共部分</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+ <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>el-menu<span class="token operator">&gt;</span>
+   <span class="token operator">&lt;</span>template v-for<span class="token operator">=</span><span class="token string">&quot;menu in <span class="token variable">$store</span>.state.menu&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>el-submenu v-if<span class="token operator">=</span><span class="token string">&quot;menu.children.length&quot;</span> :key<span class="token operator">=</span><span class="token string">&quot;menu.auth&quot;</span> :index<span class="token operator">=</span><span class="token string">&quot;menu.auth&quot;</span><span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span>template <span class="token assign-left variable">slot</span><span class="token operator">=</span><span class="token string">&quot;title&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>menu.name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span><span class="token operator">!</span>-- 此处需要不停的递归 el-submenu  --<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/el-submenu<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>el-menu-item v-else :key<span class="token operator">=</span><span class="token string">&quot;menu.auth&quot;</span> :index<span class="token operator">=</span><span class="token string">&quot;menu.auth&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>menu.name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/el-menu-item<span class="token operator">&gt;</span>
+   <span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>/el-menu<span class="token operator">&gt;</span>
+ <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>编写递归组件</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>el-submenu :index<span class="token operator">=</span><span class="token string">&quot;menu.auth&quot;</span><span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>template <span class="token assign-left variable">slot</span><span class="token operator">=</span><span class="token string">&quot;title&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>menu.name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>template v-for<span class="token operator">=</span><span class="token string">&quot;(child,index) in menu.children&quot;</span><span class="token operator">&gt;</span>  
+            <span class="token operator">&lt;</span>el-menu-item v-if<span class="token operator">=</span><span class="token string">&quot;!child.children.length&quot;</span> :key<span class="token operator">=</span><span class="token string">&quot;index&quot;</span><span class="token operator">&gt;</span> 
+               <span class="token operator">&lt;</span>router-link :to<span class="token operator">=</span><span class="token string">&quot;{name:child.auth}&quot;</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>child.name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/router-link<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>/el-menu-item<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">!</span>-- 如果有儿子继续递归组件 --<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>ResubMenu :menu<span class="token operator">=</span><span class="token string">&quot;child&quot;</span> v-else :key<span class="token operator">=</span><span class="token string">&quot;index&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/ResubMenu<span class="token operator">&gt;</span>
+         <span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/el-submenu<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/template<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token builtin class-name">export</span> default <span class="token punctuation">{</span>
+    name:<span class="token string">'ResubMenu'</span>,
+    props:<span class="token punctuation">{</span>
+        menu:<span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h3 id="_7-权限按钮控制"><a href="#_7-权限按钮控制" class="header-anchor">#</a> 7.权限按钮控制</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code>state<span class="token operator">:</span> <span class="token punctuation">{</span>
+    hasPermission<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    menu<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 菜单权限</span>
+    btnPermission<span class="token operator">:</span><span class="token punctuation">{</span> <span class="token comment">// 按钮权限</span>
+        edit<span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>
+        add<span class="token operator">:</span><span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>查看当前按钮是否有权限</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token operator">&lt;</span>el-button v-has<span class="token operator">=</span><span class="token string">&quot;'edit'&quot;</span><span class="token operator">&gt;</span>编辑<span class="token operator">&lt;</span>/el-button<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>el-button v-has<span class="token operator">=</span><span class="token string">&quot;'add'&quot;</span><span class="token operator">&gt;</span>添加<span class="token operator">&lt;</span>/el-button<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>自定义指令的使用</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>directives<span class="token operator">:</span> <span class="token punctuation">{</span>
+  has<span class="token operator">:</span> <span class="token punctuation">{</span>
+   <span class="token function">inserted</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token punctuation">,</span> bindings<span class="token punctuation">,</span> vnode</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">let</span> value <span class="token operator">=</span> bindings<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+     <span class="token comment">// 在vuex中查看是否有按钮权限</span>
+     <span class="token keyword">let</span> flag <span class="token operator">=</span> vnode<span class="token punctuation">.</span>context<span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>btnPermission<span class="token punctuation">[</span>value<span class="token punctuation">]</span><span class="token punctuation">;</span>
+     <span class="token comment">// 如果没有全选则将按钮删除即可</span>
+     <span class="token operator">!</span>flag <span class="token operator">&amp;&amp;</span> el<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/giserman001/blogs/edit/master/docs/vue/vue_auth_manage.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
-      <a href="/blogs/vue/vue_optimize.html" class="prev">vue优化技巧</a></span> <span class="next"><a href="/blogs/vue/vue_JWT.html">vue里JWT认证</a>
+      <a href="/blogs/vue/vue_optimize.html" class="prev">
+        vue优化技巧
+      </a></span> <span class="next"><a href="/blogs/vue/vue_JWT.html">
+        vue里JWT认证
+      </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/blogs/assets/js/app.75a4696a.js" defer></script><script src="/blogs/assets/js/2.281d8a21.js" defer></script><script src="/blogs/assets/js/21.62657bd5.js" defer></script><script src="/blogs/assets/js/6.f154602b.js" defer></script>
+    <script src="/blogs/assets/js/app.03f4b91d.js" defer></script><script src="/blogs/assets/js/2.8cc78ac9.js" defer></script><script src="/blogs/assets/js/32.6779046f.js" defer></script><script src="/blogs/assets/js/8.f1407b67.js" defer></script>
   </body>
 </html>

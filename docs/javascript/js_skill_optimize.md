@@ -153,3 +153,86 @@ function Func(name = IsRequired()) {
 Func() // "param is required"
 Func('You') // "I Love You"
 ```
+
+### 格式化日期
+```js
+/**
+ * @param  {date} date 要格式化的时间
+ * @param  {stirng} str 连接字符串
+ * @return {date}
+ */
+export function formatDate(date, str = '-') {
+  // const arr = new Date(date).toLocaleDateString().match(/\d+/g)
+  const time = new Date(date)
+  const year = time.getFullYear()
+  const month = time.getMonth() + 1
+  const day = time.getDate()
+  const arr = [year, month, day]
+  return arr.map(e => String(e).padStart(2, 0)).join(str)
+}
+```
+### 获取距离今天，d天的时间
+```js
+/**
+ * @param  {number} d 间隔天数
+ * @param  {stirng} str 连接字符串
+ * @return {date}
+ */
+export function subtractDate(d = 0, str = '-') {
+  const date = +new Date() - d * 24 * 3600 * 1000
+  return formatDate(date, str)
+}
+```
+
+### 类型判断
+```js
+/**
+ * @param  {any}  任意类型
+ * @return {stirng} 返回类型字符串
+ */
+export function typeCheck(param) {
+  return Object.prototype.toString.call(param).slice(8, -1)
+}
+```
+
+### 类型日期是否为周末
+```js
+/**
+ * @param  {string|number}  日期格式 如20190101
+ * @return {boolean}
+ */
+export function dateIsWeekend(date) {
+  const d = String(date).replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3')
+  const day = new Date(d).getDay()
+  return day === 6 || day === 0
+}
+```
+### 判断一个时间是否在某个区段中
+```js
+/**
+ * @param  {string} beginTime 
+ * @param  {string} endTime
+ * @return {boolean}
+ */
+export function isRangeTime(beginTime, endTime) {
+  var strb = beginTime.split(':')
+  if (strb.length != 2) {
+    return false
+  }
+  var stre = endTime.split(':')
+  if (stre.length != 2) {
+    return false
+  }
+  var b = new Date()
+  var e = new Date()
+  var n = new Date()
+  b.setHours(strb[0])
+  b.setMinutes(strb[1])
+  e.setHours(stre[0])
+  e.setMinutes(stre[1])
+  if (n.getTime() - b.getTime() > 0 && n.getTime() - e.getTime() < 0) {
+    return true
+  }
+  return false
+}
+```

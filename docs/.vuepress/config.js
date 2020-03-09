@@ -83,7 +83,8 @@ module.exports = {
       '/javascript/': [
         ['', '数字翻滚封装'],
         ['card_overturn', 'css3卡片翻转'],
-        ['js_skill_optimize', '灵活运用JS开发技巧']
+        ['js_skill_optimize', '灵活运用JS开发技巧'],
+        ['html5_upload', 'HTML5上传下载']
       ],
       '/article/strategy/': [{
         title: '攻略',
