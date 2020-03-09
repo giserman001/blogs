@@ -17,6 +17,9 @@ module.exports = {
   title: '清风拂林',
   lastUpdated: true,
   description: 'Vuepress blog',
+  // head: [
+  //   ['link', { rel: "shortcut icon", href: "/assets/favicons/favicon.ico"}]
+  // ],
   themeConfig: {
     sidebarDepth: 1,
     logo: './logo.jpg',
