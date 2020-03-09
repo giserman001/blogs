@@ -1,5 +1,7 @@
 # HTML5新特性-上传下载
 
+关于Blob，ArrayBuffer、File、FileReader和FormData的区别可[参考](https://www.cnblogs.com/youhong/p/10875190.html) 
+
 [[toc]]
 
 ### 前言
@@ -47,13 +49,52 @@ accept="image/*" 可以用来限制只允许上传图像格式。但是在 Webki
 ### Blob 对象
 Blob 对象相当于一个容器，可以用于存放二进制数据。它有两个属性，size 属性表示字节长度，type 属性表示 MIME 类型。
 
+> ////     filename，摘取了常用的部分
+  ////    'doc'        => 'application/msword',
+  ////    'bin'        => 'application/octet-stream',
+  ////    'exe'        => 'application/octet-stream',
+  ////    'so'         => 'application/octet-stream',
+  ////    'dll'        => 'application/octet-stream',
+  ////    'pdf'        => 'application/pdf',
+  ////    'ai'         => 'application/postscript',
+  ////    'xls'        => 'application/vnd.ms-excel',
+  ////    'ppt'        => 'application/vnd.ms-powerpoint',
+  ////    'dir'        => 'application/x-director',
+  ////    'js'         => 'application/x-javascript',
+  ////    'swf'        => 'application/x-shockwave-flash',
+  ////    'xhtml'      => 'application/xhtml+xml',
+  ////    'xht'        => 'application/xhtml+xml',
+  ////    'zip'        => 'application/zip',
+  ////    'mid'        => 'audio/midi',
+  ////    'midi'       => 'audio/midi',
+  ////    'mp3'        => 'audio/mpeg',
+  ////    'rm'         => 'audio/x-pn-realaudio',
+  ////    'rpm'        => 'audio/x-pn-realaudio-plugin',
+  ////    'wav'        => 'audio/x-wav',
+  ////    'bmp'        => 'image/bmp',
+  ////    'gif'        => 'image/gif',
+  ////    'jpeg'       => 'image/jpeg',
+  ////    'jpg'        => 'image/jpeg',
+  ////    'png'        => 'image/png',
+  ////    'css'        => 'text/css',
+  ////    'html'       => 'text/html',
+  ////    'htm'        => 'text/html',
+  ////    'txt'        => 'text/plain',
+  ////    'xsl'        => 'text/xml',
+  ////    'xml'        => 'text/xml',
+  ////    'mpeg'       => 'video/mpeg',
+  ////    'mpg'        => 'video/mpeg',
+  ////    'avi'        => 'video/x-msvideo',
+  ////    'movie'      => 'video/x-sgi-movie',
+
+
 #### 如何创建
 Blob 对象可以使用 Blob() 构造函数来创建。
 ```js
 var blob = new Blob(['hello'], {type:"text/plain"});
 ```
 
-Blob 构造函数中的第一个参数是一个数组，可以存放 ArrayBuffer对象、ArrayBufferView 对象、Blob对象和字符串。
+Blob 构造函数中的第一个参数是一个数组，可以存放 <font color=#ec7259>二进制数据、ArrayBuffer对象、ArrayBufferView 对象、Blob对象和字符串</font>。
 
 Blob 对象可以通过 slice() 方法来返回一个新的 Blob 对象。
 
@@ -81,6 +122,19 @@ Blod 对象可以通过 window.URL 对象生成一个网络地址，结合 a 标
   ctx.fillRect(10, 10, 100, 100);
   canvas.toBlob(function(blob){
       // 使用 createObjectURL 生成地址，格式为 blob:null/fd95b806-db11-4f98-b2ce-5eb16b38ba36
+      // 这里有兼容问题
+      // if (window.navigator.msSaveOrOpenBlob) {
+      //   navigator.msSaveBlob(blob, fileName);
+      // } else {
+      //   var url = URL.createObjectURL(blob);
+      //   var a = document.createElement('a');
+      //   a.download = 'canvas';
+      //   a.href = url;
+      //   // 模拟a标签点击进行下载
+      //   a.click();
+      //   // 下载后告诉浏览器不再需要保持这个文件的引用了
+      //   URL.revokeObjectURL(url);
+      // }
       var url = URL.createObjectURL(blob);
       var a = document.createElement('a');
       a.download = 'canvas';
@@ -92,7 +146,7 @@ Blod 对象可以通过 window.URL 对象生成一个网络地址，结合 a 标
   });
 </script>
 ```
-也可以将字符串保存为一个文本文件，方法类似。
+也可以将字符串保存为一个文本文件。
 
 ```html
 <button onclick="test()">点击</button>
