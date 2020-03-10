@@ -122,3 +122,10 @@ let end = moment().endOf('year').format('YYYY-MM-DD');
   npm install packageName --save //安装到项目目录下，并在package.json文件的dependencies中写入依赖，简写为-S
   npm install packageName --save-dev //安装到项目目录下，并在package.json文件的devDependencies中写入依赖，简写为-D
   ```
+  ### git如何设置不忽略文件夹名字大小写
+  ```js
+  // 查看本地仓库git忽略大小写是打开还是关闭
+  git congfig –get core.ignorecase
+  // 设置false
+  git config core.ignorecase false
+  ```
