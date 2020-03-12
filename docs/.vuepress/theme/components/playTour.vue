@@ -6,19 +6,15 @@
     <ul>
       <li>
         <span>支付宝扫一扫、领红包</span>
-        <img src="https://slbblog.oss-cn-beijing.aliyuncs.com/getMoney.jpeg" />
-      </li>
-      <li>
-        <span>赏下了</span>
-        <img src="https://slbblog.oss-cn-beijing.aliyuncs.com/wechat.jpg" />
+        <img src="/images/zf-s.jpg" />
       </li>
       <li>
         <span>支持一杯coffee</span>
-        <img src="https://slbblog.oss-cn-beijing.aliyuncs.com/coffee.jpeg" />
+        <img src="/images/wx.jpg" />
       </li>
       <li>
         <span>赏下百两黄金：</span>
-        <img src="https://slbblog.oss-cn-beijing.aliyuncs.com/thankyou.jpeg" />
+        <img src="/images/zf.jpg" />
       </li>
     </ul>
   </div>
@@ -87,7 +83,7 @@ em {
   overflow: hidden;
 }
 #money.active li {
-  width: 24%;
+  width: 32.8%;
   text-align: center;
   list-style: none;
   float: left;
