@@ -125,7 +125,7 @@ npm install packageName --save-dev //安装到项目目录下，并在package.js
 ## git如何设置不忽略文件夹名字大小写
 ```js
 // 查看本地仓库git忽略大小写是打开还是关闭
-git congfig –get core.ignorecase
+git congfig --get core.ignorecase
 // 设置false
 git config core.ignorecase false
 ```
