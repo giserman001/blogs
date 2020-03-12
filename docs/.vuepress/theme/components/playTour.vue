@@ -6,15 +6,15 @@
     <ul>
       <li>
         <span>支付宝扫一扫、领红包</span>
-        <img src="https://github.com/giserman001/blogs/tree/master/docs/.vuepress/public/images/zf-s.jpg" />
+        <img :src="$withBase('/images/zf-s.jpg')" />
       </li>
       <li>
         <span>支持一杯coffee</span>
-        <img src="https://github.com/giserman001/blogs/tree/master/docs/.vuepress/public/images/wx.jpg" />
+        <img :src="$withBase('/images/wx.jpg')" />
       </li>
       <li>
         <span>赏下百两黄金：</span>
-        <img src="https://github.com/giserman001/blogs/tree/master/docs/.vuepress/public/images/zf.jpg" />
+        <img :src="$withBase('/images/zf.jpg')" />
       </li>
     </ul>
   </div>
