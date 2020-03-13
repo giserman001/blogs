@@ -3,6 +3,7 @@ home: true
 heroImage: /logo.jpg
 actionText: 去看看
 actionLink: /home/
+pageClass: custom-home-class
 heroText: null
 tagline: 记录生活，记录工作
 features:

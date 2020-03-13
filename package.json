@@ -21,5 +21,8 @@
     "hooks": {
       "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "busuanzi.pure.js": "^1.0.2"
   }
 }
