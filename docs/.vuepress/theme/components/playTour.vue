@@ -66,8 +66,8 @@ export default {
   animation: rotate 1.5s infinite alternate;
 }
 #money.active > span {
-  animation: none!important;
-  display: none!important;
+  animation: none !important;
+  display: none !important;
 }
 #money.animate > span {
   position: relative;
@@ -79,7 +79,7 @@ em {
   display: none;
 }
 #money.active ul {
-  display: block!important;
+  display: block !important;
   overflow: hidden;
 }
 #money.active li {
@@ -97,7 +97,7 @@ em {
   width: 150px;
   border-radius: 10px;
 }
-#money.active>em {
+#money.active > em {
   width: 30px;
   height: 30px;
   right: 15px;
@@ -109,12 +109,12 @@ em {
 #money.active {
   box-shadow: 0 -3px 13px 0 #f1f1f1;
   z-index: 1000;
-  bottom: 0!important;
+  bottom: 0 !important;
   width: 100%;
   background: #fff;
-  animation: none!important;
+  animation: none !important;
 }
-#money.active>em:before {
+#money.active > em:before {
   content: "";
   position: absolute;
   background: #aaa;
@@ -124,7 +124,7 @@ em {
   right: 9px;
   border-radius: 1px;
 }
-#money.active>em:after{
+#money.active > em:after {
   content: "";
   position: absolute;
   background: #aaa;
@@ -134,10 +134,33 @@ em {
   right: 9px;
   border-radius: 1px;
 }
-#money.active>em:before {
+#money.active > em:before {
   transform: rotate(45deg);
 }
-#money.active>em:after {
+#money.active > em:after {
   transform: rotate(-45deg);
+}
+@media screen and (max-width: 720px) {
+  #money > span {
+    width: 38px;
+    height: 38px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .active li {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 720px) {
+  .active li img {
+    width: auto;
+  }
+}
+@media screen and (max-width: 720px) {
+  .active {
+    z-index: 1000;
+    overflow-y: auto;
+    height: 100%;
+  }
 }
 </style>
