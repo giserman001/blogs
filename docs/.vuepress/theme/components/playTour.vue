@@ -83,7 +83,7 @@ em {
   overflow: hidden;
 }
 #money.active li {
-  width: 32.8%;
+  width: 32.2%;
   text-align: center;
   list-style: none;
   float: left;
