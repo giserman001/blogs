@@ -26,6 +26,20 @@ export default {
 </script>
 
 <style scoped>
+@-webkit-keyframes radar-data {
+  to {
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5);
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,0)
+  }
+}
+@keyframes radar-data {
+  to {
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5);
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,0)
+  }
+}
 .homeBlog{
   position: absolute;
   left: 0;
@@ -91,8 +105,8 @@ export default {
   height: 100%;
   box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.1);
   border-radius: 50%;
-  -webkit-animation: radar-data-v-135a1092 4s linear infinite;
-  animation: radar-data-v-135a1092 4s linear infinite;
+  -webkit-animation: radar-data 4s linear infinite;
+  animation: radar-data 4s linear infinite;
 }
 .head:before {
   -webkit-animation-delay: -2s;
