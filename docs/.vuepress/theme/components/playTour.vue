@@ -61,7 +61,7 @@ export default {
   height: 65px;
   border-radius: 50%;
   border: 3px solid #cd1b31;
-  background: url('/nolook.svg');
+  background: url('/blogs/nolook.svg');
   background-size: cover;
   animation: rotate 1.5s infinite alternate;
 }
