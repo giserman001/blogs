@@ -36,6 +36,10 @@ module.exports = {
         link: '/javascript/'
       },
       {
+        text: '友情链接',
+        link: '/friendLink'
+      },
+      {
         text: '前端框架',
         items: [{
             text: 'vue',
@@ -106,7 +110,34 @@ module.exports = {
       '/': [
         ['home', 'web开发记录']
       ]
-    }
+    },
+    // 自定义属性----用于添加友情链接
+    friendLinks: [{
+      logo: 'https://giserman001.github.io/blogs/logo.jpg',
+      webSiteName: '清风拂林',
+      webSiteUrl: 'https://giserman001.github.io/blogs/',
+      webSiteDes: '前端开发,技术分享'
+    },{
+      logo: 'https://giserman001.github.io/blogs/logo.jpg',
+      webSiteName: '清风拂林',
+      webSiteUrl: 'https://giserman001.github.io/blogs/',
+      webSiteDes: '前端开发,技术分享'
+    },{
+      logo: 'https://giserman001.github.io/blogs/logo.jpg',
+      webSiteName: '清风拂林',
+      webSiteUrl: 'https://giserman001.github.io/blogs/',
+      webSiteDes: '前端开发,技术分享'
+    },{
+      logo: 'https://giserman001.github.io/blogs/logo.jpg',
+      webSiteName: '清风拂林',
+      webSiteUrl: 'https://giserman001.github.io/blogs/',
+      webSiteDes: '前端开发,技术分享'
+    },{
+      logo: 'https://giserman001.github.io/blogs/logo.jpg',
+      webSiteName: '清风拂林',
+      webSiteUrl: 'https://giserman001.github.io/blogs/',
+      webSiteDes: '前端开发,技术分享'
+    }]
   },
   markdown: {
     lineNumbers: true

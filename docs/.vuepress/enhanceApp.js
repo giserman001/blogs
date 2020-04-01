@@ -1,3 +1,5 @@
+import Element from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import copy from "./common/copy";
 
 export default ({
@@ -6,6 +8,7 @@ export default ({
   router, // 当前应用的路由实例
   siteData // 站点元数据
 }) => {
+  Vue.use(Element)
   setTimeout(() => {
     try {
       document &&
