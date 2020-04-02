@@ -1,5 +1,10 @@
 ---
+title: 'web开发记录'
+des: '平时开发中点滴记录,方便自己查阅...'
+date: '2019-01-22'
+tags: '前端'
 sidebarDepth: 2
+sidebar: false
 ---
 ## 浏览器滚动条样式修改（兼容IE）
 ```css

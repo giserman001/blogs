@@ -1,3 +1,10 @@
+---
+title: 'HTML5新特性-上传下载'
+des: '关于Blob、File、FileReader和FormData的一些记录...'
+date: '2019-11-03'
+tags: 'HTML5'
+sidebar: false
+---
 # HTML5新特性-上传下载
 
 关于Blob，ArrayBuffer、File、FileReader和FormData的区别可[参考](https://www.cnblogs.com/youhong/p/10875190.html) 

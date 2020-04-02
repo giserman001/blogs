@@ -1,9 +1,10 @@
 ---
-title: Sequelize - model definition
-date: 2019-02-11 12:41:03
-categories: Sequelize
-tags: Sequelize
+title: 'Sequelize - model模型定义'
+des: 'Sequelize 使用 define 方法定义模型和表之间的映射，Sequelize 将默认添加 createdAt 和 updatedAt 属性。因此，您将能够知道数据库条目何时进入数据库以及最后一次更新时....'
+date: '2019-02-21'
+tags: 'sequelize'
 sidebarDepth: 1
+sidebar: false
 ---
 [[toc]]
 ### Model definition - 模型定义

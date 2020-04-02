@@ -1,9 +1,10 @@
 ---
-title: Sequelize - quick start(快速开始)
-date: 2019-02-11 12:40:42
-categories: Sequelize
-tags: Sequelize
+title: 'Sequelize - quick start(快速开始)'
+des: '在 `Node.js` 社区中，`sequelize` 是一个广泛使用的 `ORM` 框架，它支持 `MySQL`、`PostgreSQL`、`SQLite` 和 `MSSQL` 等多个数据源....'
+date: '2019-02-11'
+tags: 'sequelize'
 sidebarDepth: 1
+sidebar: false
 ---
 [[toc]]
 在 `Node.js` 社区中，`sequelize` 是一个广泛使用的 `ORM` 框架，它支持 `MySQL`、`PostgreSQL`、`SQLite` 和 `MSSQL` 等多个数据源。

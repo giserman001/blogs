@@ -1,9 +1,10 @@
 ---
-title: Sequelize - 单表 CURD
-date: 2019-02-11 12:42:16
-categories: Sequelize
-tags: Sequelize
+title: 'Sequelize - 单表 CURD'
+des: '构建一个新的模型实例，并进行保存。与 `build()`方法不同的是，此方法除创建新实例外，还会将其保存到对应数据库表中....'
+date: '2019-02-24'
+tags: 'sequelize'
 sidebarDepth: 1
+sidebar: false
 ---
 
 [[toc]]

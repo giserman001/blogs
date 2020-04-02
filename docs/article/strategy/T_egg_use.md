@@ -1,3 +1,10 @@
+---
+title: 'EggJS基本使用'
+des: 'Egg.js 是《阿里旗下产品》基于 Node.js 和 Koa 是一个 Nodejs 的企业级应用开发框架。可以帮助发团队和开发人员降低开发和维护成本...'
+date: '2019-09-21'
+tags: 'egg.js'
+sidebar: false
+---
 # EggJS基本使用
 
 ::: tip 记录

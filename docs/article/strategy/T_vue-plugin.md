@@ -1,3 +1,10 @@
+---
+title: 'vue插件总结——总有一款你能用上'
+des: ''
+date: '2019-06-21'
+tags: 'vue'
+sidebar: false
+---
 # vue插件总结——总有一款你能用上
 > 转载知乎
 

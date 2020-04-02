@@ -1,3 +1,10 @@
+---
+title: 'vue中使用typescript'
+des: '习惯了template开发vue,那么我们来尝试一下vue2+ts开发之旅...'
+date: '2019-08-22'
+tags: 'vue'
+sidebar: false
+---
 # vue中使用typescript
 
 [[toc]]

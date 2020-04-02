@@ -1,9 +1,10 @@
 ---
-title: Sequelize - 多表 CURD
-date: 2019-02-11 12:42:39
-categories: Sequelize
-tags: Sequelize
+title: 'Sequelize - 多表 CURD'
+des: ''
+date: '2019-02-25'
+tags: 'sequelize'
 sidebarDepth: 1
+sidebar: false
 ---
 [[toc]]
 ### 一对一

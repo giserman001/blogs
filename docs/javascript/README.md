@@ -1,3 +1,10 @@
+---
+title: '数字翻滚'
+des: 'js采用了ES6的class编写，尽量使用chrome浏览器来查看，可以使用babel转成ES5，或者通过babel的网站在线转换。动画使用css3。...'
+date: '2018-01-03'
+tags: 'javascript,es6'
+sidebar: false
+---
 # 数字翻滚
 
 ### es6版本

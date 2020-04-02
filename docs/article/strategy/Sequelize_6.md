@@ -1,9 +1,10 @@
 ---
-title: Sequelize - associations
-date: 2019-02-11 12:41:53
-categories: Sequelize
-tags: Sequelize
+title: 'Sequelize - associations'
+des: '本部分描述了 Sequelize 中的各种关联类型。 Sequelize 中有四种类型的关联...'
+date: '2019-02-25'
+tags: 'sequelize'
 sidebarDepth: 1
+sidebar: false
 ---
 [[toc]]
 本部分描述了 Sequelize 中的各种关联类型。 Sequelize 中有四种类型的关联

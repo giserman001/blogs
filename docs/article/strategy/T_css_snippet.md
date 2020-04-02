@@ -1,5 +1,10 @@
 ---
-type: 'css'
+title: 'CSS开发效率的必备片段'
+des: '这篇文章会记录我平时常用到的 CSS 片段，使用这些 CSS 可以帮助我们解决许多实际项目中遇到的问题，方便日后查找...'
+date: '2020-03-25'
+tags: 'css'
+sidebarDepth: 1
+sidebar: false
 ---
 
 # CSS开发效率的必备片段

@@ -1,3 +1,11 @@
+---
+title: 'vue使用优化及使用技巧'
+des: 'vue使用做了如下优化总结以及使用技巧...'
+date: '2019-06-01'
+tags: 'vue'
+sidebar: false
+---
+
 # vue使用优化及使用技巧
 
 [[toc]]
