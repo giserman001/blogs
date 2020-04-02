@@ -2,6 +2,6 @@
 isNoPage: true
 sidebar: false
 editLink: false
-pageClass: blogroll-list
+pageClass: article-list
 ---
-<pages-blogroll />
+<pages-articleList />

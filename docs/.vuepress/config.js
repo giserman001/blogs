@@ -36,6 +36,10 @@ module.exports = {
         link: '/javascript/'
       },
       {
+        text: '文章',
+        link: '/article'
+      },
+      {
         text: '友情链接',
         link: '/friendLink'
       },
@@ -113,10 +117,10 @@ module.exports = {
     },
     // 自定义属性----用于添加友情链接
     friendLinks: [{
-      logo: 'https://giserman001.github.io/blogs/logo.jpg',
-      webSiteName: '清风拂林',
-      webSiteUrl: 'https://giserman001.github.io/blogs/',
-      webSiteDes: '前端开发,技术分享'
+      logo: 'https://removeif.github.io/images/avatar.jpg',
+      webSiteName: '辣椒の酱',
+      webSiteUrl: 'https://removeif.github.io',
+      webSiteDes: '后端开发，技术分享'
     },{
       logo: 'https://giserman001.github.io/blogs/logo.jpg',
       webSiteName: '清风拂林',

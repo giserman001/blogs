@@ -1,6 +1,6 @@
 <template>
   <div class="blogroll">
-    <div class="title"><i class="el-icon-user-solid"></i> 技术大佬</div>
+    <div class="tit"><i class="el-icon-user-solid"></i> 技术大佬</div>
     <div class="blogrollList">
       <template v-for="(item, index) in $themeConfig.friendLinks">
         <el-card class="blogrollItem" :style="{'background-color': randomColor()}" shadow="hover" :key="index" @click.native="skipTo(item)">
@@ -12,7 +12,7 @@
         </el-card>
       </template>
     </div>
-    <div class="title"><i class="el-icon-info"></i> 申请友链须知</div>
+    <div class="tit"><i class="el-icon-info"></i> 申请友链须知</div>
     <div class="blogrollInfo">
       <ul>
         <li>原则上只和技术类博客交换，但不包括含有和色情、暴力、政治敏感的网站。</li>
@@ -26,11 +26,11 @@
         <li>本站友链信息如下：</li>
       </ul>
       <div class="websiteMsg">
-        <p>网站图标：<a href="https://giserman001.github.io/blogs/logo.jpg">https://giserman001.github.io/blogs/logo.jpg</a></p>
-        <p>网站名称：清风拂林</p>
-        <p>网站地址：<a href="https://giserman001.github.io/blogs/">https://giserman001.github.io/blogs/</a></p>
-        <p>网站简介：前端开发，技术分享</p>
-        <p>Github地址：<a href="https://github.com/giserman001/blogs">点击右上角GitHub去star一下</a></p>
+        <p>网站图标：<span class="sp"><a href="https://giserman001.github.io/blogs/logo.jpg">https://giserman001.github.io/blogs/logo.jpg</a></span></p>
+        <p>网站名称：<span class="sp">清风拂林</span></p>
+        <p>网站地址：<span class="sp"><a href="https://giserman001.github.io/blogs/">https://giserman001.github.io/blogs/</a></span></p>
+        <p>网站简介：<span class="sp">前端开发，技术分享</span></p>
+        <p>Github地址：<span class="sp"><a href="https://github.com/giserman001/blogs">点击右上角GitHub去star一下</a></span></p>
       </div>
     </div>
   </div>
@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style>
-.title{
+.tit{
   color: #1BC3FB;
   font-size: 20px;
 }
@@ -59,9 +59,9 @@ export default {
   color: red;
 }
 .blogrollList{
-  width: 100%;
+  width: calc(100% - 20px);
   overflow: hidden;
-  padding: 10px 0px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
@@ -99,7 +99,7 @@ export default {
 }
 
 .blogrollItem.el-card.is-always-shadow, .blogrollItem.el-card.is-hover-shadow:focus, .blogrollItem.el-card.is-hover-shadow:hover {
-  -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 2px 18px 0 rgba(0,0,0,.1);
   box-shadow: 0 2px 18px 0 rgba(0,0,0,.6)
 }
 .blogrollInfo{
@@ -115,6 +115,9 @@ export default {
 .websiteMsg p{
   margin: 5px 0;
 }
+.sp{
+  color: #1BC3FB;
+}
 @media screen and (max-width: 720px) {
   .blogrollBox .tags{
     font-size: 12px;
@@ -124,6 +127,9 @@ export default {
   }
   .friend-name{
     font-size: 14px;
+  }
+  .sp{
+    display: block;
   }
 }
 </style>
