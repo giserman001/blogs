@@ -83,9 +83,9 @@ git checkout .
 [参考文章](https://www.cnblogs.com/popfisher/p/5731232.html)
 
 ## axios发送请求几个技巧
-> ![截图](./images/img1.png)
-> ![截图](./images/img2.png)
-> ![截图](./images/img3.png)
+> ![截图](../images/img1.png)
+> ![截图](../images/img2.png)
+> ![截图](../images/img3.png)
 
 ## 时间格式化正则
 > YYYY-MM-DD || YYYY/MM/DD
