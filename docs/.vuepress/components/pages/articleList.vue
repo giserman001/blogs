@@ -14,11 +14,11 @@
     <div class="leftArticle">
       <template v-for="(item, index) in arts">
         <el-card shadow="hover" class="cardArticle" :key="index">
-          <a :href="`/blogs/${item.regularPath}`" class="tits">{{item.title}}</a>
+          <a :href="`/blogs${item.regularPath}`" class="tits">{{item.title}}</a>
           <el-divider></el-divider>
           <div class="art" v-if="item.frontmatter.des">
             {{item.frontmatter.des}}
-            <a :href="`/blogs/${item.regularPath}`"><el-button size="mini" type="success">阅读全文</el-button></a> 
+            <a :href="`/blogs${item.regularPath}`"><el-button size="mini" type="success">阅读全文</el-button></a> 
           </div>
           <div class="types">
             <span><i class="el-icon-date"></i> {{item.frontmatter.date}}</span>
