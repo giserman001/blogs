@@ -40,7 +40,6 @@ export default {
   },
   mounted() {
     this.getArts('') // 全部
-    console.log(this.$site, 'this')
   },
   computed: {
     tags() {
