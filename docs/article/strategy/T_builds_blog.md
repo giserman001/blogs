@@ -1,5 +1,5 @@
 ---
-title: 'Sequelize - associations'
+title: 'Vuepress搭建静态博客全攻略'
 des: '昨天看到 GitHub 发布了一个叫做 Actions 的新功能，我迫不及待地试用了一下，顺便给自己搭了一个博客，所以就把搭建博客的过程以及每一步踩过的坑梳理了出来，希望可以给后面用 Vuepress 搭建静态博客的同好们一些帮助～...'
 date: '2019-03-25'
 tags: 'vuepress'

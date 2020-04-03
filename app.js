@@ -40,6 +40,7 @@ const fileList = fs.readdirSync('./docs') // 读取文件目录，里面还包�
 // 找出文件夹，过滤 .vuepress 文件
 const folderList = fileList.filter(filename => {
   const filePath = path.resolve(__dirname, `./docs/${filename}`)
+  console.log(filePath, 'filePath')
   return filename !== 'images' && filename !== '.vuepress' && fs.statSync(filePath).isDirectory()
 })
 folderList.unshift('null')
