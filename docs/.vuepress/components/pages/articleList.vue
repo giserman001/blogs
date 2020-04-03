@@ -4,9 +4,10 @@
       <div class="info">
         <h6>标签云</h6>
         <el-tag
-          v-for="item in tags"
+          v-for="(item, index) in tags"
           :key="item"
-          @click="handleChangeTag(item)">
+          :class="current === index ? 'active' : ''"
+          @click="handleChangeTag(item, index)">
           {{ item }}
         </el-tag>
       </div>
@@ -35,7 +36,8 @@ import { randomColor } from '../../utils'
 export default {
   data() {
     return {
-      arts: []
+      arts: [],
+      current: 0
     }
   },
   mounted() {
@@ -55,12 +57,13 @@ export default {
     colorChange() {
       return randomColor()
     },
-    handleChangeTag(tag) {
+    handleChangeTag(tag, index) {
       if (tag === '全部') {
         this.getArts('')
       } else {
         this.getArts(tag)
       }
+      this.current = index
     },
     getArts(tag) {
       let arr = []
@@ -146,6 +149,10 @@ export default {
 .rightTags .el-tag{
   margin: 4px;
   cursor: pointer;
+}
+.rightTags .el-tag.active{
+  background-color: #1e90ff;
+  color: #fff;
 }
 @media screen and (max-width: 720px) {
   .rightTags{
