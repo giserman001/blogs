@@ -6,15 +6,15 @@
     <ul>
       <li>
         <span>支付宝扫一扫、领红包</span>
-        <img :src="isPro === 'development' ? $withBase('/images/zf-s.jpg') : '/images/zf-s.jpg'" />
+        <img :src="$withBase('/images/zf-s.jpg')" />
       </li>
       <li>
         <span>支持一杯coffee</span>
-        <img :src="isPro === 'development' ? $withBase('/images/wx.jpg') : '/images/wx.jpg'" />
+        <img :src="$withBase('/images/wx.jpg')" />
       </li>
       <li>
         <span>赏下百两黄金：</span>
-        <img :src="isPro === 'development' ? $withBase('/images/zf.jpg') : '/images/zf.jpg'" />
+        <img :src="$withBase('/images/zf.jpg')" />
       </li>
     </ul>
   </div>
@@ -24,8 +24,7 @@
 export default {
   data() {
     return {
-      isClick: false,
-      isPro: process.env.NODE_ENV
+      isClick: false
     }
   },
   methods: {

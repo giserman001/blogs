@@ -2,11 +2,10 @@
   <div class="homeBlog">
     <div class="box">
       <div class="head">
-        <!-- <img src="/logo.jpg" alt="logo"> -->
-        <img :src="isPro === 'development' ? $withBase('/logo.jpg') : '/logo.jpg'" alt="logo">
+        <img :src="$withBase('/logo.jpg')" alt="logo">
       </div>
       <p>为梦想而年轻，为年轻而坚定</p>
-      <a class="enter" :href="isPro === 'development' ? '/blogs/article.html' : '/article.html'">去看看</a>
+      <a class="enter" href="/blogs/article.html">去看看</a>
     </div>
     <div class="footer">
       <div class="copyRight">部分内容来源于网络,如有侵权,请留言或联系1522962872@qq.com;Copyright © 2019-present giserman001</div>
@@ -22,14 +21,6 @@ import busuanzi from '../busuanzi.vue'
 export default {
   components: {
     busuanzi
-  },
-  data() {
-    return {
-      isPro: process.env.NODE_ENV
-    }
-  },
-  mounted() {
-    console.log(this.isPro, 'process.env.NODE_ENV')
   }
 }
 </script>
