@@ -1,6 +1,6 @@
 <template>
   <div id="money" :class="{ 'active': isClick, 'animate': true }" @click="clickMe">
-    <span></span> 
+    <span></span>
     <em class="close" @click.stop="closed"></em>
     <div class="shadow"></div>
     <ul>

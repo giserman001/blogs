@@ -13,7 +13,9 @@ jobs:
 
     - run: npm ci
 
-    - run: node upload && npm run build
+    - run: npm run build
+
+    - run: node upload
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.5.0
