@@ -1,6 +1,7 @@
 const path = require('path')
 const qiniu = require('qiniu')
 const fs = require('fs')
+const mime = require('mime');
 
 // 鉴权对象mac
 var accessKey = 'rEnOGO6rPzWLgP6uSwncdt4wM2kYdbqqQ6dbjfWk'
@@ -14,13 +15,14 @@ config.zone = qiniu.zone.Zone_z0
 config.useCdnDomain = true
 
 var formUploader = new qiniu.form_up.FormUploader(config)
-var putExtra = new qiniu.form_up.PutExtra()
+
 
 // 执行
-displayFile('./docs/.vuepress/dist')
+displayFile('./docs/.vuepress/dist/assets')
+displayFile('./docs/.vuepress/dist/images')
 
 
-function upload(key, localFile) {
+function upload(key, localFile, mimeType) {
   //这里base-html是存储空间名
   var Bucket = 'vuepress-blogs'
   var options = {
@@ -29,6 +31,7 @@ function upload(key, localFile) {
   // let key = null
   var putPolicy = new qiniu.rs.PutPolicy(options)
   var uploadToken = putPolicy.uploadToken(mac)
+  var putExtra = new qiniu.form_up.PutExtra('', {}, mimeType)
   formUploader.putFile(uploadToken, key, localFile, putExtra, function (respErr, respBody, respInfo) {
       if (respErr) {
         throw respErr
@@ -61,8 +64,12 @@ function displayFile(param) {
         })
     } else {
       var localFile = path.resolve(__dirname, param)
-      var key = 'vuepress-blogs/' + param.replace(/\\/g, '/').split('dist/')[1]
-      upload(key, localFile)
+      var key = 'blogs/' + param.replace(/\\/g, '/').split('dist/')[1]
+      console.log(localFile, 'localFile')
+      console.log(key, 'key')
+      console.log(key.split('.'))
+      var mimeType = mime.getType(key.split('.')[2])
+      upload(key, localFile, mimeType)
     }
   })
 }
