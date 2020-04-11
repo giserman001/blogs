@@ -1,6 +1,6 @@
 <template>
   <div id="money" :class="{ 'active': isClick, 'animate': true }" @click="clickMe">
-    <span></span>
+    <span><img :src="$withBase('/images/nolook.svg')" alt=""></span>
     <em class="close" @click.stop="closed"></em>
     <div class="shadow"></div>
     <ul>
@@ -61,9 +61,14 @@ export default {
   height: 65px;
   border-radius: 50%;
   border: 3px solid #cd1b31;
-  background: url('/blogs/nolook.svg');
-  background-size: cover;
+  /* background: url('/blogs/nolook.svg');
+  background-size: cover; */
   animation: rotate 1.5s infinite alternate;
+}
+#money > span img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 #money.active > span {
   animation: none !important;
