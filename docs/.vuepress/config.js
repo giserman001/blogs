@@ -150,11 +150,11 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
-  plugins: ['@vuepress/back-to-top']
-  // configureWebpack: (config, isServer) => {
-  //   if (process.env.NODE_ENV === 'production') {
-  //     // 将地址改为你的阿里云地址
-  //     config.output.publicPath = 'http://q87dbe06a.bkt.clouddn.com/blogs/'
-  //   }
-  // }
+  plugins: ['@vuepress/back-to-top'],
+  configureWebpack: (config, isServer) => {
+    if (process.env.NODE_ENV === 'production') {
+      // 将地址改为你的阿里云地址
+      config.output.publicPath = 'https://lw68.top/blogs/'
+    }
+  }
 }

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
+    "build-test": "vuepress build docs && node upload",
     "build": "node ./builds/addComponents.js && vuepress build docs && node ./builds/delComponents.js",
     "deploy": "npm run build && gh-pages -d docs/.vuepress/dist"
   },

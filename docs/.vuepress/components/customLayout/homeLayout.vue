@@ -5,7 +5,8 @@
         <img :src="$withBase('/logo.jpg')" alt="logo">
       </div>
       <p>为梦想而年轻，为年轻而坚定</p>
-      <a class="enter" href="/blogs/article.html">去看看</a>
+      <!-- <a class="enter" href="/blogs/article.html">去看看</a> -->
+      <router-link class="enter" to="/article">去看看</router-link>
     </div>
     <div class="footer">
       <div class="copyRight">部分内容来源于网络,如有侵权,请留言或联系1522962872@qq.com;Copyright © 2019-present giserman001</div>
