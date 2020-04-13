@@ -45,7 +45,7 @@ const folderList = fileList.filter(filename => {
 })
 folderList.unshift('null')
 
-let tags = ["node", "javascript", "sequelize", "vuepress", "css", "git", "mysql", "egg.js", "vue", "es6", "HTML5", "css3", "小程序", "react", "element-ui", "前端", "express", "vue-router"]
+let tags = ["node", "javascript", "sequelize", "vuepress", "css", "git", "mysql", "egg.js", "vue", "es6", "HTML5", "css3", "小程序", "react", "element-ui", "前端", "express", "vue-router", "typescript"]
 let tagsGroup = []
 tags.forEach((item, index) => {
   if(index !== 0) {
