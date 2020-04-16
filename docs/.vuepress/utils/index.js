@@ -26,4 +26,4 @@ Date.prototype.format = function (fmt) {
  * date 日期对象
  * str string
  */
-export const getTime = (date, str) => date.format(str)
+export const getTimes = (date, str) => date.format(str)

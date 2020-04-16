@@ -15,16 +15,14 @@
     <div class="leftArticle">
       <template v-for="(item, index) in arts">
         <el-card shadow="hover" class="cardArticle" :key="index">
-          <!-- <a :href="`/blogs${item.regularPath}`" class="tits">{{item.title}}</a> -->
           <router-link class="tits" :to="item.regularPath">{{item.title}}</router-link>
           <el-divider></el-divider>
           <div class="art" v-if="item.frontmatter.des">
             {{item.frontmatter.des}}
-            <!-- <a :href="`/blogs${item.regularPath}`"><el-button size="mini" type="success">阅读全文</el-button></a>  -->
             <router-link class="enter" :to="item.regularPath"><el-button size="mini" type="success">阅读全文</el-button></router-link>
           </div>
           <div class="types">
-            <span><i class="el-icon-date"></i> {{item.frontmatter.date}}</span>
+            <span><i class="el-icon-date"></i> {{formatterDate(item.frontmatter.date)}}</span>
             <span><i class="el-icon-collection-tag"></i> {{item.frontmatter.tags}}</span>
           </div>
         </el-card>
@@ -34,7 +32,7 @@
 </template>
 
 <script>
-import { randomColor } from '../../utils'
+import { randomColor, getTimes } from '../../utils'
 export default {
   data() {
     return {
@@ -56,6 +54,9 @@ export default {
     }
   },
   methods: {
+    formatterDate(date) {
+      return getTimes(new Date(date), 'yyyy-MM-dd')
+    },
     colorChange() {
       return randomColor()
     },
