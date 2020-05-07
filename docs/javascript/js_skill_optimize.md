@@ -246,8 +246,8 @@ export function isRangeTime(beginTime, endTime) {
 ### 保留N位小数(四舍五入)，从此告别toFixed(n)
 ```js
 /**
- * @param  {string} num 需要处理的数字
- * @param  {string} n 需要保留的位数
+ * @param  {number} num 需要处理的数字
+ * @param  {number} n 需要保留的位数
  */
 const f=(num,n)=>Math.round(num*10**n)/10**n
 f(12.466, 2) // 12.47
