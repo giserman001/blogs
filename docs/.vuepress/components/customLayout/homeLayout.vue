@@ -51,13 +51,17 @@ import busuanzi from '../busuanzi.vue';
 export default {
   data() {
     return {
-      height: window.innerHeight,
-      width: window.innerWidth,
+      height: 0,
+      width: 0
     };
   },
   components: {
     busuanzi,
   },
+  mounted() {
+    this.height = window.innerHeight
+    this.width = window.innerWidth
+  }
 };
 </script>
 
