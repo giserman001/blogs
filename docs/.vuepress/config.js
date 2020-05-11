@@ -126,10 +126,10 @@ module.exports = {
       webSiteUrl: 'https://removeif.github.io',
       webSiteDes: '后端开发，技术分享'
     },{
-      logo: 'https://giserman001.github.io/blogs/logo.jpg',
-      webSiteName: '清风拂林',
-      webSiteUrl: 'https://giserman001.github.io/blogs/',
-      webSiteDes: '前端开发,技术分享'
+      logo: 'https://www.515code.com/img/head.jpg',
+      webSiteName: '515code-实验室',
+      webSiteUrl: 'https://www.515code.com/',
+      webSiteDes: '后端开发、机器学习等文章分享'
     },{
       logo: 'https://giserman001.github.io/blogs/logo.jpg',
       webSiteName: '清风拂林',
