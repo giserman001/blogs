@@ -1,7 +1,7 @@
 <template>
   <div class="breakdown">
-    <div class="text" data-text="SUNMOON">
-      SUNMOON
+    <div class="text" data-text="PROGRAMMER">
+      PROGRAMMER
     </div>
   </div>
 </template>
