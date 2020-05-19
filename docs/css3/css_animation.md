@@ -10,10 +10,16 @@ tags: css
 
 
 ### loading效果
+::: tip
+loading的大小需要自己调整，本博客只做演示
+:::
 
 <css3-loading />
 
 ### 故障风格文字效果
+::: tip
+由于使用css的clip-path属性，它的兼容性不是很好，建议谷歌浏览。
+:::
 
 <css3-breakdownText />
 
