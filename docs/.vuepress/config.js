@@ -38,6 +38,10 @@ module.exports = {
       {
         text: '关于作者',
         link: '/aboutMe'
+      },
+      {
+        text: '图说生活',
+        link: '/pictureLife'
       }
       // {
       //   text: 'web开发记录',

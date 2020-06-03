@@ -22,6 +22,7 @@
     "inquirer": "^7.1.0",
     "mime": "^2.4.4",
     "qiniu": "^7.3.0",
+    "vue-waterfall-easy": "^2.4.4",
     "vuepress": "^1.2.0"
   },
   "husky": {

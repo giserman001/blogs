@@ -36,3 +36,8 @@ export default {
   }
 }
 </script>
+<style lang="stylus">
+.globalLayout
+  width 100%
+  height 100%
+</style>
