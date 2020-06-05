@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "busuanzi.pure.js": "^1.0.2",
-    "element-ui": "^2.13.0"
+    "element-ui": "^2.13.0",
+    "vue-photo-preview": "^1.1.3"
   }
 }
