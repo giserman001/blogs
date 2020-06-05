@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import vueWaterfallEasy from 'vue-waterfall-easy'
+// import vueWaterfallEasy from 'vue-waterfall-easy'
 export default {
   name: 'PictureLife',
   components: {
-    vueWaterfallEasy,
+    vueWaterfallEasy: () => import('vue-waterfall-easy')
   },
   data() {
     return {

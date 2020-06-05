@@ -24,4 +24,11 @@ export default ({
       console.error(e.message);
     }
   }, 500);
+  // Vue.mixin({
+  //   mounted() {
+  //     import('vue-waterfall-easy').then(function (m) {
+  //       Vue.use(m.default)
+  //     })
+  //   },
+  // })
 };
