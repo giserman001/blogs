@@ -2,8 +2,10 @@
 title: typescript学习笔记——函数、类、类与接口
 date: 2020-04-16
 isNoPage: false
+sidebarDepth: 0
 des: 
 tags: typescript
+showList: true
 ---
 
 [[toc]]

@@ -1,9 +1,10 @@
 ---
-title: typescript学习笔记——基本类型
+title: typescript学习笔记
 date: 2020-04-13
 isNoPage: false
 des: 随着前端日益发展，typescript在前端领域是越来越突出，弱类型的语言总是让我们又爱又恨，typescript弥补了javascript的一些缺点...
 tags: typescript
+sidebarDepth: 0
 ---
 
 # typescript学习笔记(day1)

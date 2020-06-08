@@ -78,6 +78,10 @@ export default {
       arr = arr.filter(item => {
         return item.frontmatter.tags && item.frontmatter.tags.indexOf(tag) >= 0
       })
+      // 过滤显示在文章列表上
+      arr = arr.filter(item => {
+        return !item.frontmatter.showList
+      })
       // 按照时间排序
       arr.sort((a, b) => {
         return new Date(a.frontmatter.date).getTime() > new Date(b.frontmatter.date).getTime() ? -1 : 1

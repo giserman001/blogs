@@ -4,7 +4,7 @@ des: '本部分描述了 Sequelize 中的各种关联类型。 Sequelize 中有�
 date: '2019-02-25'
 tags: 'sequelize'
 sidebarDepth: 1
-sidebar: false
+showList: true
 ---
 [[toc]]
 本部分描述了 Sequelize 中的各种关联类型。 Sequelize 中有四种类型的关联

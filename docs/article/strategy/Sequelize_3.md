@@ -4,7 +4,7 @@ des: '`Sequelize` 中有两种查询：使用 `Model`（模型）中的方法查
 date: '2019-02-24'
 tags: 'sequelize'
 sidebarDepth: 1
-sidebar: false
+showList: true
 ---
 [[toc]]
 `Sequelize` 中有两种查询：使用 `Model`（模型）中的方法查询和使用 `sequelize.query()` 进行基于 SQL 语句的原始查询。

@@ -2,8 +2,10 @@
 title: typescript学习笔记——枚举类型，接口（对象，函数）
 date: 2020-04-14
 isNoPage: false
+sidebarDepth: 0
 des: 
 tags: typescript
+showList: true
 ---
 
 # typescript学习笔记(day2)

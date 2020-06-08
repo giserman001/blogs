@@ -4,7 +4,7 @@ des: ''
 date: '2019-02-25'
 tags: 'sequelize'
 sidebarDepth: 1
-sidebar: false
+showList: true
 ---
 [[toc]]
 ### 一对一

@@ -4,7 +4,6 @@ des: '在 `Node.js` 社区中，`sequelize` 是一个广泛使用的 `ORM` 框�
 date: '2019-02-11'
 tags: 'sequelize'
 sidebarDepth: 1
-sidebar: false
 ---
 [[toc]]
 在 `Node.js` 社区中，`sequelize` 是一个广泛使用的 `ORM` 框架，它支持 `MySQL`、`PostgreSQL`、`SQLite` 和 `MSSQL` 等多个数据源。

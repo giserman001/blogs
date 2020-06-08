@@ -4,7 +4,7 @@ des: 'Sequelize 使用 define 方法定义模型和表之间的映射，Sequeliz
 date: '2019-02-21'
 tags: 'sequelize'
 sidebarDepth: 1
-sidebar: false
+showList: true
 ---
 [[toc]]
 ### Model definition - 模型定义

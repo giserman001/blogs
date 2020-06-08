@@ -4,7 +4,7 @@ des: '构建一个新的模型实例，并进行保存。与 `build()`方法不�
 date: '2019-02-24'
 tags: 'sequelize'
 sidebarDepth: 1
-sidebar: false
+showList: true
 ---
 
 [[toc]]

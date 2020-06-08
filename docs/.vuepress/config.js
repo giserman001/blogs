@@ -80,49 +80,62 @@ module.exports = {
       //   ]
       // }
     ],
-    // sidebar: {
-    //   '/vue/': [
-    //     ['', 'element分页组件记录'],
-    //     ['vue_search_form', 'element-ui二次封装form表单'],
-    //     ['vue_ts', 'Vue + TS 开发应用'],
-    //     ['vue_optimize', 'vue优化技巧'],
-    //     ['vue_auth_manage', 'vue权限菜单及按钮权限'],
-    //     ['vue_JWT', 'vue里JWT认证'],
-    //     ['vue_render_jsx', 'vue里render函数之JSX应用'],
-    //     ['vue_module_communicate', 'Vue组件间通信方式'],
-    //     ['vue_router', 'Vue相同路由不同参数的不刷新问题']
-    //   ],
-    //   '/react/': [
-    //     ['', '默认文档']
-    //   ],
-    //   '/miniprogram/': [
-    //     ['', '小程序左滑删除'],
-    //     ['wx_calendar', '小程序日历组件']
-    //   ],
-    //   '/javascript/': [
-    //     ['', '数字翻滚封装'],
-    //     ['card_overturn', 'css3卡片翻转'],
-    //     ['js_skill_optimize', '灵活运用JS开发技巧'],
-    //     ['html5_upload', 'HTML5上传下载']
-    //   ],
-    //   '/article/strategy/': [{
-    //     title: '攻略',
-    //     children: getFileNames('/article/strategy/')
-    //   }],
-    //   // 暂时去掉优质文章模块
-    //   '/article/qualityArticles/': [{
-    //       title: 'javascript',
-    //       children: getFileNames('/article/qualityArticles/javascript/', 'javascript')
-    //     },
-    //     {
-    //       title: 'node',
-    //       children: getFileNames('/article/qualityArticles/node/', 'node')
-    //     }
-    //   ],
-    //   '/': [
-    //     ['home', 'web开发记录']
-    //   ]
-    // },
+    sidebar: {
+      // '/vue/': [
+      //   ['', 'element分页组件记录'],
+      //   ['vue_search_form', 'element-ui二次封装form表单'],
+      //   ['vue_ts', 'Vue + TS 开发应用'],
+      //   ['vue_optimize', 'vue优化技巧'],
+      //   ['vue_auth_manage', 'vue权限菜单及按钮权限'],
+      //   ['vue_JWT', 'vue里JWT认证'],
+      //   ['vue_render_jsx', 'vue里render函数之JSX应用'],
+      //   ['vue_module_communicate', 'Vue组件间通信方式'],
+      //   ['vue_router', 'Vue相同路由不同参数的不刷新问题']
+      // ],
+      // '/react/': [
+      //   ['', '默认文档']
+      // ],
+      // '/miniprogram/': [
+      //   ['', '小程序左滑删除'],
+      //   ['wx_calendar', '小程序日历组件']
+      // ],
+      // '/javascript/': [
+      //   ['', '数字翻滚封装'],
+      //   ['card_overturn', 'css3卡片翻转'],
+      //   ['js_skill_optimize', '灵活运用JS开发技巧'],
+      //   ['html5_upload', 'HTML5上传下载']
+      // ],
+      // '/article/strategy/': [{
+      //   title: '攻略',
+      //   children: getFileNames('/article/strategy/')
+      // }],
+      '/article/strategy/': [
+        ['', 'Sequelize - quick start(快速开始)'],
+        ['Sequelize_2', 'Sequelize - model模型定义'],
+        ['Sequelize_3', 'Sequelize - 使用 model 查询数据'],
+        ['Sequelize_4', 'Sequelize - 单表 CURD'],
+        ['Sequelize_5', 'Sequelize - 多表 CURD'],
+        ['Sequelize_6', 'Sequelize - associations']
+      ],
+      '/typescript/': [
+        ['ts_in_action1', 'typescript学习笔记——基本类型'],
+        ['ts_in_action2', 'typescript学习笔记——枚举类型，接口（对象，函数）'],
+        ['ts_in_action3', 'typescript学习笔记——函数、类、类与接口']
+      ],
+      // 暂时去掉优质文章模块
+      // '/article/qualityArticles/': [{
+      //     title: 'javascript',
+      //     children: getFileNames('/article/qualityArticles/javascript/', 'javascript')
+      //   },
+      //   {
+      //     title: 'node',
+      //     children: getFileNames('/article/qualityArticles/node/', 'node')
+      //   }
+      // ],
+      // '/': [
+      //   ['home', 'web开发记录']
+      // ]
+    },
     // 自定义属性----用于添加友情链接
     friendLinks: [{
       logo: 'https://removeif.github.io/images/avatar.jpg',
