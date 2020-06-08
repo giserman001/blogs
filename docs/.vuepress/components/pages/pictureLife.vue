@@ -1,10 +1,11 @@
 <template>
   <div class="waterfallBox">
-    <vue-waterfall-easy :imgsArr="imgsArr" @click="clickFn">
-      <div class="img-info" slot-scope="props">
-        <div class="some-info">{{ props.value.info }}</div>
+    <div class="waterfall">
+      <div class="waterfallItem" v-for="(item, index) in imgsArr" :key="index" @click="clickFn(item)">
+        <img :src="item.src" alt="图文生活" class="waterfall-img">
+        <div class="info-txt">{{item.info}}</div>
       </div>
-    </vue-waterfall-easy>
+    </div>
     <div class="show-div" v-if="sigleInfo.src" @click.stop="close">
       <img :src="sigleInfo.src">
       <div class="show-introduce">{{sigleInfo.info}}</div>
@@ -13,14 +14,12 @@
 </template>
 
 <script>
-import vueWaterfallEasy from 'vue-waterfall-easy'
+import Vue from 'vue'
 export default {
   name: 'PictureLife',
-  components: {
-    vueWaterfallEasy,
-  },
   data() {
     return {
+      containerId: 'test',
       imgsArr: [
         {
           src: require('../../public/lifeImg/1.jpg'),
@@ -79,15 +78,10 @@ export default {
     }
   },
   methods: {
-    clickFn(event, { index, value }) {
-      // 阻止a标签跳转
-      event.preventDefault()
-      // 只有当点击到图片时才进行操作
-      if (event.target.tagName.toLowerCase() == 'img') {
-        this.sigleInfo = {
-          ...value
+    clickFn(item) {
+      this.sigleInfo = {
+          ...item
         }
-      }
     },
     close(e) {
       if(e.target.tagName.toLowerCase() !== 'img') {
@@ -99,25 +93,32 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.waterfallBox{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50px;
-  left: 0;
+@keyframes show-card {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-.waterfallBox >>> .vue-waterfall-easy-container .vue-waterfall-easy-scroll{
-  overflow-x: visible;
-  overflow-y: visible;
+img {
+  vertical-align: middle;
+  border-style: none;
 }
-.waterfallBox >>> .img-inner-box{
+.waterfall{
+  column-width: 200px;
+  column-count: auto;
+  column-gap: 20px;
+}
+.waterfallItem{
+  animation: show-card 0.4s;
+  height: auto;
+  box-sizing: border-box;
   position relative
+  margin-bottom 20px
   cursor pointer
 }
-.waterfallBox >>> .img-inner-box:hover .img-info{
-  display block
-}
-.img-info{
+.info-txt{
   position absolute
   bottom 0
   left 0
@@ -129,6 +130,14 @@ export default {
   color: rgba(0, 0, 0, 0.65);
   font-size: 14px;
   display none
+  box-sizing: border-box;
+}
+.waterfallItem:hover .info-txt{
+  display block
+}
+.waterfall-img{
+  height:auto;
+  width:100%;
 }
 .show-div {
   position: fixed;
@@ -146,10 +155,6 @@ export default {
   border-radius: 4px;
   max-width: 90%;
   max-height 80%
-}
-img {
-  vertical-align: middle;
-  border-style: none;
 }
 .show-introduce {
   margin: 20px auto;
