@@ -47,7 +47,7 @@ export default {
         },
         {
           src: require('../../public/lifeImg/7.jpg'),
-          info: '看着是不是很眼馋，大家知道是吗？ 哈哈哈',
+          info: '看着是不是很眼馋，大家知道这是什么吗？ 哈哈哈',
         },
         {
           src: require('../../public/lifeImg/8.jpg'),
