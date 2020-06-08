@@ -1,5 +1,6 @@
 // findMarkdown.js
 const fs = require('fs')
+const whiteName = ['./docs/README.md', './docs/aboutMe.md', './docs/article.md', './docs/pictureLife.md']
 
 function findMarkdown(dir, callback) {
   fs.readdir(dir, function (err, files) {
@@ -16,7 +17,10 @@ function findMarkdown(dir, callback) {
             //   callback(innerDir);
             // }
             // 只跳过docs根目录下README.md文件
-            if (/\.md$/.test(fileName) && innerDir !== './docs/README.md'){
+            // if (/\.md$/.test(fileName) && innerDir !== './docs/README.md'){
+            //   callback(innerDir);
+            // }
+            if (/\.md$/.test(fileName) && !getWhiteName(innerDir, whiteName)){
               callback(innerDir);
             }
           }
@@ -24,6 +28,18 @@ function findMarkdown(dir, callback) {
       }
     })
   })
+}
+
+function getWhiteName(dir, whiteName) {
+  let flag = false
+  if(Object.prototype.toString.call(whiteName).slice(8, -1) === 'Array') {
+    whiteName.forEach(item => {
+      if(item === dir) {
+        flag = true
+      }
+    })
+  }
+  return flag
 }
 
 module.exports = findMarkdown
