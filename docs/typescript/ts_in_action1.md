@@ -31,10 +31,16 @@ let arr1: number[] = [1, 2, 3, 4]
 let arr2: Array<number> = [1, 2, 3, 4]
 // 联合类型 可以使数组里面元素类型多样化
 let arr3: Array<number | string> = [1, 2, 3, '4']
+const arr: (string | number | boolean)[] = [1, '2', true];
+// 以上例子都是存储的基础类型数据，对象类型也是可以的
+// type alias 类型别名
+type People = { name: string, age: number, sex: string };
+const peopleArr: People[] = [{ name: 'Tom', age: 23, sex: 'men' }];
 ```
 
 ### 元组类型
 ::: warning 
+元组可以理解为一个长度，每一项元素类型都确定的数组,
 一一对应关系，不能多不能少,跟数组有差别
 :::
 
