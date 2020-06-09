@@ -150,6 +150,7 @@ img {
   padding: 30px;
   color: #fff;
   z-index 100
+  box-sizing: border-box;
 }
 .show-div > img {
   border-radius: 4px;
@@ -161,5 +162,11 @@ img {
   font-size: 1.4rem;
   max-width: 800px;
   text-align: center;
+}
+@media screen and (max-width: 750px) {
+  .waterfallItem .info-txt{
+    display block
+    text-align center
+  }
 }
 </style>
