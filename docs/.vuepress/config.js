@@ -171,7 +171,7 @@ module.exports = {
   configureWebpack: (config, isServer) => {
     if (process.env.NODE_ENV === 'production') {
       // 将地址改为你的阿里云地址
-      config.output.publicPath = 'https://lw68.top/blogs/'
+      // config.output.publicPath = 'https://lw68.top/blogs/'
     }
   }
 }
