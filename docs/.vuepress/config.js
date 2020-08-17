@@ -27,7 +27,8 @@ module.exports = {
     editLinks: true,
     docsDir: 'docs',
     smoothScroll: true,
-    nav: [{
+    nav: [
+      {
         text: '文章',
         link: '/article'
       },
@@ -42,6 +43,10 @@ module.exports = {
       {
         text: '图说生活',
         link: '/pictureLife'
+      },
+      {
+        text: '楼市LPR走势',
+        link: '/houseLPR'
       }
       // {
       //   text: 'web开发记录',
@@ -162,7 +167,69 @@ module.exports = {
       webSiteName: '清风拂林',
       webSiteUrl: 'https://giserman001.github.io/blogs/',
       webSiteDes: '前端开发,技术分享'
-    }]
+    }],
+    LPRData: [
+      {
+        time: '2019-8-20',
+        oneYear: 4.25,
+        fiveYear: 4.85,
+      },
+      {
+        time: '2019-9-20',
+        oneYear: 4.20,
+        fiveYear: 4.85,
+      },
+      {
+        time: '2019-10-21',
+        oneYear: 4.20,
+        fiveYear: 4.85,
+      },
+      {
+        time: '2019-11-20',
+        oneYear: 4.15,
+        fiveYear: 4.80,
+      },
+      {
+        time: '2019-12-20',
+        oneYear: 4.15,
+        fiveYear: 4.80,
+      },
+      {
+        time: '2020-1-20',
+        oneYear: 4.15,
+        fiveYear: 4.80,
+      },
+      {
+        time: '2020-2-20',
+        oneYear: 4.05,
+        fiveYear: 4.75,
+      },
+      {
+        time: '2020-3-20',
+        oneYear: 4.05,
+        fiveYear: 4.75,
+      },
+      {
+        time: '2020-4-20',
+        oneYear: 3.85,
+        fiveYear: 4.65,
+      },
+      {
+        time: '2020-5-20',
+        oneYear: 3.85,
+        fiveYear: 4.65,
+      },
+      {
+        time: '2020-6-22',
+        oneYear: 3.85,
+        fiveYear: 4.65,
+      },
+      {
+        time: '2020-7-20',
+        oneYear: 3.85,
+        fiveYear: 4.65,
+      },
+    ],
   },
   markdown: {
     lineNumbers: true
