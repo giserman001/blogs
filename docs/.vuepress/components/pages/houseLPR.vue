@@ -79,12 +79,16 @@ export default {
       let myChart = echarts.init(document.getElementById('line'))
       myChart.setOption({
         title: {
+          top: 0,
+          left:'center',
           text: 'LPR利率变化趋势图',
         },
         tooltip: {
           trigger: 'axis',
         },
         legend: {
+          top: '10%',
+          left:'center',
           data: ['一年期', '五年期'],
         },
         grid: {
