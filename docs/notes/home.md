@@ -134,3 +134,23 @@ git congfig --get core.ignorecase
 git config core.ignorecase false
 ```
 
+## 指定的一个box的子元素的显示顺序
+::: warning
+  目前没有浏览器支持 box-ordinal-group 属性。
+  Firefox 支持替代的 -moz-box-ordinal-group 属性。
+  Safari 和 Chrome 支持替代的 -webkit-box-ordinal-group 属性。
+:::
+```css
+  box-ordinal-group: 1(integer) 属性
+```
+## 如果你还想要存储 untracked files，可以使用 -u 选项。（对于未被git追踪的文件，你如果还想stash, 那么考虑用 -u 选项）
+```js
+git stash -u
+```
+
+## 避免有多次commit提交点
+
+```js
+git commit --amend //命令用来修复最近一次commit. 可以让你合并你缓存区的修改和上一次commit, 而不是提交一个新的快照. 还可以用来编辑上一次的commit描述.
+```
+
