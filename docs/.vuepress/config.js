@@ -242,8 +242,9 @@ module.exports = {
   plugins: ['@vuepress/back-to-top'],
   configureWebpack: (config, isServer) => {
     if (process.env.NODE_ENV === 'production') {
-      // 将地址改为你的阿里云地址
+      // 将地址改为你的阿里云地址 
       // config.output.publicPath = 'https://lw68.top/blogs/'
+      config.output.publicPath = 'https://cdn.jsdelivr.net/gh/giserman001/blogs@gh-pages/'
     }
   }
 }
