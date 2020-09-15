@@ -22,7 +22,7 @@
     "inquirer": "^7.1.0",
     "mime": "^2.4.4",
     "qiniu": "^7.3.0",
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.5.4"
   },
   "husky": {
     "hooks": {
