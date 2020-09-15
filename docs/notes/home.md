@@ -134,3 +134,13 @@ git congfig --get core.ignorecase
 git config core.ignorecase false
 ```
 
+## 指定的一个box的子元素的显示顺序
+::: warning
+  目前没有浏览器支持 box-ordinal-group 属性。
+  Firefox 支持替代的 -moz-box-ordinal-group 属性。
+  Safari 和 Chrome 支持替代的 -webkit-box-ordinal-group 属性。
+:::
+```css
+  box-ordinal-group: 1(integer) 属性
+```
+
