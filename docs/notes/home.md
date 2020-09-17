@@ -149,6 +149,11 @@ git stash -u
 ```
 
 ## 避免有多次commit提交点
+::: tips
+可以看到，在执行git commit --amend --no-edit之后，hash值由c56f680变成了eb6c8cb，但是message内容并没有发生变化，并且最重要的是只有一条commit记录。
+
+如果要修改上一条的message，那么去掉--no-edit选项即可，git commit --amend -m "xxxx"。同理，commit记录同样只会有一条。
+:::
 
 ```js
 git commit --amend //命令用来修复最近一次commit. 可以让你合并你缓存区的修改和上一次commit, 而不是提交一个新的快照. 还可以用来编辑上一次的commit描述.
