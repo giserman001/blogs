@@ -239,6 +239,11 @@ module.exports = {
         oneYear: 3.85,
         fiveYear: 4.65,
       },
+      {
+        time: '2020-10-20',
+        oneYear: 3.85,
+        fiveYear: 4.65,
+      },
     ],
   },
   markdown: {
