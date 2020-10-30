@@ -127,6 +127,9 @@ module.exports = {
         ['ts_in_action2', 'typescript学习笔记——枚举类型，接口（对象，函数）'],
         ['ts_in_action3', 'typescript学习笔记——函数、类、类与接口']
       ],
+      '/css3/': [
+        ['css_skill_border_bg', '边框与背景']
+      ],
       // 暂时去掉优质文章模块
       // '/article/qualityArticles/': [{
       //     title: 'javascript',

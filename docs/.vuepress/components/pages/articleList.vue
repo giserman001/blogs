@@ -15,7 +15,7 @@
     <div class="leftArticle">
       <template v-for="(item, index) in arts">
         <el-card shadow="hover" class="cardArticle" :key="index">
-          <router-link class="tits" :to="item.regularPath">{{item.title}}</router-link>
+          <router-link class="tits" :to="item.regularPath">{{item.frontmatter.showListTit || item.title}}</router-link>
           <el-divider></el-divider>
           <div class="art" v-if="item.frontmatter.des">
             {{item.frontmatter.des}}
