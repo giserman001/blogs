@@ -156,10 +156,10 @@ module.exports = {
       webSiteUrl: 'https://www.515code.com/',
       webSiteDes: '后端开发、机器学习等文章分享'
     },{
-      logo: 'https://giserman001.github.io/blogs/logo.jpg',
-      webSiteName: '清风拂林',
-      webSiteUrl: 'https://giserman001.github.io/blogs/',
-      webSiteDes: '前端开发,技术分享'
+      logo: 'http://react.lllomh.com/favicon.ico',
+      webSiteName: 'lllomh',
+      webSiteUrl: 'http://react.lllomh.com',
+      webSiteDes: '这是一个实时统计的前端2大主流框架在各个城市的职位数量,很有参考价值'
     },{
       logo: 'https://giserman001.github.io/blogs/logo.jpg',
       webSiteName: '清风拂林',

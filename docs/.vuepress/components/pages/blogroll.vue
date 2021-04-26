@@ -7,7 +7,7 @@
           <div class="blogrollBox">
             <el-avatar size="large" :src="item.logo ? item.logo : 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'"></el-avatar>
             <div class="friend-name">{{item.webSiteName}}</div>
-            <div class="tags">{{item.webSiteDes}}</div>
+            <div class="tags" :title="item.webSiteDes">{{item.webSiteDes}}</div>
           </div>
         </el-card>
       </template>
